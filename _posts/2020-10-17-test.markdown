@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Jekyll文章测试"
+date:   2020-10-17 20:57:44 +0800
+categories: jekyll update
+---
+
+### 该文章用于JekyllWriter软件的使用测试与Jekyll文章生成原理的学习和测试
+
+目前需要继续学习的知识：
+* yml
+* liquid(?)
+* jekyll文件生成原理与语法
+
+```java
+class Hello{
+    static public void main(String[] args){
+        System.out.ptintln("Hello, world!");
+    }
+}
+```
