@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	
+	{% include head.html %}
+	
+	<body>
+		<div id="main">
+			<div id="root">
+				
+				<!-- header开始 -->
+				{% include header.html %}
+				<!-- header结束 -->
+				
+				<!-- container开始 -->
+				<div id="container">
+					<div id="coverViewPort" onclick="showFloatingWinodwWithInfo('brFloatingWindow', 'brFloatingWindowContent', '在萌图主页上找到的,感觉很美')">
+						<div id="coverImg"></div>
+					</div>
+					<div id="content">
+						<div id="contentList">
+							
+							<!-- 内容 -->
+							{{ content }}
+							<!-- 内容结束 -->
+							
+						</div>
+						<div id="extraInfoList">
+							<div id="blogerInfo" class="commonBlockPanel">
+								<div id="blogerCoverViewPort">
+									<div id="blogerCoverImg" class="coverImg" onmouseenter="avatorShine()" 
+									onclick="showFloatingWinodwWithInfo('brFloatingWindow', 'brFloatingWindowContent', '在萌图上拷到的头像图片')">
+										<div id="shiningBar"></div>
+									</div>
+								</div>
+								<p id="blogerName" class="centerLocatedText">{{ site.author.name }}</p>
+								<p id="blogerDescription" class="centerLocatedText">{{ site.author.description }}</p>
+								<div id="relatedLinksBox">
+									<ul id="relatedLinks" class="bueatifiedList">
+										{% for link in site.author.links %}
+										<li><a href="{{ link.url }}">{{ link.name }}</a></li>
+										{% endfor %}
+									</ul>
+								</div>
+							</div>
+							<div id="siteInfoBox" class="commonBlockPanel">
+								<div id="siteInfo">
+									<span>
+										<p class="centerLocatedText siteInfoHead">POST</p>
+										<p class="centerLocatedText siteInfoBody">2</p>
+									</span>
+									<span>
+										<p class="centerLocatedText siteInfoHead">TAG</p>
+										<p class="centerLocatedText siteInfoBody">2</p>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- container结束 -->
+				
+				<!-- 浮窗开始 -->
+				<div id="brFloatingWindow" class="commonGlobalFloatingWindow commonBlockPanel" onclick="closeBrFloatingWindow()" >
+					<!-- <div id="brFlaotingWindowHeader"></div> -->
+					<p id="brFloatingWindowContent"></p>
+				</div>
+				<!-- 浮窗结束 -->
+				
+			</div>
+		</div>
+		<script src="/static/js/animations.js"></script>
+	</body>
+</html>

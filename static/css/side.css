@@ -1,0 +1,98 @@
+/* 额外信息样式 */
+#extraInfoList{
+	float: right;
+	width: 270px;
+}
+
+/* 我的信息面板样式 */
+#blogerInfo{
+	padding: 30px 0;
+	margin-bottom:  30px;
+}
+
+/* 用户封面视口样式 */
+#blogerCoverViewPort{
+	width: 150px;
+	margin: 0 auto;
+	border-radius: 999px;
+	height: 150px;
+	overflow: hidden;
+	/* border-radius: inherit;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0; */
+}
+
+/* 用户封面图片样式 */
+#blogerCoverImg{
+	background-image: url("https://img.mmy.moe/images/2018/03/25/mmymoe-35487f047da50f4ccff5.md.png");
+	background-image: url(/static/img/avatortmp.png);
+	height: inherit;
+}
+
+/* 用户名文字样式 */
+#blogerName{
+	margin: 20px 20px;
+	margin-bottom: 0;
+	font-size: 22px;
+	color: rgb(67, 67, 67);
+	padding: 10px 0;
+}
+
+/* 用户描述文字样式 */
+#blogerDescription{
+	margin: 20px 20px;
+	margin-top: 0;
+	color: rgb(129, 129, 129);
+	border-bottom: solid 2px rgb(255, 188, 52);
+	padding: 10px 0;
+}
+
+/* 用户相关链接盒子样式 */
+#relatedLinksBox{
+	margin: 0 20px;
+}
+
+/* 用户相关链接样式 */
+#relatedLinks{
+	display: flex;
+	justify-content: space-around;
+	font-size: 12px;
+}
+
+/* 用户相关连接中文子样式 */
+#relatedLinks a{
+	color: rgb(81, 81, 81);
+}
+
+/* 用户链接前图标样式 */
+#relatedLinks li::before{
+	content: url(../img/link.png);
+	margin-right: 5px;
+	position: relative;
+	top: 2px;
+}
+
+/* 网站信息样式 */
+#siteInfoBox{
+	padding: 20px 0;
+	margin-bottom:  30px;
+}
+
+/* 网站信息样式 */
+#siteInfo{
+	display: flex;
+	justify-content: space-around;
+}
+
+/* 网站信息头部样式 */
+.siteInfoHead{
+	font-size: 20px;
+	color: rgb(50, 50, 50);
+	margin-bottom: 5px;
+}
+
+/* 网站信息内容样式 */
+.siteInfoBody{
+	font-size: 18px;
+	color: rgb(104, 104, 104);
+}

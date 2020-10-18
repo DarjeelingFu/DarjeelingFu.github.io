@@ -1,0 +1,30 @@
+/* post框盒整体样式 */
+#postContent{
+	width: 800px;
+	padding: 60px 0;
+	padding-top: 0;
+}
+
+/* post文本样式 */
+#postText{
+	padding: 0 40px;
+}
+
+/* post封面视口样式 */
+#postCoverViewPort{
+	width: inherit;
+	height: 260px;
+	float: left;
+	border-radius: inherit;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	overflow: hidden;
+	
+	margin-bottom: 40px;
+}
+
+/* post封面样式 */
+#postCoverImg{
+	height: inherit;
+	background-image: url(../img/mountains.jpg);
+}

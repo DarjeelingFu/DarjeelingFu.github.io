@@ -1,0 +1,87 @@
+#postText h1{
+	text-align: center;
+	padding: 5px 0;
+	border-bottom: solid 2px #000;
+}
+
+#postText h1, h2, h3, h4, h5{
+	margin: 8px 0;
+	font-weight: 500;
+}
+
+#postText{
+	line-height: 1.6;
+}
+
+#postText blockquote{
+	background: #eee;
+	margin: 12px 0;
+	padding: 10px 10px;
+	border-left: solid 6px #aaa;
+}
+
+pre{
+	margin: 20px 0;
+}
+
+code{
+	border-radius: 5px;
+	font-family: "Lucida Console";
+	font-size: 14px;
+}
+
+#postText a{
+
+}
+
+/*表格样式*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ 
+td,th {
+    padding: 0;
+}
+ 
+.pure-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+}
+ 
+.pure-table caption {
+    color: #000;
+    font: italic 85%/1 arial,sans-serif;
+    padding: 1em 0;
+    text-align: center;
+}
+ 
+.pure-table td,.pure-table th {
+    border-left: 1px solid #cbcbcb;
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible;
+    padding: .5em 1em;
+}
+ 
+.pure-table thead {
+    background-color: #e0e0e0;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+ 
+.pure-table td {
+    background-color: transparent;
+}
+ 
+.pure-table-bordered td {
+    border-bottom: 1px solid #cbcbcb;
+}
+ 
+.pure-table-bordered tbody>tr:last-child>td {
+    border-bottom-width: 0;
+}
