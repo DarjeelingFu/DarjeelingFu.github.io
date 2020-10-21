@@ -3,7 +3,20 @@ layout: default
 ---
 <div id="postContent" class="commonBlockPanel">
 	<div id="postCoverViewPort">
-		<div id="postCoverImg" class="coverImg"></div>
+		<div id="postCoverImg" class="coverImg">
+			<img src="{{ page.innerCover }}" id="img" />
+		</div>
+	</div>
+	<div id="passageInfo">
+		<div id="title">{{ page.title }}</div>
+		<div id="subInfo">
+			<span id="datetime">{{ page.date | date: "%Y-%m-%d %H:%M" }}</span>
+			<ul id="tags">
+				{% for tag in page.tags %}
+				<li>{{ tag }}</li>
+				{% endfor %}
+			</ul>
+		</div>
 	</div>
 	<div id="postText">
 		{{ content }}
@@ -11,7 +24,7 @@ layout: default
 </div>
 <div id="postBottom" class="commonBlockPanel">
 	<div id="bottomJump">
-		<a>Pre</a>
-		<a>Next</a>
+		<a id="pre">Pre</a>
+		<a id="next">Next</a>
 	</div>
 </div>

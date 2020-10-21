@@ -7,7 +7,7 @@
 
 /* post文本样式 */
 #postText{
-	padding: 0 40px;
+	padding: 0 30px;
 }
 
 /* post封面视口样式 */
@@ -19,7 +19,7 @@
 	border-bottom-right-radius: 0;
 	overflow: hidden;
 	
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 /* post封面样式 */
@@ -36,4 +36,56 @@
 	padding: 20px 30px;
 	display: flex;
 	justify-content: space-between;
+	color: #54565b;
+}
+
+#pre::before{
+	content: url(/static/img/arrowL.png);
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+}
+
+#next::after{
+	content: url(/static/img/arrowR.png);
+	margin-left: 5px;
+	position: relative;
+	top: 3px;
+}
+
+#passageInfo{
+	padding: 20px 30px;
+	padding-bottom: 15px;
+	border-left: solid rgb(255, 188, 52) 4px;
+}
+
+#title{
+	font-size: 22px;
+}
+
+#passageInfo{
+	display: flex;
+	justify-content: space-between;
+}
+
+#datetime{
+	float: right;
+	font-size: 12px;
+	color: #868686;
+}
+
+#tags{
+	color: #868686;
+	list-style: none;
+}
+
+#tags li{
+	float: right;
+	font-size: 12px;
+}
+
+#tags::before{
+	content: url(/static/img/tag.png);
+	position: relative;
+	
 }

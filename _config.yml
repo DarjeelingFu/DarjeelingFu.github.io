@@ -18,6 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+defaults: 
+  -
+    scope: 
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+    summary: 博客文章
+
 author:
   name: 饱食终日的我
   description: 

@@ -134,3 +134,18 @@
 	background-color: rgba(255, 255, 255, 0.5);
 	top: -30px;
 }
+
+/* 大标题 */
+
+#coverImg{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.topTitle{
+	font-size: 55px;
+	color: #fff;
+	opacity: 0.8;
+}

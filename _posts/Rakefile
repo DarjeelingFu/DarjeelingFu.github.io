@@ -11,7 +11,7 @@ CONFIG = {
 desc "Begin a new post in #{CONFIG['posts']}"
 task :post do
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
-  title = ENV["title"] || "new-post"
+  title = ENV[""] || ""
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   filename = File.join(CONFIG['posts'], "#{Time.now.strftime('%Y-%m-%d')}-#{slug}.#{CONFIG['post_ext']}")
   if File.exist?(filename)
@@ -23,7 +23,11 @@ task :post do
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts "category: "
+    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M:%S')} +0800"
+    post.puts "summary: "
+    post.puts "outerCover: "
+    post.puts "innerCover: "
+    post.puts "categories: "
     post.puts "tags: []"
     post.puts "---"
   end

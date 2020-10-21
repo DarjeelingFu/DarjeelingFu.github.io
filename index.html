@@ -32,7 +32,11 @@ layout: default
 {% for post in site.posts %}
 <article class="article commonBlockPanel">
 	<div class="articleCoverViewPort">
-		<div class="articleCoverImg"></div>
+		<div class="articleCoverImg">
+			{% if post.outerCover %}
+			<img src="{{ post.outerCover }}" id="coverImg"/>
+			{% endif %}
+		</div>
 	</div>
 	<div class="articleInfoBox">
 		<div class="articleInfo">

@@ -1,9 +1,9 @@
 #postText h1{
 	text-align: center;
-	padding: 3px 0px;
 	border-bottom: solid 2px #333;
     font-weight: 500;
-
+	display: inline-block;
+	padding: 0 30px;
 }
 
 #postText h2{
@@ -12,20 +12,29 @@
 }
 
 #postText h2, h3, h4, h5{
-	margin: 8px 0;
+	margin: 20px 0;
+	margin-top: 45px;
 	font-weight: 500;
 }
 
 #postText{
-	line-height: 1.6;
+	line-height: 1.8;
     color: #333;
+	letter-spacing: 0.6px;
+}
+
+#postText p{
+	padding-bottom: 15px;
 }
 
 #postText blockquote{
 	background: #eee;
 	margin: 12px 0;
-	padding: 10px 10px;
+	padding: 15px 10px;
+	padding-bottom: 0;
 	border-left: solid 6px #c3c3c3;
+	color: #636363;
+	border-radius: 5px;
 }
 
 pre{
@@ -39,7 +48,7 @@ code{
 }
 
 .language-plaintext{
-	background-color: #dcecf3;
+	background-color: #ddeaf0;
 	border-radius: 3px;
 	padding: 3px 3px;
 }
