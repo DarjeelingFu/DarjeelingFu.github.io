@@ -1,0 +1,69 @@
+/* 默认整体样式 */
+*{
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+/* body整体样式 */
+body{
+	/* background-image: linear-gradient(to right ,#55a2e6, #66cae5); */
+}
+
+/* 为保证可拓展性，使用名为main的div装载所有内容 */
+#main{
+	width: 100%;
+}
+
+/* 为保证可拓展性，使用名为root的div装载main的所有内容 */
+#root{
+}
+
+/* 超链接元素默认样式 */
+a{
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+}
+
+/* 列表元素默认样式 */
+list{
+	list-style: none;
+}
+
+/* 一般性美化的li元素样式 */
+.bueatifiedList li{
+	float: left;
+	list-style: none;
+}
+
+/* 浮窗样式 */
+.floatWindow{
+	position: absolute;
+	width: 100px;
+	height: 150px;
+	margin: 10px 10px;
+	border-radius: 5px;
+	left: 100px;
+}
+
+/* 一般性阴影圆角块状平面 */
+.commonBlockPanel{
+	border-radius: 8px;
+	box-shadow: 0px 0px 8px 1px rgb(219, 227, 227);
+}
+
+/* cover型背景图片通用样式 */
+.coverImg{
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* 中央对齐文字样式 */
+.centerLocatedText{
+	text-align: center;
+}
+
+/* 统一字体配置 */
+/**{
+	font-family: "Helvetica Neue";
+}*/

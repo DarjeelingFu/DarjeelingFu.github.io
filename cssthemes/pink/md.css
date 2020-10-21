@@ -100,20 +100,3 @@ table td {
 table tbody>tr:last-child>td {
     border-bottom-width: 0;
 }
-
-.hljs-ln-numbers{
-    margin-right: 5px
-}
-
-.hljs-ln{
-    margin: 0 0;
-    border: none;
-}
-
-.hljs-ln td{
-    border: none;
-}
-
-.hljs-ln-n::before {
-    margin-right: 5px;
-}

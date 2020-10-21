@@ -1,0 +1,41 @@
+/* 全局浮窗样式 */
+.commonGlobalFloatingWindow{
+	position: fixed;
+}
+
+/* 右下角浮窗样式 */
+#brFloatingWindow{
+	width: 400px;
+	right: 30px;
+	bottom: 30px;
+	z-index: 998;
+	background-color: rgb(250, 250, 250);
+	opacity: 0;
+
+	overflow: hidden;
+	
+	padding: 20px 0;
+}
+
+/* 右下浮窗顶部内容样式 */
+#brFlaotingWindowHeader{
+	height: 32px;
+	margin-bottom: 10px;
+}
+
+/* 右下角浮窗内部图表样式 */
+#brFloatingWindowContent::before{
+	content: url(../img/灯泡32.png);
+	margin-right: 5px;
+	position: relative;
+	top: 5px;
+	left: 0px;
+	
+}
+
+/* 右下角浮窗内容样式 */
+#brFloatingWindowContent{
+	font-size: 18px;
+	color: rgb(54, 54, 54);
+	margin: 0 30px;
+}
