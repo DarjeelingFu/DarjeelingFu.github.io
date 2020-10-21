@@ -27,3 +27,13 @@
 	height: inherit;
 	background-image: url(../img/mountains.jpg);
 }
+
+#postBottom{
+	margin-top: 30px;
+}
+
+#bottomJump{
+	padding: 20px 30px;
+	display: flex;
+	justify-content: space-between;
+}

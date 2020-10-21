@@ -50,6 +50,7 @@ list{
 .commonBlockPanel{
 	border-radius: 8px;
 	box-shadow: 0px 0px 8px 1px rgb(219, 227, 227);
+	background-color: #fff;
 }
 
 /* cover型背景图片通用样式 */
