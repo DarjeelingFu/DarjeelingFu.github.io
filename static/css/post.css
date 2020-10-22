@@ -89,3 +89,15 @@
 	position: relative;
 	
 }
+
+@media screen and (max-width: 480px)  {
+	#postContent{
+		width: 100%;
+		border-radius: 0;
+	}
+	
+	#postBottom{
+		border-radius: 0;
+	}
+	
+}

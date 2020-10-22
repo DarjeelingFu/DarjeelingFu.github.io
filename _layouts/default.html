@@ -81,8 +81,19 @@
 		</div>
 		<script src="/static/js/animations.js"></script>
 		<script>
+			var imgCoverWidth = $('.articleCoverViewPort').css('width')
+			var imgCoverHeight = $('.articleCoverViewPort').css('height')
+			var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
+			var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
+			// cutImage('img', width, height)
+			cutImage('articleCover', width, height)
+			
+			var imgCoverWidth = $('#postCoverViewPort').css('width')
+			var imgCoverHeight = $('#postCoverViewPort').css('height')
+			var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
+			var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
 			cutImage('img', 800, 260)
-			cutImage('coverImg', 240, 200)			
+			
 		</script>
 	</body>
 </html>
