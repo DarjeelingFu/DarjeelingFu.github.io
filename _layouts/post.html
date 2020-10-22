@@ -24,7 +24,15 @@ layout: default
 </div>
 <div id="postBottom" class="commonBlockPanel">
 	<div id="bottomJump">
-		<a id="pre">Pre</a>
-		<a id="next">Next</a>
+		{% if page.previous %}
+		<a id="pre" href="{{ page.previous.url | prepend: site.baseurl | prepend: site.url }}">Pre</a>
+		{% else %}
+		<span>The end</span>
+		{% endif %}
+		{% if page.next %}
+		<a id="next" href="{{ page.next.url | prepend: site.baseurl | prepend: site.url }}">Next</a>
+		{% else %}
+		<span>咕咕咕</span>
+		{% endif %}
 	</div>
 </div>

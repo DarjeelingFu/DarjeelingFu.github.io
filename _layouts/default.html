@@ -49,11 +49,19 @@
 								<div id="siteInfo">
 									<span>
 										<p class="centerLocatedText siteInfoHead">POST</p>
-										<p class="centerLocatedText siteInfoBody">2</p>
+										{% assign postNum = 0 %}
+										{% for post in site.posts %}
+										{% assign postNum = postNum | plus: 1 %}
+										{% endfor %}
+										<p class="centerLocatedText siteInfoBody">{{ postNum }}</p>
 									</span>
 									<span>
 										<p class="centerLocatedText siteInfoHead">TAG</p>
-										<p class="centerLocatedText siteInfoBody">2</p>
+										{% assign tagNum = 0 %}
+										{% for post in site.tags %}
+										{% assign tagNum = tagNum | plus: 1 %}
+										{% endfor %}
+										<p class="centerLocatedText siteInfoBody">{{ tagNum }}</p>
 									</span>
 								</div>
 							</div>
