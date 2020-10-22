@@ -5,8 +5,8 @@ date: 2020-10-21 19:57:40 +0800
 summary: 图床好使不~
 categories: 
 tags: [测试]
-outerCover: https://img.mmy.moe/images/2018/03/25/mmymoe-68086c3860196f65900c.md.jpg
-innerCover: https://img.mmy.moe/images/2018/03/25/mmymoe-6708d91fca64db4f3fd1.jpg
+outerCover: https://img.mmy.moe/images/2018/03/25/mmymoe-58737ad9fe547282d0dc.md.png
+innerCover: https://img.mmy.moe/content/images/system/home_cover_1509095806272_cb5acc.jpg
 ---
 
 
