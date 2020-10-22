@@ -100,4 +100,12 @@
 		border-radius: 0;
 	}
 	
+	#postCoverViewPort{
+		display: none;
+	}
+	
+	.articleTitlePlaceHolder{
+		display: none;
+	}
+	
 }

@@ -29,26 +29,6 @@ function avatorShine(){
 	}
 }
 
-// header出现
-function bannerShow(){
-	new anime({
-		targets: '#header',
-		opacity: 1,
-		easing: 'linear',
-		duration: 200
-	})
-}
-
-// header消失
-function bannerHide(){
-	new anime({
-		targets: '#header',
-		opacity: 0,
-		easing: 'linear',
-		duration: 300
-	})
-}
-
 // 浮窗显示或消失
 function floatingWindowToggle(selector, value){
 	new anime({
