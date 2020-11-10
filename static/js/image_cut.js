@@ -22,21 +22,3 @@ function cutImage(selector, width, height){
 		images[i].width = value
 	}
 }
-
-$(document).ready(function(){
-	var imgCoverWidth = $('.articleCoverViewPort').css('width')
-	var imgCoverHeight = $('.articleCoverViewPort').css('height')
-	if(imgCoverHeight && imgCoverHeight){
-		var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
-		var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
-		cutImage('.articleCover', width, height)
-	}
-	
-	var imgCoverWidth = $('#postCoverViewPort').css('width')
-	var imgCoverHeight = $('#postCoverViewPort').css('height')
-	if(imgCoverWidth && imgCoverHeight){
-		var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
-		var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
-		cutImage('#img', width, height)
-	}
-})
