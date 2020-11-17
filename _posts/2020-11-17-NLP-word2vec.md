@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "NCP and word2vec"
+title: "NLP and word2vec"
 date: 2020-11-17 21:23:04 +0800
 summary: word2vec词向量与自然语言处理
 outerCover: 
