@@ -1,1 +1,0 @@
-rake post title="title"

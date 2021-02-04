@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>秦莱山记志</title>
+	<script src="/static/js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/anime.min.js"></script>
+	<script src="/static/js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="/static/js/highlight.pack.js"></script>
+	<script type="text/javascript" src="/static/js/highlightjs-line-numbers.js"></script>
+	<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+	<script type="text/javascript">hljs.initLineNumbersOnLoad();</script>
+	<script type="text/javascript" src="/static/js/image_cut.js"></script>
+	<script type="text/javascript" src="/static/js/scroll-event.js"></script>	
+
+	<!-- 	
+	<link rel="shortcut icon" type="image/x-icon" media="screen" href="/favicon.ico" />
+    <link rel="canonical" href="/2020/10/21/learn-20201021.html" />
+    <link rel="alternate" type="application/rss+xml" title="FuXiangyu's blog (initial version)" href="/feed.xml"  />
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/octicons/3.5.0/octicons.min.css" >
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+	-->
+
+	<link rel="stylesheet" href="/static/css/common.css" />
+	<link rel="stylesheet" href="/static/css/header.css" />
+	<link rel="stylesheet" href="/static/css/container.css" />
+	<link rel="stylesheet" href="/static/css/side.css" />
+	<link rel="stylesheet" href="/static/css/floatwindows.css" />
+	<link rel="stylesheet" href="/static/css/post.css" />
+	<link rel="stylesheet" href="/static/css/md.css" />
+	<link rel="stylesheet" href="/static/styles/darcula.css" />	
+
+</head>
+	
+	<body>
+		<div id="main">
+			<div id="root">
+				
+				<!-- header开始 -->
+				<div id="header" onmouseenter="bannerShow()" onmouseleave="bannerHide()">
+	<div id="headerContent">
+		<div id="headerContentLeft" class="headerContentBox">
+			<ul class="towardsRight bueatifiedList">
+				<li><a href="/" id="mainPage">首页</a></li>
+			</ul>
+		</div>
+		<div id="headerContentRight" class="headerContentBox">
+			<ul class="towardsLeft bueatifiedList">
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+	// header出现
+	function bannerShow(){
+		new anime({
+			targets: '#header',
+			opacity: 1,
+			easing: 'linear',
+			duration: 200
+		})
+	}
+	
+	// header消失
+	function bannerHide(){
+		new anime({
+			targets: '#header',
+			opacity: 0,
+			easing: 'linear',
+			duration: 300
+		})
+	}
+</script>
+				<!-- header结束 -->
+				
+				<!-- container开始 -->
+				<div id="container">
+					<div id="coverViewPort">
+						<div id="coverImg">
+							<p class="topTitle">my hollow wrath, my houkai</p>
+							<p class="topTitle">dissovling in the realm of shell</p>
+						</div>
+					</div>
+					<div id="content">
+						<div id="contentList">
+							
+							<!-- 内容 -->
+							<div id="postContent" class="commonBlockPanel">
+	<div id="postCoverViewPort">
+		<div id="postCoverImg" class="coverImg">
+			<img src="" id="img" />
+		</div>
+	</div>
+	<div id="passageInfo">
+		<div id="title">递归算法思想小总结</div>
+		<div id="subInfo">
+			<span id="datetime">2020-10-21 20:49</span>
+			<ul id="tags">
+				
+				<li>算法</li>
+				
+			</ul>
+		</div>
+	</div>
+	<div id="postText">
+		<h2 id="我对递归的理解">我对递归的理解</h2>
+
+<p>在代码角度上，递归是指函数对自身的调用；在数学领域中，可通过递归解决的问题往往有自己的递推公式，这与“函数调用自身”在理解上和形式上都十分相似；现实问题中，递归往往是对问题的拆解，即该问题可以通过将大问题化小，小问题化了来解决，相比上面两个层面，在这一层面上，递归体现了它 十分关键的一个特点，即存在递归的终点。这个“终点”往往是整个文字的出发点，而且十分容易解决，就像<code class="language-plaintext highlighter-rouge">1! == 1</code>一样。</p>
+
+<p>在实际写递归代码时，可以按与上述角度相反的顺序来思考，也即，首先，将问题拆分。欲做到这一点，往往按照“由顶向下”的思路分析，即，要实现最终问题，前一步要先实现什么，这样一来，“前一步”就会不停的展开下去，再稍加总结，发现共同规律，就会得到上述第二个角度提到的递推公式<code class="language-plaintext highlighter-rouge">f(n) = G(n - k)</code>，其中<code class="language-plaintext highlighter-rouge">G(x)</code>为一系列<code class="language-plaintext highlighter-rouge">f(x)</code>和其他已知值的运算，<code class="language-plaintext highlighter-rouge">x</code>取<code class="language-plaintext highlighter-rouge">n</code>减去一正整数<code class="language-plaintext highlighter-rouge">k</code>或<code class="language-plaintext highlighter-rouge">x</code>就是该递归过程的一个终点</p>
+
+<p>通常，递推公式与最终代码的形式十分相似，但递推公式相比最终代码，少了十分重要的一部分。递归公式是数学的，它仅仅反映关系，而对于递归的终点不会提及，就好比行列式的递归定义不会告知“递归到二阶（或者直接到一阶）行列式时问题即可简单解决”，而程序代码负责得出最终的结果（最具代表性的就是一句<code class="language-plaintext highlighter-rouge">return</code>语句），因而代码中必须含有判断递归终点的一部分，这部分是代码与纯数学递归公式的一个显著区别。</p>
+
+<p>这样一来，参考前面提到的递归公式，一个使用递归思想解决问题的函数大概长这个样子：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solve</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="c1"># 先判断一下递归终点，避免一直归下去
+</span>    <span class="k">if</span> <span class="n">expression</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">value</span>
+    
+    <span class="c1"># 没到终点，就按照递归公式接着归下去(这里递归公式仅为示例)
+</span>    <span class="k">return</span> <span class="n">values</span> <span class="o">*</span> <span class="n">solve</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<h2 id="记录一些递归的例子长期更新">记录一些递归的例子（长期更新）</h2>
+
+<ul>
+  <li>上楼梯问题，描述大概如下</li>
+</ul>
+
+<blockquote>
+  <p>一个人爬楼梯，一次最多只能爬3级，问爬上15级楼梯一共有多少种方法？</p>
+</blockquote>
+
+<p>要上n级，可以从<code class="language-plaintext highlighter-rouge">n - 1</code>，<code class="language-plaintext highlighter-rouge">n - 2</code>，<code class="language-plaintext highlighter-rouge">n - 3</code>上，递推公式get</p>
+
+<p>递归终点：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>终点可能的情况</th>
+      <th>上一级</th>
+      <th>上两级</th>
+      <th>上三级</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>可能的方法数（返回值）</td>
+      <td>1</td>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>代码：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solve</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">4</span>
+    
+    <span class="k">return</span> <span class="n">solve</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">solve</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">solve</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="c1"># 为什么老把我认成是yaml的代码···
+</span>
+</code></pre></div></div>
+
+<p>实际递归过程中多个相同的<code class="language-plaintext highlighter-rouge">solve(n)</code>被运算了，降低了算法效率，优化方法很多，暂略。</p>
+
+
+	</div>
+</div>
+<div id="postBottom" class="commonBlockPanel">
+	<div id="bottomJump">
+		
+		<a id="pre" href="/2020/10/21/cover-test.html">Pre</a>
+		
+		
+		<a id="next" href="/2020/10/25/leetcode-videoclips.html">Next</a>
+		
+	</div>
+</div>
+							<!-- 内容结束 -->
+							
+						</div>
+						<div id="extraInfoList">
+							<div id="blogerInfo" class="commonBlockPanel scrollFixed">
+								<div id="blogerCoverViewPort">
+									<div id="blogerCoverImg" class="coverImg" onmouseenter="avatorShine()" 
+									onclick="showFloatingWinodwWithInfo('brFloatingWindow', 'brFloatingWindowContent', '在萌图上拷到的头像图片')">
+										<div id="shiningBar"></div>
+									</div>
+								</div>
+								<p id="blogerName" class="centerLocatedText">饱食终日的我</p>
+								<p id="blogerDescription" class="centerLocatedText"></p>
+								<div id="relatedLinksBox">
+									<ul id="relatedLinks" class="bueatifiedList">
+										
+										<li><a href="https://github.com/DarjeelingFu">github</a></li>
+										
+										<li><a href="https://www.kaggle.com/michaelfu2012">Kaggle</a></li>
+										
+									</ul>
+								</div>
+							</div>
+							<div id="siteInfoBox" class="commonBlockPanel scrollFixed">
+								<div id="siteInfo">
+									<span>
+										<p class="centerLocatedText siteInfoHead">POST</p>
+										
+										
+										<p class="centerLocatedText siteInfoBody">6</p>
+									</span>
+									<span>
+										<p class="centerLocatedText siteInfoHead">TAG</p>
+										
+										
+										<p class="centerLocatedText siteInfoBody">4</p>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- container结束 -->
+				
+				<!-- 浮窗开始 -->
+				<div id="brFloatingWindow" class="commonGlobalFloatingWindow commonBlockPanel" onclick="closeBrFloatingWindow()" >
+					<!-- <div id="brFlaotingWindowHeader"></div> -->
+					<p id="brFloatingWindowContent"></p>
+				</div>
+				<!-- 浮窗结束 -->
+				
+			</div>
+		</div>
+		<script src="/static/js/animations.js"></script>
+		<script>
+			
+			function log(a){
+				console.log(a)
+			}
+			
+			var imgCoverWidth = $('.articleCoverViewPort').css('width')
+			var imgCoverHeight = $('.articleCoverViewPort').css('height')
+			if(imgCoverHeight && imgCoverHeight){
+				var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
+				var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
+				cutImage('.articleCover', width, height)
+			}
+			
+			var imgCoverWidth = $('#postCoverViewPort').css('width')
+			var imgCoverHeight = $('#postCoverViewPort').css('height')
+			if(imgCoverWidth && imgCoverHeight){
+				var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
+				var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
+				cutImage('#img', width, height)
+			}
+			
+		</script>
+	</body>
+</html>

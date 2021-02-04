@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>秦莱山记志</title>
+	<script src="/static/js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/anime.min.js"></script>
+	<script src="/static/js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="/static/js/highlight.pack.js"></script>
+	<script type="text/javascript" src="/static/js/highlightjs-line-numbers.js"></script>
+	<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+	<script type="text/javascript">hljs.initLineNumbersOnLoad();</script>
+	<script type="text/javascript" src="/static/js/image_cut.js"></script>
+	<script type="text/javascript" src="/static/js/scroll-event.js"></script>	
+
+	<!-- 	
+	<link rel="shortcut icon" type="image/x-icon" media="screen" href="/favicon.ico" />
+    <link rel="canonical" href="/2020/11/17/NLP-word2vec.html" />
+    <link rel="alternate" type="application/rss+xml" title="FuXiangyu's blog (initial version)" href="/feed.xml"  />
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/octicons/3.5.0/octicons.min.css" >
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+	-->
+
+	<link rel="stylesheet" href="/static/css/common.css" />
+	<link rel="stylesheet" href="/static/css/header.css" />
+	<link rel="stylesheet" href="/static/css/container.css" />
+	<link rel="stylesheet" href="/static/css/side.css" />
+	<link rel="stylesheet" href="/static/css/floatwindows.css" />
+	<link rel="stylesheet" href="/static/css/post.css" />
+	<link rel="stylesheet" href="/static/css/md.css" />
+	<link rel="stylesheet" href="/static/styles/darcula.css" />	
+
+</head>
+	
+	<body>
+		<div id="main">
+			<div id="root">
+				
+				<!-- header开始 -->
+				<div id="header" onmouseenter="bannerShow()" onmouseleave="bannerHide()">
+	<div id="headerContent">
+		<div id="headerContentLeft" class="headerContentBox">
+			<ul class="towardsRight bueatifiedList">
+				<li><a href="/" id="mainPage">首页</a></li>
+			</ul>
+		</div>
+		<div id="headerContentRight" class="headerContentBox">
+			<ul class="towardsLeft bueatifiedList">
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+	// header出现
+	function bannerShow(){
+		new anime({
+			targets: '#header',
+			opacity: 1,
+			easing: 'linear',
+			duration: 200
+		})
+	}
+	
+	// header消失
+	function bannerHide(){
+		new anime({
+			targets: '#header',
+			opacity: 0,
+			easing: 'linear',
+			duration: 300
+		})
+	}
+</script>
+				<!-- header结束 -->
+				
+				<!-- container开始 -->
+				<div id="container">
+					<div id="coverViewPort">
+						<div id="coverImg">
+							<p class="topTitle">my hollow wrath, my houkai</p>
+							<p class="topTitle">dissovling in the realm of shell</p>
+						</div>
+					</div>
+					<div id="content">
+						<div id="contentList">
+							
+							<!-- 内容 -->
+							<div id="postContent" class="commonBlockPanel">
+	<div id="postCoverViewPort">
+		<div id="postCoverImg" class="coverImg">
+			<img src="" id="img" />
+		</div>
+	</div>
+	<div id="passageInfo">
+		<div id="title">NLP and word2vec</div>
+		<div id="subInfo">
+			<span id="datetime">2020-11-17 21:23</span>
+			<ul id="tags">
+				
+				<li>机器学习</li>
+				
+			</ul>
+		</div>
+	</div>
+	<div id="postText">
+		<h2 id="自然语言处理-natural-language-processing">自然语言处理 Natural Language Processing</h2>
+
+<p>自然语言处理是指让计算机处理人类能够理解的自然语言并达成一定目的，比如智能问答，名词实体识别等等。</p>
+
+<p>对机器学习而言，其学习模型无非可以用<code class="language-plaintext highlighter-rouge">f(x) = y</code>表示，即，给定一系列输入，通过模型内部的复杂运算，最终得到结果。在自然语言处理领域，处理的基本对象为词语，因而<code class="language-plaintext highlighter-rouge">x</code>可以是一个或多个词语，其输出<code class="language-plaintext highlighter-rouge">y</code>则可以是<code class="language-plaintext highlighter-rouge">x</code>的词性，或者<code class="language-plaintext highlighter-rouge">x</code>的同义词等等。</p>
+
+<p>机器学习的模型仅接受数字化的输入，因而要想将自然语言作为输入，就必须找到方法把语言文字转换为数字数据，该过程被称为词嵌入（嵌入到数字空间）。word2vec是常见的词嵌入方法。</p>
+
+<h2 id="word2vec词嵌入方法">Word2vec词嵌入方法</h2>
+
+<p>word2vec的愿景是用一个定长的n-dim向量唯一表示一个词语，该向量的各维往往有自己独特的意义（比如不同维度代表不同情感色彩的强弱，（解释不固定）），本质上是用语言模型（Language Model）来表示词语。需要注意的是，word2vec的获得本身就是机器学习的结果，下面介绍其具体获得过程。</p>
+
+<p>既然word2vec词向量可以通过机器学习获得，那么可以从训练集，隐藏层设置，数据输出三个层面来理解其获得过程。</p>
+
+<p>首先，word2vec学习模型的输入可以一个词语，该词语用其<code class="language-plaintext highlighter-rouge">one-hot</code>编码表示，也即，设整个词表中有<code class="language-plaintext highlighter-rouge">N</code>个词语，并按一定次序排列，那么第<code class="language-plaintext highlighter-rouge">n</code>个词语的<code class="language-plaintext highlighter-rouge">one-hot</code>编码为一个N维向量，其中除第<code class="language-plaintext highlighter-rouge">n</code>位为<code class="language-plaintext highlighter-rouge">1</code>外，其他维都为<code class="language-plaintext highlighter-rouge">0</code>。这样一来，词表中的词语就可以被唯一标定。到目前为止，好像已经找到了用向量唯一表示词语的方法，似乎已经没有必要再使用word2vec获得其词向量。的确，one-hot编码可以作为词语的向量表示，但是它过于稀疏，会造成存储空间的浪费，同时这种向量表示仅仅是简单的标记，缺少具体含义，这些是word2vec想要避免的。</p>
+
+<p>前面说过，word2vec词向量希望体现出一个词语的某种含义，这种“含义”实际上是从该词语的上下文中获得的。word2vec模型是有监督的学习模型。数据集中，除了词语的one-hot编码，还有该词语的上下文环境作为“标签值”。简单地说，标签值可以是输入词语最有可能关联的词语（同样以one-hot编码表示），这样一来，通过不断训练，给定词<code class="language-plaintext highlighter-rouge">x</code>输出的<code class="language-plaintext highlighter-rouge">N</code>维向量中最大值所对应的值即为<code class="language-plaintext highlighter-rouge">x</code>最可能关联的值。当然，实际训练时情况更复杂，往往<code class="language-plaintext highlighter-rouge">y</code>不是唯一的，毕竟一个词语的上下文环境本身就是复杂的。同时<code class="language-plaintext highlighter-rouge">x</code>也可能不是唯一的，这种模型通过给定上下文来预测空缺的那个词语。</p>
+
+<p>但是，该模型的训练结果比不被我们所重视，而我们真正需要的其实是模型内部的参数。one-hot编码具有自己的独特性，独特在<code class="language-plaintext highlighter-rouge">1</code>是唯一的，也即，在训练过程中，当一个one-hot编码被传入时，从输入到隐含层的各个权重中，仅有与<code class="language-plaintext highlighter-rouge">1</code>相连的权重被激活了，只要one-hot编码不同，那么激活的权重就不同，而前面已经说明，词语与其one-hot编码一一对应，这样一来，经过该模型的训练，所有的词语就会被一一对应于相等数量的权重，而且不难直到，如果隐含层的单元个数为<code class="language-plaintext highlighter-rouge">v</code>，那么每个词对应的权重数也为<code class="language-plaintext highlighter-rouge">v</code>，将这<code class="language-plaintext highlighter-rouge">v</code>个数据放到一个向量中，该向量即为词语的wrod2vec词向量。</p>
+
+<p>由于引入了上下文环境，word2vec词向量具有了表达含义的能力，有训练结果显示，词语king，queen，man，woman的word2vec词向量体现出了<code class="language-plaintext highlighter-rouge">king = queen - woman + man</code>的奇妙运算关系。</p>
+
+
+	</div>
+</div>
+<div id="postBottom" class="commonBlockPanel">
+	<div id="bottomJump">
+		
+		<a id="pre" href="/2020/10/25/leetcode-videoclips.html">Pre</a>
+		
+		
+		<span>咕咕咕</span>
+		
+	</div>
+</div>
+							<!-- 内容结束 -->
+							
+						</div>
+						<div id="extraInfoList">
+							<div id="blogerInfo" class="commonBlockPanel scrollFixed">
+								<div id="blogerCoverViewPort">
+									<div id="blogerCoverImg" class="coverImg" onmouseenter="avatorShine()" 
+									onclick="showFloatingWinodwWithInfo('brFloatingWindow', 'brFloatingWindowContent', '在萌图上拷到的头像图片')">
+										<div id="shiningBar"></div>
+									</div>
+								</div>
+								<p id="blogerName" class="centerLocatedText">饱食终日的我</p>
+								<p id="blogerDescription" class="centerLocatedText"></p>
+								<div id="relatedLinksBox">
+									<ul id="relatedLinks" class="bueatifiedList">
+										
+										<li><a href="https://github.com/DarjeelingFu">github</a></li>
+										
+										<li><a href="https://www.kaggle.com/michaelfu2012">Kaggle</a></li>
+										
+									</ul>
+								</div>
+							</div>
+							<div id="siteInfoBox" class="commonBlockPanel scrollFixed">
+								<div id="siteInfo">
+									<span>
+										<p class="centerLocatedText siteInfoHead">POST</p>
+										
+										
+										<p class="centerLocatedText siteInfoBody">6</p>
+									</span>
+									<span>
+										<p class="centerLocatedText siteInfoHead">TAG</p>
+										
+										
+										<p class="centerLocatedText siteInfoBody">4</p>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- container结束 -->
+				
+				<!-- 浮窗开始 -->
+				<div id="brFloatingWindow" class="commonGlobalFloatingWindow commonBlockPanel" onclick="closeBrFloatingWindow()" >
+					<!-- <div id="brFlaotingWindowHeader"></div> -->
+					<p id="brFloatingWindowContent"></p>
+				</div>
+				<!-- 浮窗结束 -->
+				
+			</div>
+		</div>
+		<script src="/static/js/animations.js"></script>
+		<script>
+			
+			function log(a){
+				console.log(a)
+			}
+			
+			var imgCoverWidth = $('.articleCoverViewPort').css('width')
+			var imgCoverHeight = $('.articleCoverViewPort').css('height')
+			if(imgCoverHeight && imgCoverHeight){
+				var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
+				var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
+				cutImage('.articleCover', width, height)
+			}
+			
+			var imgCoverWidth = $('#postCoverViewPort').css('width')
+			var imgCoverHeight = $('#postCoverViewPort').css('height')
+			if(imgCoverWidth && imgCoverHeight){
+				var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
+				var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
+				cutImage('#img', width, height)
+			}
+			
+		</script>
+	</body>
+</html>

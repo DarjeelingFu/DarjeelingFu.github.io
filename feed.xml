@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-02-04T12:34:21+08:00</updated><id>/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">NLP and word2vec</title><link href="/2020/11/17/NLP-word2vec.html" rel="alternate" type="text/html" title="NLP and word2vec" /><published>2020-11-17T21:23:04+08:00</published><updated>2020-11-17T21:23:04+08:00</updated><id>/2020/11/17/NLP-word2vec</id><content type="html" xml:base="/2020/11/17/NLP-word2vec.html">&lt;h2 id=&quot;自然语言处理-natural-language-processing&quot;&gt;自然语言处理 Natural Language Processing&lt;/h2&gt;
+
+&lt;p&gt;自然语言处理是指让计算机处理人类能够理解的自然语言并达成一定目的，比如智能问答，名词实体识别等等。&lt;/p&gt;
+
+&lt;p&gt;对机器学习而言，其学习模型无非可以用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f(x) = y&lt;/code&gt;表示，即，给定一系列输入，通过模型内部的复杂运算，最终得到结果。在自然语言处理领域，处理的基本对象为词语，因而&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;可以是一个或多个词语，其输出&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt;则可以是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;的词性，或者&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;的同义词等等。&lt;/p&gt;
+
+&lt;p&gt;机器学习的模型仅接受数字化的输入，因而要想将自然语言作为输入，就必须找到方法把语言文字转换为数字数据，该过程被称为词嵌入（嵌入到数字空间）。word2vec是常见的词嵌入方法。&lt;/p&gt;
+
+&lt;h2 id=&quot;word2vec词嵌入方法&quot;&gt;Word2vec词嵌入方法&lt;/h2&gt;
+
+&lt;p&gt;word2vec的愿景是用一个定长的n-dim向量唯一表示一个词语，该向量的各维往往有自己独特的意义（比如不同维度代表不同情感色彩的强弱，（解释不固定）），本质上是用语言模型（Language Model）来表示词语。需要注意的是，word2vec的获得本身就是机器学习的结果，下面介绍其具体获得过程。&lt;/p&gt;
+
+&lt;p&gt;既然word2vec词向量可以通过机器学习获得，那么可以从训练集，隐藏层设置，数据输出三个层面来理解其获得过程。&lt;/p&gt;
+
+&lt;p&gt;首先，word2vec学习模型的输入可以一个词语，该词语用其&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;one-hot&lt;/code&gt;编码表示，也即，设整个词表中有&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N&lt;/code&gt;个词语，并按一定次序排列，那么第&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;个词语的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;one-hot&lt;/code&gt;编码为一个N维向量，其中除第&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;位为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;外，其他维都为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;。这样一来，词表中的词语就可以被唯一标定。到目前为止，好像已经找到了用向量唯一表示词语的方法，似乎已经没有必要再使用word2vec获得其词向量。的确，one-hot编码可以作为词语的向量表示，但是它过于稀疏，会造成存储空间的浪费，同时这种向量表示仅仅是简单的标记，缺少具体含义，这些是word2vec想要避免的。&lt;/p&gt;
+
+&lt;p&gt;前面说过，word2vec词向量希望体现出一个词语的某种含义，这种“含义”实际上是从该词语的上下文中获得的。word2vec模型是有监督的学习模型。数据集中，除了词语的one-hot编码，还有该词语的上下文环境作为“标签值”。简单地说，标签值可以是输入词语最有可能关联的词语（同样以one-hot编码表示），这样一来，通过不断训练，给定词&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;输出的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;N&lt;/code&gt;维向量中最大值所对应的值即为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;最可能关联的值。当然，实际训练时情况更复杂，往往&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt;不是唯一的，毕竟一个词语的上下文环境本身就是复杂的。同时&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;也可能不是唯一的，这种模型通过给定上下文来预测空缺的那个词语。&lt;/p&gt;
+
+&lt;p&gt;但是，该模型的训练结果比不被我们所重视，而我们真正需要的其实是模型内部的参数。one-hot编码具有自己的独特性，独特在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;是唯一的，也即，在训练过程中，当一个one-hot编码被传入时，从输入到隐含层的各个权重中，仅有与&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;相连的权重被激活了，只要one-hot编码不同，那么激活的权重就不同，而前面已经说明，词语与其one-hot编码一一对应，这样一来，经过该模型的训练，所有的词语就会被一一对应于相等数量的权重，而且不难直到，如果隐含层的单元个数为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v&lt;/code&gt;，那么每个词对应的权重数也为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v&lt;/code&gt;，将这&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v&lt;/code&gt;个数据放到一个向量中，该向量即为词语的wrod2vec词向量。&lt;/p&gt;
+
+&lt;p&gt;由于引入了上下文环境，word2vec词向量具有了表达含义的能力，有训练结果显示，词语king，queen，man，woman的word2vec词向量体现出了&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;king = queen - woman + man&lt;/code&gt;的奇妙运算关系。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="机器学习" /><summary type="html">自然语言处理 Natural Language Processing</summary></entry><entry><title type="html">leetcode日记</title><link href="/2020/10/25/leetcode-videoclips.html" rel="alternate" type="text/html" title="leetcode日记" /><published>2020-10-25T12:37:27+08:00</published><updated>2020-10-25T12:37:27+08:00</updated><id>/2020/10/25/leetcode-videoclips</id><content type="html" xml:base="/2020/10/25/leetcode-videoclips.html">&lt;blockquote&gt;
+  &lt;p&gt;你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。&lt;/p&gt;
+
+  &lt;p&gt;视频片段 clips[i] 都用区间进行表示：开始于 clips[i] [0] 并于 clips[i] [1] 结束。我们甚至可以对这些片段自由地再剪辑，例如片段 [0, 7] 可以剪切成 [0, 1] + [1, 3] + [3, 7] 三部分。&lt;/p&gt;
+
+  &lt;p&gt;我们需要将这些片段进行再剪辑，并将剪辑后的内容拼接成覆盖整个运动过程的片段（[0, T]）。返回所需片段的最小数目，如果无法完成该任务，则返回 -1 。&lt;/p&gt;
+
+  &lt;p&gt;了解到该问题实质上是找到尽可能少的片段去覆盖最大的范围时，很难让人不想到贪心算法。但是我对贪心算法掌握并不熟练，故虽能在代码中体现该思想，但想法仍旧十分浅层和初阶，最终通过后排名也不尽人意，有待后期继续完善。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;主要思路：首先将clips按长度降序排序，在保证包含0（起点）和T（终点，大于等于即可）的前提下遍历找出最少的需要的clip；其次，将这些clips按起点（clip[i] [0]）升序排序，这样他们的起点在数轴上能够依次排开，之后遍历这些clip，每次都判断是否要将需要的总片段数自增（分析可知，对于遍历中的每一个clip，只有其起点和终点满足一定要求时才会使总片段数自增，粗略的讲，clip的始末点都要在一个有效的区间里）。&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;videoStitching&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clips&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+        :type clips: List[List[int]]
+        :type T: int
+        :rtype: int
+        &quot;&quot;&quot;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sortedByLen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clips&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# print(sortedByLen)
+&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;isContained&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;finallySelected&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;isContained&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;isContained&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;finallySelected&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isContained&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isContained&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+        
+        &lt;span class=&quot;c1&quot;&gt;# print(finallySelected)
+&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isContained&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isContained&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;finallySelected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getStartPos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;currentStart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+            
+            &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentStart&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+                                
+                &lt;span class=&quot;n&quot;&gt;currentStart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt;
+                
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;currentStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'|'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;
+            
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getStartPos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;排名极差······有待提升&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="算法" /><summary type="html">你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。 视频片段 clips[i] 都用区间进行表示：开始于 clips[i] [0] 并于 clips[i] [1] 结束。我们甚至可以对这些片段自由地再剪辑，例如片段 [0, 7] 可以剪切成 [0, 1] + [1, 3] + [3, 7] 三部分。 我们需要将这些片段进行再剪辑，并将剪辑后的内容拼接成覆盖整个运动过程的片段（[0, T]）。返回所需片段的最小数目，如果无法完成该任务，则返回 -1 。 了解到该问题实质上是找到尽可能少的片段去覆盖最大的范围时，很难让人不想到贪心算法。但是我对贪心算法掌握并不熟练，故虽能在代码中体现该思想，但想法仍旧十分浅层和初阶，最终通过后排名也不尽人意，有待后期继续完善。</summary></entry><entry><title type="html">递归算法思想小总结</title><link href="/2020/10/21/learn-20201021.html" rel="alternate" type="text/html" title="递归算法思想小总结" /><published>2020-10-21T20:49:10+08:00</published><updated>2020-10-21T20:49:10+08:00</updated><id>/2020/10/21/learn-20201021</id><content type="html" xml:base="/2020/10/21/learn-20201021.html">&lt;h2 id=&quot;我对递归的理解&quot;&gt;我对递归的理解&lt;/h2&gt;
+
+&lt;p&gt;在代码角度上，递归是指函数对自身的调用；在数学领域中，可通过递归解决的问题往往有自己的递推公式，这与“函数调用自身”在理解上和形式上都十分相似；现实问题中，递归往往是对问题的拆解，即该问题可以通过将大问题化小，小问题化了来解决，相比上面两个层面，在这一层面上，递归体现了它 十分关键的一个特点，即存在递归的终点。这个“终点”往往是整个文字的出发点，而且十分容易解决，就像&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1! == 1&lt;/code&gt;一样。&lt;/p&gt;
+
+&lt;p&gt;在实际写递归代码时，可以按与上述角度相反的顺序来思考，也即，首先，将问题拆分。欲做到这一点，往往按照“由顶向下”的思路分析，即，要实现最终问题，前一步要先实现什么，这样一来，“前一步”就会不停的展开下去，再稍加总结，发现共同规律，就会得到上述第二个角度提到的递推公式&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f(n) = G(n - k)&lt;/code&gt;，其中&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;G(x)&lt;/code&gt;为一系列&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;f(x)&lt;/code&gt;和其他已知值的运算，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;取&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n&lt;/code&gt;减去一正整数&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;k&lt;/code&gt;或&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt;就是该递归过程的一个终点&lt;/p&gt;
+
+&lt;p&gt;通常，递推公式与最终代码的形式十分相似，但递推公式相比最终代码，少了十分重要的一部分。递归公式是数学的，它仅仅反映关系，而对于递归的终点不会提及，就好比行列式的递归定义不会告知“递归到二阶（或者直接到一阶）行列式时问题即可简单解决”，而程序代码负责得出最终的结果（最具代表性的就是一句&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;return&lt;/code&gt;语句），因而代码中必须含有判断递归终点的一部分，这部分是代码与纯数学递归公式的一个显著区别。&lt;/p&gt;
+
+&lt;p&gt;这样一来，参考前面提到的递归公式，一个使用递归思想解决问题的函数大概长这个样子：&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# 先判断一下递归终点，避免一直归下去
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expression&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;
+    
+    &lt;span class=&quot;c1&quot;&gt;# 没到终点，就按照递归公式接着归下去(这里递归公式仅为示例)
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;记录一些递归的例子长期更新&quot;&gt;记录一些递归的例子（长期更新）&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;上楼梯问题，描述大概如下&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;一个人爬楼梯，一次最多只能爬3级，问爬上15级楼梯一共有多少种方法？&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;要上n级，可以从&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n - 1&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n - 2&lt;/code&gt;，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;n - 3&lt;/code&gt;上，递推公式get&lt;/p&gt;
+
+&lt;p&gt;递归终点：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;终点可能的情况&lt;/th&gt;
+      &lt;th&gt;上一级&lt;/th&gt;
+      &lt;th&gt;上两级&lt;/th&gt;
+      &lt;th&gt;上三级&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;可能的方法数（返回值）&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;代码：&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;solve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;solve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# 为什么老把我认成是yaml的代码···
+&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;实际递归过程中多个相同的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;solve(n)&lt;/code&gt;被运算了，降低了算法效率，优化方法很多，暂略。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="算法" /><summary type="html">我对递归的理解</summary></entry><entry><title type="html">试试图床好用不，试试布局合理不</title><link href="/2020/10/21/cover-test.html" rel="alternate" type="text/html" title="试试图床好用不，试试布局合理不" /><published>2020-10-21T19:57:40+08:00</published><updated>2020-10-21T19:57:40+08:00</updated><id>/2020/10/21/cover-test</id><content type="html" xml:base="/2020/10/21/cover-test.html"></content><author><name>饱食终日的我</name></author><category term="测试" /><summary type="html"></summary></entry><entry><title type="html">第一篇博客</title><link href="/2020/10/18/test-first-blog.html" rel="alternate" type="text/html" title="第一篇博客" /><published>2020-10-18T22:57:00+08:00</published><updated>2020-10-18T22:57:00+08:00</updated><id>/2020/10/18/test-first-blog</id><content type="html" xml:base="/2020/10/18/test-first-blog.html">&lt;h2 id=&quot;我的第一篇博客&quot;&gt;我的第一篇博客&lt;/h2&gt;
+
+&lt;p&gt;经过许多学习与尝试，总算是写了点能看的博客。&lt;/p&gt;
+
+&lt;p&gt;最初的宏图大志 was proved to be achieved by small steps, 而不是一时兴起的东拼西凑。&lt;/p&gt;
+
+&lt;p&gt;希望可以继续坚持下去。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="日常" /><summary type="html">我的第一篇博客 经过许多学习与尝试，总算是写了点能看的博客。 最初的宏图大志 was proved to be achieved by small steps, 而不是一时兴起的东拼西凑。 希望可以继续坚持下去。</summary></entry><entry><title type="html">自编写md转html样式实验</title><link href="/jekyll/update/2020/10/18/test-for-md-to-html-style.html" rel="alternate" type="text/html" title="自编写md转html样式实验" /><published>2020-10-18T19:06:00+08:00</published><updated>2020-10-18T19:06:00+08:00</updated><id>/jekyll/update/2020/10/18/test-for-md-to-html-style</id><content type="html" xml:base="/jekyll/update/2020/10/18/test-for-md-to-html-style.html">&lt;h1 id=&quot;标题&quot;&gt;标题&lt;/h1&gt;
+
+&lt;h2 id=&quot;标题-1&quot;&gt;标题&lt;/h2&gt;
+
+&lt;h3 id=&quot;标题-2&quot;&gt;标题&lt;/h3&gt;
+
+&lt;h4 id=&quot;标题-3&quot;&gt;标题&lt;/h4&gt;
+
+&lt;h5 id=&quot;标题-4&quot;&gt;标题&lt;/h5&gt;
+
+&lt;p&gt;文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字&lt;/p&gt;
+
+&lt;p&gt;文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字&lt;/p&gt;
+
+&lt;p&gt;文字文字文字文字文字&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;引用&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Hello&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, world!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;www.baidu.com&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;A&lt;/th&gt;
+      &lt;th&gt;B&lt;/th&gt;
+      &lt;th&gt;C&lt;/th&gt;
+      &lt;th&gt;D&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>饱食终日的我</name></author><category term="jekyll" /><category term="update" /><category term="测试" /><summary type="html">标题 标题 标题 标题 标题 文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字 文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字 文字文字文字文字文字 引用 public class Hello{ static public void main(String[] args){ System.out.println(&quot;Hello, world!&quot;); } } Link A B C D 1 2 3 4</summary></entry></feed>

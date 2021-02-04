@@ -1,9 +1,96 @@
----
-permalink: /404.html
-layout: default
----
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>秦莱山记志</title>
+	<script src="/static/js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/anime.min.js"></script>
+	<script src="/static/js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="/static/js/highlight.pack.js"></script>
+	<script type="text/javascript" src="/static/js/highlightjs-line-numbers.js"></script>
+	<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+	<script type="text/javascript">hljs.initLineNumbersOnLoad();</script>
+	<script type="text/javascript" src="/static/js/image_cut.js"></script>
+	<script type="text/javascript" src="/static/js/scroll-event.js"></script>	
 
-<style type="text/css" media="screen">
+	<!-- 	
+	<link rel="shortcut icon" type="image/x-icon" media="screen" href="/favicon.ico" />
+    <link rel="canonical" href="/404.html" />
+    <link rel="alternate" type="application/rss+xml" title="FuXiangyu's blog (initial version)" href="/feed.xml"  />
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/octicons/3.5.0/octicons.min.css" >
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+	-->
+
+	<link rel="stylesheet" href="/static/css/common.css" />
+	<link rel="stylesheet" href="/static/css/header.css" />
+	<link rel="stylesheet" href="/static/css/container.css" />
+	<link rel="stylesheet" href="/static/css/side.css" />
+	<link rel="stylesheet" href="/static/css/floatwindows.css" />
+	<link rel="stylesheet" href="/static/css/post.css" />
+	<link rel="stylesheet" href="/static/css/md.css" />
+	<link rel="stylesheet" href="/static/styles/darcula.css" />	
+
+</head>
+	
+	<body>
+		<div id="main">
+			<div id="root">
+				
+				<!-- header开始 -->
+				<div id="header" onmouseenter="bannerShow()" onmouseleave="bannerHide()">
+	<div id="headerContent">
+		<div id="headerContentLeft" class="headerContentBox">
+			<ul class="towardsRight bueatifiedList">
+				<li><a href="/" id="mainPage">首页</a></li>
+			</ul>
+		</div>
+		<div id="headerContentRight" class="headerContentBox">
+			<ul class="towardsLeft bueatifiedList">
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+	// header出现
+	function bannerShow(){
+		new anime({
+			targets: '#header',
+			opacity: 1,
+			easing: 'linear',
+			duration: 200
+		})
+	}
+	
+	// header消失
+	function bannerHide(){
+		new anime({
+			targets: '#header',
+			opacity: 0,
+			easing: 'linear',
+			duration: 300
+		})
+	}
+</script>
+				<!-- header结束 -->
+				
+				<!-- container开始 -->
+				<div id="container">
+					<div id="coverViewPort">
+						<div id="coverImg">
+							<p class="topTitle">my hollow wrath, my houkai</p>
+							<p class="topTitle">dissovling in the realm of shell</p>
+						</div>
+					</div>
+					<div id="content">
+						<div id="contentList">
+							
+							<!-- 内容 -->
+							<style type="text/css" media="screen">
   .container {
     margin: 10px auto;
     max-width: 600px;
@@ -23,3 +110,83 @@ layout: default
   <p><strong>Page not found :(</strong></p>
   <p>The requested page could not be found.</p>
 </div>
+
+							<!-- 内容结束 -->
+							
+						</div>
+						<div id="extraInfoList">
+							<div id="blogerInfo" class="commonBlockPanel scrollFixed">
+								<div id="blogerCoverViewPort">
+									<div id="blogerCoverImg" class="coverImg" onmouseenter="avatorShine()" 
+									onclick="showFloatingWinodwWithInfo('brFloatingWindow', 'brFloatingWindowContent', '在萌图上拷到的头像图片')">
+										<div id="shiningBar"></div>
+									</div>
+								</div>
+								<p id="blogerName" class="centerLocatedText">饱食终日的我</p>
+								<p id="blogerDescription" class="centerLocatedText"></p>
+								<div id="relatedLinksBox">
+									<ul id="relatedLinks" class="bueatifiedList">
+										
+										<li><a href="https://github.com/DarjeelingFu">github</a></li>
+										
+										<li><a href="https://www.kaggle.com/michaelfu2012">Kaggle</a></li>
+										
+									</ul>
+								</div>
+							</div>
+							<div id="siteInfoBox" class="commonBlockPanel scrollFixed">
+								<div id="siteInfo">
+									<span>
+										<p class="centerLocatedText siteInfoHead">POST</p>
+										
+										
+										<p class="centerLocatedText siteInfoBody">6</p>
+									</span>
+									<span>
+										<p class="centerLocatedText siteInfoHead">TAG</p>
+										
+										
+										<p class="centerLocatedText siteInfoBody">4</p>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- container结束 -->
+				
+				<!-- 浮窗开始 -->
+				<div id="brFloatingWindow" class="commonGlobalFloatingWindow commonBlockPanel" onclick="closeBrFloatingWindow()" >
+					<!-- <div id="brFlaotingWindowHeader"></div> -->
+					<p id="brFloatingWindowContent"></p>
+				</div>
+				<!-- 浮窗结束 -->
+				
+			</div>
+		</div>
+		<script src="/static/js/animations.js"></script>
+		<script>
+			
+			function log(a){
+				console.log(a)
+			}
+			
+			var imgCoverWidth = $('.articleCoverViewPort').css('width')
+			var imgCoverHeight = $('.articleCoverViewPort').css('height')
+			if(imgCoverHeight && imgCoverHeight){
+				var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
+				var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
+				cutImage('.articleCover', width, height)
+			}
+			
+			var imgCoverWidth = $('#postCoverViewPort').css('width')
+			var imgCoverHeight = $('#postCoverViewPort').css('height')
+			if(imgCoverWidth && imgCoverHeight){
+				var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
+				var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
+				cutImage('#img', width, height)
+			}
+			
+		</script>
+	</body>
+</html>

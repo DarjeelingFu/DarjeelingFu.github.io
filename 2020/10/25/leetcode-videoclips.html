@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>秦莱山记志</title>
+	<script src="/static/js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/anime.min.js"></script>
+	<script src="/static/js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="/static/js/highlight.pack.js"></script>
+	<script type="text/javascript" src="/static/js/highlightjs-line-numbers.js"></script>
+	<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+	<script type="text/javascript">hljs.initLineNumbersOnLoad();</script>
+	<script type="text/javascript" src="/static/js/image_cut.js"></script>
+	<script type="text/javascript" src="/static/js/scroll-event.js"></script>	
+
+	<!-- 	
+	<link rel="shortcut icon" type="image/x-icon" media="screen" href="/favicon.ico" />
+    <link rel="canonical" href="/2020/10/25/leetcode-videoclips.html" />
+    <link rel="alternate" type="application/rss+xml" title="FuXiangyu's blog (initial version)" href="/feed.xml"  />
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/octicons/3.5.0/octicons.min.css" >
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+	-->
+
+	<link rel="stylesheet" href="/static/css/common.css" />
+	<link rel="stylesheet" href="/static/css/header.css" />
+	<link rel="stylesheet" href="/static/css/container.css" />
+	<link rel="stylesheet" href="/static/css/side.css" />
+	<link rel="stylesheet" href="/static/css/floatwindows.css" />
+	<link rel="stylesheet" href="/static/css/post.css" />
+	<link rel="stylesheet" href="/static/css/md.css" />
+	<link rel="stylesheet" href="/static/styles/darcula.css" />	
+
+</head>
+	
+	<body>
+		<div id="main">
+			<div id="root">
+				
+				<!-- header开始 -->
+				<div id="header" onmouseenter="bannerShow()" onmouseleave="bannerHide()">
+	<div id="headerContent">
+		<div id="headerContentLeft" class="headerContentBox">
+			<ul class="towardsRight bueatifiedList">
+				<li><a href="/" id="mainPage">首页</a></li>
+			</ul>
+		</div>
+		<div id="headerContentRight" class="headerContentBox">
+			<ul class="towardsLeft bueatifiedList">
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+	// header出现
+	function bannerShow(){
+		new anime({
+			targets: '#header',
+			opacity: 1,
+			easing: 'linear',
+			duration: 200
+		})
+	}
+	
+	// header消失
+	function bannerHide(){
+		new anime({
+			targets: '#header',
+			opacity: 0,
+			easing: 'linear',
+			duration: 300
+		})
+	}
+</script>
+				<!-- header结束 -->
+				
+				<!-- container开始 -->
+				<div id="container">
+					<div id="coverViewPort">
+						<div id="coverImg">
+							<p class="topTitle">my hollow wrath, my houkai</p>
+							<p class="topTitle">dissovling in the realm of shell</p>
+						</div>
+					</div>
+					<div id="content">
+						<div id="contentList">
+							
+							<!-- 内容 -->
+							<div id="postContent" class="commonBlockPanel">
+	<div id="postCoverViewPort">
+		<div id="postCoverImg" class="coverImg">
+			<img src="" id="img" />
+		</div>
+	</div>
+	<div id="passageInfo">
+		<div id="title">leetcode日记</div>
+		<div id="subInfo">
+			<span id="datetime">2020-10-25 12:37</span>
+			<ul id="tags">
+				
+				<li>算法</li>
+				
+			</ul>
+		</div>
+	</div>
+	<div id="postText">
+		<blockquote>
+  <p>你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。</p>
+
+  <p>视频片段 clips[i] 都用区间进行表示：开始于 clips[i] [0] 并于 clips[i] [1] 结束。我们甚至可以对这些片段自由地再剪辑，例如片段 [0, 7] 可以剪切成 [0, 1] + [1, 3] + [3, 7] 三部分。</p>
+
+  <p>我们需要将这些片段进行再剪辑，并将剪辑后的内容拼接成覆盖整个运动过程的片段（[0, T]）。返回所需片段的最小数目，如果无法完成该任务，则返回 -1 。</p>
+
+  <p>了解到该问题实质上是找到尽可能少的片段去覆盖最大的范围时，很难让人不想到贪心算法。但是我对贪心算法掌握并不熟练，故虽能在代码中体现该思想，但想法仍旧十分浅层和初阶，最终通过后排名也不尽人意，有待后期继续完善。</p>
+</blockquote>
+
+<p>主要思路：首先将clips按长度降序排序，在保证包含0（起点）和T（终点，大于等于即可）的前提下遍历找出最少的需要的clip；其次，将这些clips按起点（clip[i] [0]）升序排序，这样他们的起点在数轴上能够依次排开，之后遍历这些clip，每次都判断是否要将需要的总片段数自增（分析可知，对于遍历中的每一个clip，只有其起点和终点满足一定要求时才会使总片段数自增，粗略的讲，clip的始末点都要在一个有效的区间里）。</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">videoStitching</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">clips</span><span class="p">,</span> <span class="n">T</span><span class="p">):</span>
+        <span class="s">"""
+        :type clips: List[List[int]]
+        :type T: int
+        :rtype: int
+        """</span>
+        <span class="n">sortedByLen</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">clips</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="bp">self</span><span class="p">.</span><span class="n">getLen</span><span class="p">)</span>
+        <span class="c1"># print(sortedByLen)
+</span>        <span class="n">isContained</span> <span class="o">=</span> <span class="p">[</span><span class="bp">False</span><span class="p">,</span> <span class="bp">False</span><span class="p">]</span>
+        <span class="n">finallySelected</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">clip</span> <span class="ow">in</span> <span class="n">sortedByLen</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">clip</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">isContained</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="k">if</span> <span class="n">clip</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">T</span><span class="p">:</span>
+                <span class="n">isContained</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="n">finallySelected</span> <span class="o">+=</span> <span class="p">[</span><span class="n">clip</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">isContained</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">isContained</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="k">break</span>
+        
+        <span class="c1"># print(finallySelected)
+</span>        <span class="k">if</span> <span class="p">(</span><span class="n">isContained</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">isContained</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="n">sortedByStart</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">finallySelected</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="bp">self</span><span class="p">.</span><span class="n">getStartPos</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">sortedByStart</span><span class="p">)</span>
+        <span class="n">total</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">currentStart</span> <span class="o">=</span> <span class="n">sortedByStart</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">currentEnd</span> <span class="o">=</span> <span class="n">sortedByStart</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">currentEnd</span> <span class="o">&gt;=</span> <span class="n">T</span><span class="p">:</span>
+            <span class="k">return</span> <span class="mi">1</span>
+        
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sortedByStart</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">sortedByStart</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">currentEnd</span><span class="p">:</span>
+                <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+            
+            <span class="k">elif</span> <span class="n">sortedByStart</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">currentStart</span> <span class="ow">and</span> <span class="n">sortedByStart</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">currentEnd</span><span class="p">:</span>
+                <span class="n">total</span> <span class="o">+=</span> <span class="mi">1</span>
+                                
+                <span class="n">currentStart</span> <span class="o">=</span> <span class="n">currentEnd</span>
+                
+            <span class="k">if</span> <span class="n">sortedByStart</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">currentEnd</span><span class="p">:</span>
+                <span class="n">currentEnd</span> <span class="o">=</span> <span class="n">sortedByStart</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">sortedByStart</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">T</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">total</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">currentStart</span><span class="p">,</span> <span class="n">currentEnd</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">'|'</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">total</span>
+            
+    <span class="k">def</span> <span class="nf">getLen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">clip</span><span class="p">):</span>
+        <span class="k">return</span> <span class="o">-</span><span class="p">(</span><span class="n">clip</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">clip</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">def</span> <span class="nf">getStartPos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">clip</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">clip</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>排名极差······有待提升</p>
+
+	</div>
+</div>
+<div id="postBottom" class="commonBlockPanel">
+	<div id="bottomJump">
+		
+		<a id="pre" href="/2020/10/21/learn-20201021.html">Pre</a>
+		
+		
+		<a id="next" href="/2020/11/17/NLP-word2vec.html">Next</a>
+		
+	</div>
+</div>
+							<!-- 内容结束 -->
+							
+						</div>
+						<div id="extraInfoList">
+							<div id="blogerInfo" class="commonBlockPanel scrollFixed">
+								<div id="blogerCoverViewPort">
+									<div id="blogerCoverImg" class="coverImg" onmouseenter="avatorShine()" 
+									onclick="showFloatingWinodwWithInfo('brFloatingWindow', 'brFloatingWindowContent', '在萌图上拷到的头像图片')">
+										<div id="shiningBar"></div>
+									</div>
+								</div>
+								<p id="blogerName" class="centerLocatedText">饱食终日的我</p>
+								<p id="blogerDescription" class="centerLocatedText"></p>
+								<div id="relatedLinksBox">
+									<ul id="relatedLinks" class="bueatifiedList">
+										
+										<li><a href="https://github.com/DarjeelingFu">github</a></li>
+										
+										<li><a href="https://www.kaggle.com/michaelfu2012">Kaggle</a></li>
+										
+									</ul>
+								</div>
+							</div>
+							<div id="siteInfoBox" class="commonBlockPanel scrollFixed">
+								<div id="siteInfo">
+									<span>
+										<p class="centerLocatedText siteInfoHead">POST</p>
+										
+										
+										<p class="centerLocatedText siteInfoBody">6</p>
+									</span>
+									<span>
+										<p class="centerLocatedText siteInfoHead">TAG</p>
+										
+										
+										<p class="centerLocatedText siteInfoBody">4</p>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- container结束 -->
+				
+				<!-- 浮窗开始 -->
+				<div id="brFloatingWindow" class="commonGlobalFloatingWindow commonBlockPanel" onclick="closeBrFloatingWindow()" >
+					<!-- <div id="brFlaotingWindowHeader"></div> -->
+					<p id="brFloatingWindowContent"></p>
+				</div>
+				<!-- 浮窗结束 -->
+				
+			</div>
+		</div>
+		<script src="/static/js/animations.js"></script>
+		<script>
+			
+			function log(a){
+				console.log(a)
+			}
+			
+			var imgCoverWidth = $('.articleCoverViewPort').css('width')
+			var imgCoverHeight = $('.articleCoverViewPort').css('height')
+			if(imgCoverHeight && imgCoverHeight){
+				var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
+				var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
+				cutImage('.articleCover', width, height)
+			}
+			
+			var imgCoverWidth = $('#postCoverViewPort').css('width')
+			var imgCoverHeight = $('#postCoverViewPort').css('height')
+			if(imgCoverWidth && imgCoverHeight){
+				var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
+				var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
+				cutImage('#img', width, height)
+			}
+			
+		</script>
+	</body>
+</html>
