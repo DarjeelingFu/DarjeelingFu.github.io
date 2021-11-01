@@ -1,4 +1,305 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-02-04T12:34:21+08:00</updated><id>/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">NLP and word2vec</title><link href="/2020/11/17/NLP-word2vec.html" rel="alternate" type="text/html" title="NLP and word2vec" /><published>2020-11-17T21:23:04+08:00</published><updated>2020-11-17T21:23:04+08:00</updated><id>/2020/11/17/NLP-word2vec</id><content type="html" xml:base="/2020/11/17/NLP-word2vec.html">&lt;h2 id=&quot;自然语言处理-natural-language-processing&quot;&gt;自然语言处理 Natural Language Processing&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-11-01T18:29:36+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">软件工程week6-α迭代第一次报告</title><link href="http://localhost:4000/2021/11/01/software-engineering-project-report-1.html" rel="alternate" type="text/html" title="软件工程week6-α迭代第一次报告" /><published>2021-11-01T18:08:26+08:00</published><updated>2021-11-01T18:08:26+08:00</updated><id>http://localhost:4000/2021/11/01/software-engineering-project-report-1</id><content type="html" xml:base="http://localhost:4000/2021/11/01/software-engineering-project-report-1.html">&lt;h1 id=&quot;scrum-meeting--week-6&quot;&gt;Scrum Meeting -Week 6&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://localhost:4000/2021/11/01/software-engineering-project-report-1.html&quot;&gt;博客链接&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;一工作记录&quot;&gt;一、工作记录&lt;/h2&gt;
+
+&lt;h3 id=&quot;1每个人的工作及进度&quot;&gt;1.每个人的工作及进度&lt;/h3&gt;
+
+&lt;h4 id=&quot;本周进度&quot;&gt;①本周进度&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;队员&lt;/th&gt;
+      &lt;th&gt;本周完成&lt;/th&gt;
+      &lt;th&gt;下周计划&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;房间创建页ui&lt;/td&gt;
+      &lt;td&gt;前后端接口&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;用户个人页登录前的界面&lt;/td&gt;
+      &lt;td&gt;用户个人界面登录后的界面，房间详情页，前后端口问题解决&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;用户和房间相关后台接口&lt;/td&gt;
+      &lt;td&gt;消息和论坛相关的后台接口&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;房间详情页ui&lt;/td&gt;
+      &lt;td&gt;前后端接口&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;房间管理页ui、完成获取房间信息&lt;/td&gt;
+      &lt;td&gt;删除人员、提交页面、删除房间按钮的功能实现&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;消息页的ui设计&lt;/td&gt;
+      &lt;td&gt;对于单条消息或是多条消息的问题解决&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;组队页的ui&lt;/td&gt;
+      &lt;td&gt;将前后端接口问题解决&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;日进度&quot;&gt;②日进度&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;队员&lt;/th&gt;
+      &lt;th&gt;25日（周一）已完成&lt;/th&gt;
+      &lt;th&gt;26日（周二）计划&lt;/th&gt;
+      &lt;th&gt;26日（周二）已完成&lt;/th&gt;
+      &lt;th&gt;27日（周三）计划&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;房间创建页导航栏 issue#2&lt;/td&gt;
+      &lt;td&gt;房间创建页类型ui issue#2&lt;/td&gt;
+      &lt;td&gt;房间创建页类型ui issue#2&lt;/td&gt;
+      &lt;td&gt;房间创建页标题ui issue#2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;用户个人登录前页面布局&lt;/td&gt;
+      &lt;td&gt;用户个人界面登录前调整&lt;/td&gt;
+      &lt;td&gt;用户个人界面登录前调整&lt;/td&gt;
+      &lt;td&gt;更换头像功能调试&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;创建项目&lt;/td&gt;
+      &lt;td&gt;后台用户相关接口&lt;/td&gt;
+      &lt;td&gt;后台用户相关接口&lt;/td&gt;
+      &lt;td&gt;后台房间相关接口&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;房间详情页面大致布局规划&lt;/td&gt;
+      &lt;td&gt;房间名称、类型板块设计&lt;/td&gt;
+      &lt;td&gt;房间名称类型模块设计&lt;/td&gt;
+      &lt;td&gt;小组成员模块设计&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;房间管理页ui框架 issue#1&lt;/td&gt;
+      &lt;td&gt;调整房间管理页ui细节issue#1&lt;/td&gt;
+      &lt;td&gt;房间管理页ui细节issue#1&lt;/td&gt;
+      &lt;td&gt;解决editor的显示问题issue#3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;消息页导航栏issue#4&lt;/td&gt;
+      &lt;td&gt;消息页标题ui issue#4&lt;/td&gt;
+      &lt;td&gt;消息页标题ui issue#4&lt;/td&gt;
+      &lt;td&gt;加入房间提醒ui issue#4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;组队页ui大致框架&lt;/td&gt;
+      &lt;td&gt;继续完成组队页ui中的大致框架&lt;/td&gt;
+      &lt;td&gt;组队页面的大致框架&lt;/td&gt;
+      &lt;td&gt;组队页中的各种跳转按钮&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;队员&lt;/th&gt;
+      &lt;th&gt;27日（周三）已完成&lt;/th&gt;
+      &lt;th&gt;28日（周四）计划&lt;/th&gt;
+      &lt;th&gt;28日（周四）已完成&lt;/th&gt;
+      &lt;th&gt;29日（周五）计划&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;房间创建页标题ui issue#2&lt;/td&gt;
+      &lt;td&gt;房间创建页最大人数ui issue#2&lt;/td&gt;
+      &lt;td&gt;房间创建页最大人数ui issue#2&lt;/td&gt;
+      &lt;td&gt;房间介绍及主页ui issue#2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;更换头像功能调试&lt;/td&gt;
+      &lt;td&gt;图片位置调整&lt;/td&gt;
+      &lt;td&gt;图片位置调整&lt;/td&gt;
+      &lt;td&gt;调整文字大小等&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;后台房间相关接口&lt;/td&gt;
+      &lt;td&gt;前端test页面的编写  issue#7&lt;/td&gt;
+      &lt;td&gt;前端test页面的编写 issue#7&lt;/td&gt;
+      &lt;td&gt;前端test页面的补充 issue#7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;小组成员模块设计&lt;/td&gt;
+      &lt;td&gt;加入队伍按钮功能实现&lt;/td&gt;
+      &lt;td&gt;加入队伍按钮布局样式设计&lt;/td&gt;
+      &lt;td&gt;房间组员头像图片布局设计&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;解决editor的显示问题 issue#3&lt;/td&gt;
+      &lt;td&gt;从后端获取房间信息issue#5&lt;/td&gt;
+      &lt;td&gt;从后端获取房间信息issue#5&lt;/td&gt;
+      &lt;td&gt;使房间信息能在原信息上修改issue#7&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;加入房间提醒ui issue#4&lt;/td&gt;
+      &lt;td&gt;房间变动提醒ui issue#4&lt;/td&gt;
+      &lt;td&gt;房间变动提醒ui issue#4&lt;/td&gt;
+      &lt;td&gt;房间退出提醒ui issue#4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;学习JavaScript中的各种跳转方式&lt;/td&gt;
+      &lt;td&gt;组队页中的各种跳转按钮&lt;/td&gt;
+      &lt;td&gt;组队页中的各种跳转按钮&lt;/td&gt;
+      &lt;td&gt;调试文字大小等系列&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;队员&lt;/th&gt;
+      &lt;th&gt;29日（周五）已完成&lt;/th&gt;
+      &lt;th&gt;11月1日（周一）计划&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;房间介绍及主页ui&lt;/td&gt;
+      &lt;td&gt;完成后端数据调用&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;调整文字大小等&lt;/td&gt;
+      &lt;td&gt;用户个人界面登录后的界面&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;前端test页面的补充 issue#7&lt;/td&gt;
+      &lt;td&gt;消息和论坛相关的后台接口&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;图片形状位置设计&lt;/td&gt;
+      &lt;td&gt;前后端接口&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;使房间信息能在原信息上修改issue#7&lt;/td&gt;
+      &lt;td&gt;提交按钮&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;房间退出提醒ui issue#4&lt;/td&gt;
+      &lt;td&gt;对于单条消息或是多条消息的问题解决&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;调试文字、背景等&lt;/td&gt;
+      &lt;td&gt;前后端接口解决&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;issues链接： &lt;a href=&quot;https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject/issues&quot;&gt;缺陷 - Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/01/oFGjWNnlyegVShw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2工作中遇到的困难&quot;&gt;2.工作中遇到的困难&lt;/h3&gt;
+
+&lt;p&gt;我们组成员大部分为微信小程序开发初学者，大部分队员都能把前端ui写好，部分队员在ui方面还有一定问题，但均在调用后端数据、前后端结合的方面问题比较大。对于后端，也存在uWSGI配置参数问题。具体信息如下：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;队员&lt;/th&gt;
+      &lt;th&gt;遇到的困难&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;目前没有信息用于“房间主页”栏目展示、不会运用循环展示用户信息&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;房间主页输入框的动态大小调整&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;没有把用户头像框对应调节&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;uWSGI配置参数问题&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;用户头像信息以及后端数据如何调用&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;flex的操作遇到困难&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;还在学习如何调用后端信息并对应前端&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;3关于高兴的地方&quot;&gt;3.关于高兴的地方&lt;/h3&gt;
+
+&lt;p&gt;组里大部分成员此前从未接触过类似的项目，大家都比较有动力去完成自己的任务，相互之间也经常讨论技术相关的东西；也都非常有想法，全队一起讨论了主题、功能、需求，大家的好点子基本上都被吸收进了这个项目的设计里。同时，大家也很有团队意识，每个人都积极配合，不管是代码相关还是其他方面都会在群里提出，大家一起解决！&lt;/p&gt;
+
+&lt;p&gt;特别感谢有小程序开发经验的付翔宇同学独自担当后端重任，并统一了整个软件的ui。由于项目才刚刚开始，大部分工作都只是前端的页面设计，也比较轻松，每个成员都很好地完成了预定计划。相信经过全队同学的努力，我们一定能很好的完成软件工程任务，做好我们的软件！&lt;/p&gt;
+
+&lt;h2 id=&quot;二燃尽图&quot;&gt;二、燃尽图&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/01/QMzR7JKwdVDeuAr.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;三例会照片&quot;&gt;三、例会照片&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/01/hKi9Rql7LwvjYN1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;拍摄者：贲龙&lt;/p&gt;
+
+&lt;h2 id=&quot;四代码签入记录&quot;&gt;四、代码签入记录&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/01/GujkeSKafChFMg8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/01/lyeQ32pts1dEHWI.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/01/LE2mcCwrg9Y68eo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="合作项目" /><summary type="html">Scrum Meeting -Week 6</summary></entry><entry><title type="html">NLP and word2vec</title><link href="http://localhost:4000/2020/11/17/NLP-word2vec.html" rel="alternate" type="text/html" title="NLP and word2vec" /><published>2020-11-17T21:23:04+08:00</published><updated>2020-11-17T21:23:04+08:00</updated><id>http://localhost:4000/2020/11/17/NLP-word2vec</id><content type="html" xml:base="http://localhost:4000/2020/11/17/NLP-word2vec.html">&lt;h2 id=&quot;自然语言处理-natural-language-processing&quot;&gt;自然语言处理 Natural Language Processing&lt;/h2&gt;
 
 &lt;p&gt;自然语言处理是指让计算机处理人类能够理解的自然语言并达成一定目的，比如智能问答，名词实体识别等等。&lt;/p&gt;
 
@@ -18,7 +319,7 @@
 
 &lt;p&gt;但是，该模型的训练结果比不被我们所重视，而我们真正需要的其实是模型内部的参数。one-hot编码具有自己的独特性，独特在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;是唯一的，也即，在训练过程中，当一个one-hot编码被传入时，从输入到隐含层的各个权重中，仅有与&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;相连的权重被激活了，只要one-hot编码不同，那么激活的权重就不同，而前面已经说明，词语与其one-hot编码一一对应，这样一来，经过该模型的训练，所有的词语就会被一一对应于相等数量的权重，而且不难直到，如果隐含层的单元个数为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v&lt;/code&gt;，那么每个词对应的权重数也为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v&lt;/code&gt;，将这&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v&lt;/code&gt;个数据放到一个向量中，该向量即为词语的wrod2vec词向量。&lt;/p&gt;
 
-&lt;p&gt;由于引入了上下文环境，word2vec词向量具有了表达含义的能力，有训练结果显示，词语king，queen，man，woman的word2vec词向量体现出了&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;king = queen - woman + man&lt;/code&gt;的奇妙运算关系。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="机器学习" /><summary type="html">自然语言处理 Natural Language Processing</summary></entry><entry><title type="html">leetcode日记</title><link href="/2020/10/25/leetcode-videoclips.html" rel="alternate" type="text/html" title="leetcode日记" /><published>2020-10-25T12:37:27+08:00</published><updated>2020-10-25T12:37:27+08:00</updated><id>/2020/10/25/leetcode-videoclips</id><content type="html" xml:base="/2020/10/25/leetcode-videoclips.html">&lt;blockquote&gt;
+&lt;p&gt;由于引入了上下文环境，word2vec词向量具有了表达含义的能力，有训练结果显示，词语king，queen，man，woman的word2vec词向量体现出了&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;king = queen - woman + man&lt;/code&gt;的奇妙运算关系。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="机器学习" /><summary type="html">自然语言处理 Natural Language Processing</summary></entry><entry><title type="html">leetcode日记</title><link href="http://localhost:4000/2020/10/25/leetcode-videoclips.html" rel="alternate" type="text/html" title="leetcode日记" /><published>2020-10-25T12:37:27+08:00</published><updated>2020-10-25T12:37:27+08:00</updated><id>http://localhost:4000/2020/10/25/leetcode-videoclips</id><content type="html" xml:base="http://localhost:4000/2020/10/25/leetcode-videoclips.html">&lt;blockquote&gt;
   &lt;p&gt;你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。&lt;/p&gt;
 
   &lt;p&gt;视频片段 clips[i] 都用区间进行表示：开始于 clips[i] [0] 并于 clips[i] [1] 结束。我们甚至可以对这些片段自由地再剪辑，例如片段 [0, 7] 可以剪切成 [0, 1] + [1, 3] + [3, 7] 三部分。&lt;/p&gt;
@@ -83,7 +384,7 @@
         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;排名极差······有待提升&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="算法" /><summary type="html">你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。 视频片段 clips[i] 都用区间进行表示：开始于 clips[i] [0] 并于 clips[i] [1] 结束。我们甚至可以对这些片段自由地再剪辑，例如片段 [0, 7] 可以剪切成 [0, 1] + [1, 3] + [3, 7] 三部分。 我们需要将这些片段进行再剪辑，并将剪辑后的内容拼接成覆盖整个运动过程的片段（[0, T]）。返回所需片段的最小数目，如果无法完成该任务，则返回 -1 。 了解到该问题实质上是找到尽可能少的片段去覆盖最大的范围时，很难让人不想到贪心算法。但是我对贪心算法掌握并不熟练，故虽能在代码中体现该思想，但想法仍旧十分浅层和初阶，最终通过后排名也不尽人意，有待后期继续完善。</summary></entry><entry><title type="html">递归算法思想小总结</title><link href="/2020/10/21/learn-20201021.html" rel="alternate" type="text/html" title="递归算法思想小总结" /><published>2020-10-21T20:49:10+08:00</published><updated>2020-10-21T20:49:10+08:00</updated><id>/2020/10/21/learn-20201021</id><content type="html" xml:base="/2020/10/21/learn-20201021.html">&lt;h2 id=&quot;我对递归的理解&quot;&gt;我对递归的理解&lt;/h2&gt;
+&lt;p&gt;排名极差······有待提升&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="算法" /><summary type="html">你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。 视频片段 clips[i] 都用区间进行表示：开始于 clips[i] [0] 并于 clips[i] [1] 结束。我们甚至可以对这些片段自由地再剪辑，例如片段 [0, 7] 可以剪切成 [0, 1] + [1, 3] + [3, 7] 三部分。 我们需要将这些片段进行再剪辑，并将剪辑后的内容拼接成覆盖整个运动过程的片段（[0, T]）。返回所需片段的最小数目，如果无法完成该任务，则返回 -1 。 了解到该问题实质上是找到尽可能少的片段去覆盖最大的范围时，很难让人不想到贪心算法。但是我对贪心算法掌握并不熟练，故虽能在代码中体现该思想，但想法仍旧十分浅层和初阶，最终通过后排名也不尽人意，有待后期继续完善。</summary></entry><entry><title type="html">递归算法思想小总结</title><link href="http://localhost:4000/2020/10/21/learn-20201021.html" rel="alternate" type="text/html" title="递归算法思想小总结" /><published>2020-10-21T20:49:10+08:00</published><updated>2020-10-21T20:49:10+08:00</updated><id>http://localhost:4000/2020/10/21/learn-20201021</id><content type="html" xml:base="http://localhost:4000/2020/10/21/learn-20201021.html">&lt;h2 id=&quot;我对递归的理解&quot;&gt;我对递归的理解&lt;/h2&gt;
 
 &lt;p&gt;在代码角度上，递归是指函数对自身的调用；在数学领域中，可通过递归解决的问题往往有自己的递推公式，这与“函数调用自身”在理解上和形式上都十分相似；现实问题中，递归往往是对问题的拆解，即该问题可以通过将大问题化小，小问题化了来解决，相比上面两个层面，在这一层面上，递归体现了它 十分关键的一个特点，即存在递归的终点。这个“终点”往往是整个文字的出发点，而且十分容易解决，就像&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1! == 1&lt;/code&gt;一样。&lt;/p&gt;
 
@@ -151,13 +452,13 @@
 &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;实际递归过程中多个相同的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;solve(n)&lt;/code&gt;被运算了，降低了算法效率，优化方法很多，暂略。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="算法" /><summary type="html">我对递归的理解</summary></entry><entry><title type="html">试试图床好用不，试试布局合理不</title><link href="/2020/10/21/cover-test.html" rel="alternate" type="text/html" title="试试图床好用不，试试布局合理不" /><published>2020-10-21T19:57:40+08:00</published><updated>2020-10-21T19:57:40+08:00</updated><id>/2020/10/21/cover-test</id><content type="html" xml:base="/2020/10/21/cover-test.html"></content><author><name>饱食终日的我</name></author><category term="测试" /><summary type="html"></summary></entry><entry><title type="html">第一篇博客</title><link href="/2020/10/18/test-first-blog.html" rel="alternate" type="text/html" title="第一篇博客" /><published>2020-10-18T22:57:00+08:00</published><updated>2020-10-18T22:57:00+08:00</updated><id>/2020/10/18/test-first-blog</id><content type="html" xml:base="/2020/10/18/test-first-blog.html">&lt;h2 id=&quot;我的第一篇博客&quot;&gt;我的第一篇博客&lt;/h2&gt;
+&lt;p&gt;实际递归过程中多个相同的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;solve(n)&lt;/code&gt;被运算了，降低了算法效率，优化方法很多，暂略。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="算法" /><summary type="html">我对递归的理解</summary></entry><entry><title type="html">试试图床好用不，试试布局合理不</title><link href="http://localhost:4000/2020/10/21/cover-test.html" rel="alternate" type="text/html" title="试试图床好用不，试试布局合理不" /><published>2020-10-21T19:57:40+08:00</published><updated>2020-10-21T19:57:40+08:00</updated><id>http://localhost:4000/2020/10/21/cover-test</id><content type="html" xml:base="http://localhost:4000/2020/10/21/cover-test.html"></content><author><name>饱食终日的我</name></author><category term="测试" /><summary type="html"></summary></entry><entry><title type="html">第一篇博客</title><link href="http://localhost:4000/2020/10/18/test-first-blog.html" rel="alternate" type="text/html" title="第一篇博客" /><published>2020-10-18T22:57:00+08:00</published><updated>2020-10-18T22:57:00+08:00</updated><id>http://localhost:4000/2020/10/18/test-first-blog</id><content type="html" xml:base="http://localhost:4000/2020/10/18/test-first-blog.html">&lt;h2 id=&quot;我的第一篇博客&quot;&gt;我的第一篇博客&lt;/h2&gt;
 
 &lt;p&gt;经过许多学习与尝试，总算是写了点能看的博客。&lt;/p&gt;
 
 &lt;p&gt;最初的宏图大志 was proved to be achieved by small steps, 而不是一时兴起的东拼西凑。&lt;/p&gt;
 
-&lt;p&gt;希望可以继续坚持下去。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="日常" /><summary type="html">我的第一篇博客 经过许多学习与尝试，总算是写了点能看的博客。 最初的宏图大志 was proved to be achieved by small steps, 而不是一时兴起的东拼西凑。 希望可以继续坚持下去。</summary></entry><entry><title type="html">自编写md转html样式实验</title><link href="/jekyll/update/2020/10/18/test-for-md-to-html-style.html" rel="alternate" type="text/html" title="自编写md转html样式实验" /><published>2020-10-18T19:06:00+08:00</published><updated>2020-10-18T19:06:00+08:00</updated><id>/jekyll/update/2020/10/18/test-for-md-to-html-style</id><content type="html" xml:base="/jekyll/update/2020/10/18/test-for-md-to-html-style.html">&lt;h1 id=&quot;标题&quot;&gt;标题&lt;/h1&gt;
+&lt;p&gt;希望可以继续坚持下去。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="日常" /><summary type="html">我的第一篇博客 经过许多学习与尝试，总算是写了点能看的博客。 最初的宏图大志 was proved to be achieved by small steps, 而不是一时兴起的东拼西凑。 希望可以继续坚持下去。</summary></entry><entry><title type="html">自编写md转html样式实验</title><link href="http://localhost:4000/jekyll/update/2020/10/18/test-for-md-to-html-style.html" rel="alternate" type="text/html" title="自编写md转html样式实验" /><published>2020-10-18T19:06:00+08:00</published><updated>2020-10-18T19:06:00+08:00</updated><id>http://localhost:4000/jekyll/update/2020/10/18/test-for-md-to-html-style</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/10/18/test-for-md-to-html-style.html">&lt;h1 id=&quot;标题&quot;&gt;标题&lt;/h1&gt;
 
 &lt;h2 id=&quot;标题-1&quot;&gt;标题&lt;/h2&gt;
 

@@ -4,6 +4,7 @@
     font-weight: 500;
 	display: inline-block;
 	padding: 0 30px;
+    margin-bottom: 20px;
 }
 
 #postText h2{
@@ -13,14 +14,14 @@
 
 #postText h2, h3, h4, h5{
 	margin: 20px 0;
-	margin-top: 45px;
+	margin-top: 20px;
 	font-weight: 500;
 }
 
 #postText{
-	line-height: 1.8;
+	line-height: 1.6;
     color: #333;
-	letter-spacing: 0.6px;
+	letter-spacing: 0.3px;
 }
 
 #postText p{
@@ -125,4 +126,8 @@ table tbody>tr:last-child>td {
 
 .hljs-ln-n::before {
     margin-right: 5px;
+}
+
+#postText img {
+    max-width: 100%;
 }
