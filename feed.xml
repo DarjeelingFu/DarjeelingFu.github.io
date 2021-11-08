@@ -1,4 +1,252 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-11-01T18:42:31+08:00</updated><id>/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">软件工程week6-α迭代第一次报告</title><link href="/2021/11/01/software-engineering-project-report-1.html" rel="alternate" type="text/html" title="软件工程week6-α迭代第一次报告" /><published>2021-11-01T18:08:26+08:00</published><updated>2021-11-01T18:08:26+08:00</updated><id>/2021/11/01/software-engineering-project-report-1</id><content type="html" xml:base="/2021/11/01/software-engineering-project-report-1.html">&lt;h1 id=&quot;scrum-meeting--week-6&quot;&gt;Scrum Meeting -Week 6&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-11-08T18:56:18+08:00</updated><id>/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">软件工程week6-α迭代第二次报告</title><link href="/2021/11/08/software-engineering-project-report-2.html" rel="alternate" type="text/html" title="软件工程week6-α迭代第二次报告" /><published>2021-11-08T18:53:47+08:00</published><updated>2021-11-08T18:53:47+08:00</updated><id>/2021/11/08/software-engineering-project-report-2</id><content type="html" xml:base="/2021/11/08/software-engineering-project-report-2.html">&lt;h1 id=&quot;scrum-meeting--week-7&quot;&gt;Scrum Meeting -Week 7&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject&quot;&gt;Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;一工作记录&quot;&gt;一、工作记录&lt;/h2&gt;
+
+&lt;h3 id=&quot;1每个人的工作及进度&quot;&gt;1.每个人的工作及进度&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;队员&lt;/th&gt;
+      &lt;th&gt;1日（周一）已完成&lt;/th&gt;
+      &lt;th&gt;2日（周二）计划&lt;/th&gt;
+      &lt;th&gt;2日（周二）已完成&lt;/th&gt;
+      &lt;th&gt;3日（周三）计划&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;继续调整页面#11&lt;/td&gt;
+      &lt;td&gt;继续调整页面，使其能根据不同机型调整布局#11&lt;/td&gt;
+      &lt;td&gt;实现不同机型不同布局#11&lt;/td&gt;
+      &lt;td&gt;学习把数据发送到后端的写法#11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;完成ui界面#13&lt;/td&gt;
+      &lt;td&gt;继续调整页面#13&lt;/td&gt;
+      &lt;td&gt;修改个人详情页后端参数#13&lt;/td&gt;
+      &lt;td&gt;同步个人房间信息获取信息#13&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;消息推送部分接口#15&lt;/td&gt;
+      &lt;td&gt;消息推送部分接口#15&lt;/td&gt;
+      &lt;td&gt;消息推送部分接口#15&lt;/td&gt;
+      &lt;td&gt;消息推送部分接口#15&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;页面整体布局完善#12&lt;/td&gt;
+      &lt;td&gt;房间数据读取#12&lt;/td&gt;
+      &lt;td&gt;房间数据读取#12&lt;/td&gt;
+      &lt;td&gt;房间成员数据读取#12&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;使房间信息正常显示#5&lt;/td&gt;
+      &lt;td&gt;使房间简介、房间主页能够滚动#5&lt;/td&gt;
+      &lt;td&gt;使房间简介、房间主页能够滚动#5&lt;/td&gt;
+      &lt;td&gt;完成删除房间功能#5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;学习了后端基本的函数#14&lt;/td&gt;
+      &lt;td&gt;调整页面#14&lt;/td&gt;
+      &lt;td&gt;调整页面#14&lt;/td&gt;
+      &lt;td&gt;进行细节问题的修改#14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;总体调整页面格局#10&lt;/td&gt;
+      &lt;td&gt;后端数据的调用，数据的展示#10&lt;/td&gt;
+      &lt;td&gt;学习后端数据的调用#10&lt;/td&gt;
+      &lt;td&gt;后端数据的调用，数据的展示#10&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;队员&lt;/th&gt;
+      &lt;th&gt;3日（周三）已完成&lt;/th&gt;
+      &lt;th&gt;4日（周四）计划&lt;/th&gt;
+      &lt;th&gt;4日（周四）已完成&lt;/th&gt;
+      &lt;th&gt;5日（周五）计划&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;看了数据发送的写法#11&lt;/td&gt;
+      &lt;td&gt;实现将数据发送到后端，并验证其有效#11&lt;/td&gt;
+      &lt;td&gt;成功将数据发送到后端，并且能查看到#11&lt;/td&gt;
+      &lt;td&gt;验证数据有效#11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;同步个人房间信息获取信息#13&lt;/td&gt;
+      &lt;td&gt;学习后端接口#13&lt;/td&gt;
+      &lt;td&gt;学习后端接口#13&lt;/td&gt;
+      &lt;td&gt;实现个人详情页后端接口#13&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;消息推送部分接口#15&lt;/td&gt;
+      &lt;td&gt;论坛系统部分接口#16&lt;/td&gt;
+      &lt;td&gt;论坛系统部分接口#16&lt;/td&gt;
+      &lt;td&gt;论坛系统部分接口#16&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;房间成员数据读取#12&lt;/td&gt;
+      &lt;td&gt;小组成员列表转跳成员页面#12&lt;/td&gt;
+      &lt;td&gt;小组成员列表转跳成员页面#12&lt;/td&gt;
+      &lt;td&gt;滚动小组成员列表#12&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;完成删除房间功能#5&lt;/td&gt;
+      &lt;td&gt;使人员信息正常展示#8&lt;/td&gt;
+      &lt;td&gt;使人员信息正常展示#8&lt;/td&gt;
+      &lt;td&gt;完成删除人员功能#8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;进行细节问题的修改#14&lt;/td&gt;
+      &lt;td&gt;规划后端函数需要哪些#14&lt;/td&gt;
+      &lt;td&gt;学习后端数据及一些基本的函数#14&lt;/td&gt;
+      &lt;td&gt;系统消息接口#14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;请求后端数据#10&lt;/td&gt;
+      &lt;td&gt;将后端数据展示于前端#10&lt;/td&gt;
+      &lt;td&gt;前端的数据显示#10&lt;/td&gt;
+      &lt;td&gt;增加刷新按钮#10&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;队员&lt;/th&gt;
+      &lt;th&gt;5日（周五）已完成&lt;/th&gt;
+      &lt;th&gt;8日（周一）计划&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;验证数据有效#11&lt;/td&gt;
+      &lt;td&gt;使提交表单时一起提交用户信息&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;实现个人详情页后端接口#13&lt;/td&gt;
+      &lt;td&gt;实现用户信息同步跳转&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;论坛系统部分接口#16&lt;/td&gt;
+      &lt;td&gt;部分消息和论坛相关的接口，小程序内部的实时通信&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;滚动小组成员列表#12&lt;/td&gt;
+      &lt;td&gt;申请加入按键功能&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;完成删除人员功能#8&lt;/td&gt;
+      &lt;td&gt;完成修改房间信息功能&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;实现系统消息接口#14&lt;/td&gt;
+      &lt;td&gt;前端界面有待优化&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;增加刷新按钮#10&lt;/td&gt;
+      &lt;td&gt;实现用户的房间的刷新功能&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;issues链接： &lt;a href=&quot;https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject/issues&quot;&gt;缺陷 - Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/08/JLmwSqAr9ls3t7T.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2工作中遇到的困难&quot;&gt;2.工作中遇到的困难&lt;/h3&gt;
+
+&lt;p&gt;本周我们组成员大部分已可以实现前后端的结合，但是前端大部分队员在按钮功能、wxml文件与js文件的参数传递方面有较大的问题，后端也存在一些问题。具体信息如下：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;队员&lt;/th&gt;
+      &lt;th&gt;遇到的困难&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;删除房间后程序该如何跳转未实现，修改房间信息功能缺少接口&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;不能在提交表单时一起提交用户信息&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;不能实现用户信息同步跳转&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;部分消息和论坛相关的接口，小程序内部的实时通信，未能自己实现python对象到字典的序列化操作&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;申请加入按键功能&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;前端界面还有待优化&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;不知道怎么实现用户的房间的刷新功能，目前设置了一个刷新按钮进行调试&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;除此之外，我们的ui界面风格不太统一，有待后续改进。&lt;/p&gt;
+
+&lt;h3 id=&quot;3关于高兴的地方&quot;&gt;3.关于高兴的地方&lt;/h3&gt;
+
+&lt;p&gt;本周大部分同学都能自行学习js调用后端数据的方法，基本上均实现了前端数据提交到后端、前端获取后端数据的功能，使得各自负责的页面均能实现基本的逻辑功能。并且，在开发过程中遇到一些问题，大家开始在群里提问和讨论了，也有会的同学解答问题。&lt;/p&gt;
+
+&lt;p&gt;本周王灿同学电脑出现故障，但为了不耽误项目的开发进度借了电脑进行开发，非常感谢！&lt;/p&gt;
+
+&lt;h2 id=&quot;二燃尽图&quot;&gt;二、燃尽图&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/08/67J5mXdagEpRjyq.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;三例会照片&quot;&gt;三、例会照片&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/08/YDPI5CT7y3JLEbe.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;拍摄者：刘晓琳&lt;/p&gt;
+
+&lt;h2 id=&quot;四代码签入记录&quot;&gt;四、代码签入记录&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/08/iIu7jAwFh4Z5cTl.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="合作项目" /><summary type="html">Scrum Meeting -Week 7</summary></entry><entry><title type="html">软件工程week6-α迭代第一次报告</title><link href="/2021/11/01/software-engineering-project-report-1.html" rel="alternate" type="text/html" title="软件工程week6-α迭代第一次报告" /><published>2021-11-01T18:08:26+08:00</published><updated>2021-11-01T18:08:26+08:00</updated><id>/2021/11/01/software-engineering-project-report-1</id><content type="html" xml:base="/2021/11/01/software-engineering-project-report-1.html">&lt;h1 id=&quot;scrum-meeting--week-6&quot;&gt;Scrum Meeting -Week 6&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://localhost:4000/2021/11/01/software-engineering-project-report-1.html&quot;&gt;博客链接&lt;/a&gt;&lt;/p&gt;
 
