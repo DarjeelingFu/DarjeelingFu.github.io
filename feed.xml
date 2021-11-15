@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-11-15T21:25:47+08:00</updated><id>/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">软件工程α迭代测试报告</title><link href="/2021/11/15/software-engineering-project-report-3.html" rel="alternate" type="text/html" title="软件工程α迭代测试报告" /><published>2021-11-15T21:01:10+08:00</published><updated>2021-11-15T21:01:10+08:00</updated><id>/2021/11/15/software-engineering-project-report-3</id><content type="html" xml:base="/2021/11/15/software-engineering-project-report-3.html">&lt;h1 id=&quot;测试报告-week-8&quot;&gt;测试报告-WEEK 8&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-11-15T21:53:42+08:00</updated><id>/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">软件工程项目α迭代阶段总结报告</title><link href="/2021/11/15/software-engineering-project-report-alpha.html" rel="alternate" type="text/html" title="软件工程项目α迭代阶段总结报告" /><published>2021-11-15T21:52:01+08:00</published><updated>2021-11-15T21:52:01+08:00</updated><id>/2021/11/15/software-engineering-project-report-alpha</id><content type="html" xml:base="/2021/11/15/software-engineering-project-report-alpha.html">&lt;h1 id=&quot;第四小组alpha冲刺阶段博客目录&quot;&gt;第四小组Alpha冲刺阶段博客目录&lt;/h1&gt;
+
+&lt;h2 id=&quot;一scrum-meeting&quot;&gt;一、Scrum Meeting&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;第六周会议记录  https://darjeelingfu.github.io/2021/11/01/software-engineering-project-report-1.html&lt;/li&gt;
+  &lt;li&gt;第七周会议记录  https://darjeelingfu.github.io/2021/11/08/software-engineering-project-report-2.html&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;二测试报告&quot;&gt;二、测试报告&lt;/h2&gt;
+
+&lt;p&gt;https://darjeelingfu.github.io/2021/11/15/software-engineering-project-report-3.html&lt;/p&gt;
+
+&lt;h2 id=&quot;三习得的软工原理--方法--技能&quot;&gt;三、习得的软工原理 / 方法 / 技能&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;成员&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;收获&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;在过去的两周里，我学习了微信小程序的前端写法，掌握了git的使用与团队开发&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;掌握类似javascript的一些基础语法，学习了一些软件工程的需求分析方法和模型建立方法，同时也学会了一些git的使用方法，更便于代码的书写和管理&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;掌握了软件需求分析和软件整体设计的基本方法，提高了对整体任务进行模块划分和队伍内分工的效率，熟悉了git提供的各种功能，加深了对django框架原理的理解&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;在Alpha阶段，我学习到了小程序前端的基本语法，了解了软件需求分析对于产品设计和团队协作的重要性，同时熟悉了git团队间的合作使用&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;在α阶段，我了解了软件工程的具体流程和基本方法，学会了微信小程序页面的布局，用js实现页面的逻辑以及调用后端数据等，也学会了如何用git进行团队合作&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;在这几周里，我对js的认知从无到有，学习了一些基础语法和简单的应用，习惯用文档查找函数，学习了页面的静态布局，和数据绑定，函数调用等内容&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;在第一阶段中学习了一些JavaScript的基础语法，对需求分析等开发开发方法进行了实践，也学会了利用Git进行合作开发，规范文档的使用等等&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>饱食终日的我</name></author><category term="合作项目" /><summary type="html">第四小组Alpha冲刺阶段博客目录</summary></entry><entry><title type="html">软件工程α迭代测试报告</title><link href="/2021/11/15/software-engineering-project-report-3.html" rel="alternate" type="text/html" title="软件工程α迭代测试报告" /><published>2021-11-15T21:01:10+08:00</published><updated>2021-11-15T21:01:10+08:00</updated><id>/2021/11/15/software-engineering-project-report-3</id><content type="html" xml:base="/2021/11/15/software-engineering-project-report-3.html">&lt;h1 id=&quot;测试报告-week-8&quot;&gt;测试报告-WEEK 8&lt;/h1&gt;
 
 &lt;p&gt;我们的α迭代成果： &lt;a href=&quot;https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject&quot;&gt;Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)&lt;/a&gt;&lt;/p&gt;
 
