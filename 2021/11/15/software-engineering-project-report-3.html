@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>秦莱山记志</title>
+	<script src="/static/js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/anime.min.js"></script>
+	<script src="/static/js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="/static/js/highlight.pack.js"></script>
+	<script type="text/javascript" src="/static/js/highlightjs-line-numbers.js"></script>
+	<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+	<script type="text/javascript">hljs.initLineNumbersOnLoad();</script>
+	<script type="text/javascript" src="/static/js/image_cut.js"></script>
+	<script type="text/javascript" src="/static/js/scroll-event.js"></script>	
+
+	<!-- 	
+	<link rel="shortcut icon" type="image/x-icon" media="screen" href="/favicon.ico" />
+    <link rel="canonical" href="/2021/11/15/software-engineering-project-report-3.html" />
+    <link rel="alternate" type="application/rss+xml" title="FuXiangyu's blog (initial version)" href="/feed.xml"  />
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/octicons/3.5.0/octicons.min.css" >
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+	-->
+
+	<link rel="stylesheet" href="/static/css/common.css" />
+	<link rel="stylesheet" href="/static/css/header.css" />
+	<link rel="stylesheet" href="/static/css/container.css" />
+	<link rel="stylesheet" href="/static/css/side.css" />
+	<link rel="stylesheet" href="/static/css/floatwindows.css" />
+	<link rel="stylesheet" href="/static/css/post.css" />
+	<link rel="stylesheet" href="/static/css/md.css" />
+	<link rel="stylesheet" href="/static/styles/darcula.css" />	
+
+</head>
+	
+	<body>
+		<div id="main">
+			<div id="root">
+				
+				<!-- header开始 -->
+				<div id="header" onmouseenter="bannerShow()" onmouseleave="bannerHide()">
+	<div id="headerContent">
+		<div id="headerContentLeft" class="headerContentBox">
+			<ul class="towardsRight bueatifiedList">
+				<li><a href="/" id="mainPage">首页</a></li>
+			</ul>
+		</div>
+		<div id="headerContentRight" class="headerContentBox">
+			<ul class="towardsLeft bueatifiedList">
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+	// header出现
+	function bannerShow(){
+		new anime({
+			targets: '#header',
+			opacity: 1,
+			easing: 'linear',
+			duration: 200
+		})
+	}
+	
+	// header消失
+	function bannerHide(){
+		new anime({
+			targets: '#header',
+			opacity: 0,
+			easing: 'linear',
+			duration: 300
+		})
+	}
+</script>
+				<!-- header结束 -->
+				
+				<!-- container开始 -->
+				<div id="container">
+					<div id="coverViewPort">
+						<div id="coverImg">
+							<p class="topTitle">my hollow wrath, my houkai</p>
+							<p class="topTitle">dissovling in the realm of shell</p>
+						</div>
+					</div>
+					<div id="content">
+						<div id="contentList">
+							
+							<!-- 内容 -->
+							<div id="postContent" class="commonBlockPanel">
+	<div id="postCoverViewPort">
+		<div id="postCoverImg" class="coverImg">
+			<img src="" id="img" />
+		</div>
+	</div>
+	<div id="passageInfo">
+		<div id="title">软件工程α迭代测试报告</div>
+		<div id="subInfo">
+			<span id="datetime">2021-11-15 21:01</span>
+			<ul id="tags">
+				
+				<li>合作项目</li>
+				
+			</ul>
+		</div>
+	</div>
+	<div id="postText">
+		<h1 id="测试报告-week-8">测试报告-WEEK 8</h1>
+
+<p>我们的α迭代成果： <a href="https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject">Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)</a></p>
+
+<h2 id="1version-11-bug-list">1.version 1.1 bug list</h2>
+
+<h3 id="本次测试出现的bug">本次测试出现的bug</h3>
+
+<ul>
+  <li>消息问题：消息页显示的消息不正确。</li>
+  <li>
+    <p>房间成员问题：当无其他成员加入时，房间详情页成员显示为0但是成员列表有房主，而房间管理页的成员列表不显示房主；有的时候进入房间组员会显示不全；重复点击申请加入会出现成员缺失。</p>
+  </li>
+  <li>数据审查问题：创建房间的人数为0或负数时也可以创建成功；创建房间的时候可以输入特殊表情后创建成功的房间在房间列表未显示；创建房间时标题过长创建不成功。</li>
+  <li>
+    <p>跳转问题：修改房间信息后回到修改之前的页面，没有刷新修改信息。</p>
+  </li>
+  <li>
+    <p>排版问题：房间介绍信息显示溢出 、房间管理页房间介绍信息没有缩进。</p>
+  </li>
+  <li>加载问题：页面加载较慢。</li>
+</ul>
+
+<h3 id="有待改进的地方">有待改进的地方</h3>
+
+<ul>
+  <li>新房间在房间页的最底部，应显示在顶部。</li>
+  <li>点击“加入房间”按钮后应有提示信息，先由房主审核，审核通过后准许加入；加入房间之后，“加入房间”按钮应改为“退出房间”按钮。</li>
+  <li>加入房间以后自己应可以申请退出房间。</li>
+  <li>管理房间时应可以修改房间人数。</li>
+  <li>后续可以显示一下房间的头像。</li>
+  <li>房间标题应有字数限制</li>
+  <li>房间主页内容有待添加。</li>
+  <li>创建房间成功应该跳转房间详情页。</li>
+</ul>
+
+<h2 id="2场景测试">2.场景测试</h2>
+
+<h3 id="场景一">场景一</h3>
+
+<ul>
+  <li>典型用户：房主</li>
+  <li>需求：想要寻找SRDP项目成员。</li>
+  <li>场景描述：
+    <ul>
+      <li>扫码打开小程序。</li>
+      <li>点击创建房间的按钮，填写相关的信息，包括房间的类型（SRDP组队），创建房间的目的，介绍等等。</li>
+      <li>创建房间后，等待其他人加入房间。一段时间后，进入消息页面检查是否有新的成员。</li>
+      <li>进入房间详情页面，在成员一栏点击相应成员的头像，查看详细的个人信息。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="场景二">场景二</h3>
+
+<ul>
+  <li>典型用户：成员</li>
+  <li>需求：想要寻找SRDP队伍。</li>
+  <li>场景描述：
+    <ul>
+      <li>扫码打开小程序。</li>
+      <li>浏览位于首页的房间列表，选择合适SRDP队伍的房间。</li>
+      <li>点击房间进入详情页，查看房间的详细信息和当前的房间成员。</li>
+      <li>发现有合适的房间，点击申请加入，试图加入该房间。</li>
+      <li>一段时间后，打开消息页面，查看是否有新的的消息显示自己已加入该房间。</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="3测试矩阵">3.测试矩阵</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>组队页</th>
+      <th> </th>
+      <th> </th>
+      <th>房间详情页</th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>测试机型</td>
+      <td>展示房间信息</td>
+      <td>创建房间</td>
+      <td>跳转房间详情</td>
+      <td>展示房间信息</td>
+      <td>申请加入房间</td>
+      <td>管理房间</td>
+      <td>跳转人员详情</td>
+    </tr>
+    <tr>
+      <td>iphone11</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>重复加入会成员缺失</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+    <tr>
+      <td>iphone11pm</td>
+      <td>正常</td>
+      <td>人数非正数也可以创建</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+    <tr>
+      <td>Honor30</td>
+      <td>房间信息显示溢出</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+    <tr>
+      <td>Redmi Note8</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+    <tr>
+      <td>iphone12/13pm</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+    <tr>
+      <td>Huawei mate30</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>房间管理</th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>测试机型</td>
+      <td>展示房间信息</td>
+      <td>修改房间信息</td>
+      <td>删除组员</td>
+      <td>提交修改</td>
+      <td>删除房间</td>
+    </tr>
+    <tr>
+      <td>iphone11</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+    <tr>
+      <td>iphone11pm</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+    <tr>
+      <td>Honor30</td>
+      <td>房间介绍信息没有缩进</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+    <tr>
+      <td>Redmi Note8</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+    <tr>
+      <td>iphone12/13pm</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+    <tr>
+      <td>Huawei mate30</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>人员详情</th>
+      <th> </th>
+      <th>房间创建</th>
+      <th> </th>
+      <th>消息页</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>测试机型</td>
+      <td>展示用户信息</td>
+      <td>授权登录</td>
+      <td>填写创建信息</td>
+      <td>提交创建</td>
+      <td>接收消息</td>
+    </tr>
+    <tr>
+      <td>iphone11</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+    <tr>
+      <td>iphone11pm</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+    <tr>
+      <td>Honor30</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>接收不到真实消息</td>
+    </tr>
+    <tr>
+      <td>Redmi Note8</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+    </tr>
+    <tr>
+      <td>iphone12/13pm</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>接收不到真实信息</td>
+    </tr>
+    <tr>
+      <td>Huawei mate30</td>
+      <td>正常</td>
+      <td>加载缓慢</td>
+      <td>正常</td>
+      <td>正常</td>
+      <td>信息不同步</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="4alpha版本的出口条件">4.ALPHA版本的出口条件</h2>
+
+<p>我们在本次迭代中选择了功能较为基础的几个页面开发，最初的出口条件为：基础功能完善、界面美观。</p>
+
+<p>后来小程序出现了一些不影响整体功能的bug但是我们时间比较紧迫，所以出口条件变为：没有严重bug、界面较为美观。</p>
+
+	</div>
+</div>
+<div id="postBottom" class="commonBlockPanel">
+	<div id="bottomJump">
+		
+		<a id="pre" href="/2021/11/08/software-engineering-project-report-2.html">Pre</a>
+		
+		
+		<span>咕咕咕</span>
+		
+	</div>
+</div>
+							<!-- 内容结束 -->
+							
+						</div>
+						<div id="extraInfoList">
+							<div id="blogerInfo" class="commonBlockPanel scrollFixed">
+								<div id="blogerCoverViewPort">
+									<div id="blogerCoverImg" class="coverImg" onmouseenter="avatorShine()" 
+									onclick="showFloatingWinodwWithInfo('brFloatingWindow', 'brFloatingWindowContent', '在萌图上拷到的头像图片')">
+										<div id="shiningBar"></div>
+									</div>
+								</div>
+								<p id="blogerName" class="centerLocatedText">饱食终日的我</p>
+								<p id="blogerDescription" class="centerLocatedText"></p>
+								<div id="relatedLinksBox">
+									<ul id="relatedLinks" class="bueatifiedList">
+										
+										<li><a href="https://github.com/DarjeelingFu">github</a></li>
+										
+										<li><a href="https://www.kaggle.com/michaelfu2012">Kaggle</a></li>
+										
+									</ul>
+								</div>
+							</div>
+							<div id="siteInfoBox" class="commonBlockPanel scrollFixed">
+								<div id="siteInfo">
+									<span>
+										<p class="centerLocatedText siteInfoHead">POST</p>
+										
+										
+										<p class="centerLocatedText siteInfoBody">9</p>
+									</span>
+									<span>
+										<p class="centerLocatedText siteInfoHead">TAG</p>
+										
+										
+										<p class="centerLocatedText siteInfoBody">5</p>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- container结束 -->
+				
+				<!-- 浮窗开始 -->
+				<div id="brFloatingWindow" class="commonGlobalFloatingWindow commonBlockPanel" onclick="closeBrFloatingWindow()" >
+					<!-- <div id="brFlaotingWindowHeader"></div> -->
+					<p id="brFloatingWindowContent"></p>
+				</div>
+				<!-- 浮窗结束 -->
+				
+			</div>
+		</div>
+		<script src="/static/js/animations.js"></script>
+		<script>
+			
+			function log(a){
+				console.log(a)
+			}
+			
+			var imgCoverWidth = $('.articleCoverViewPort').css('width')
+			var imgCoverHeight = $('.articleCoverViewPort').css('height')
+			if(imgCoverHeight && imgCoverHeight){
+				var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
+				var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
+				cutImage('.articleCover', width, height)
+			}
+			
+			var imgCoverWidth = $('#postCoverViewPort').css('width')
+			var imgCoverHeight = $('#postCoverViewPort').css('height')
+			if(imgCoverWidth && imgCoverHeight){
+				var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
+				var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
+				cutImage('#img', width, height)
+			}
+			
+		</script>
+	</body>
+</html>

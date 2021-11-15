@@ -1,1 +1,1 @@
-jekyll build -d ../DarjeelingFu.github.io/
+bundle exec jekyll build -d ../DarjeelingFu.github.io/
