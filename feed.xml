@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-11-15T21:02:33+08:00</updated><id>/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">软件工程α迭代测试报告</title><link href="/2021/11/15/software-engineering-project-report-3.html" rel="alternate" type="text/html" title="软件工程α迭代测试报告" /><published>2021-11-15T21:01:10+08:00</published><updated>2021-11-15T21:01:10+08:00</updated><id>/2021/11/15/software-engineering-project-report-3</id><content type="html" xml:base="/2021/11/15/software-engineering-project-report-3.html">&lt;h1 id=&quot;测试报告-week-8&quot;&gt;测试报告-WEEK 8&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-11-15T21:25:47+08:00</updated><id>/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">软件工程α迭代测试报告</title><link href="/2021/11/15/software-engineering-project-report-3.html" rel="alternate" type="text/html" title="软件工程α迭代测试报告" /><published>2021-11-15T21:01:10+08:00</published><updated>2021-11-15T21:01:10+08:00</updated><id>/2021/11/15/software-engineering-project-report-3</id><content type="html" xml:base="/2021/11/15/software-engineering-project-report-3.html">&lt;h1 id=&quot;测试报告-week-8&quot;&gt;测试报告-WEEK 8&lt;/h1&gt;
 
 &lt;p&gt;我们的α迭代成果： &lt;a href=&quot;https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject&quot;&gt;Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)&lt;/a&gt;&lt;/p&gt;
 
@@ -302,7 +302,17 @@
 
 &lt;p&gt;我们在本次迭代中选择了功能较为基础的几个页面开发，最初的出口条件为：基础功能完善、界面美观。&lt;/p&gt;
 
-&lt;p&gt;后来小程序出现了一些不影响整体功能的bug但是我们时间比较紧迫，所以出口条件变为：没有严重bug、界面较为美观。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="合作项目" /><summary type="html">测试报告-WEEK 8</summary></entry><entry><title type="html">软件工程week6-α迭代第二次报告</title><link href="/2021/11/08/software-engineering-project-report-2.html" rel="alternate" type="text/html" title="软件工程week6-α迭代第二次报告" /><published>2021-11-08T18:53:47+08:00</published><updated>2021-11-08T18:53:47+08:00</updated><id>/2021/11/08/software-engineering-project-report-2</id><content type="html" xml:base="/2021/11/08/software-engineering-project-report-2.html">&lt;h1 id=&quot;scrum-meeting--week-7&quot;&gt;Scrum Meeting -Week 7&lt;/h1&gt;
+&lt;p&gt;后来小程序出现了一些不影响整体功能的bug但是我们时间比较紧迫，所以出口条件变为：没有严重bug、界面较为美观。&lt;/p&gt;
+
+&lt;h2 id=&quot;4测试实录&quot;&gt;4.测试实录&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/15/shXnZliaBqyrE2F.jpg&quot; style=&quot;zoom: 25%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/15/RWLeCgDk9nPxKMj.jpg&quot; style=&quot;zoom:25%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/15/yBChdfswJngZP7b.jpg&quot; style=&quot;zoom:25%;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/15/qkcixanWPmKJ1OY.jpg&quot; style=&quot;zoom:25%;&quot; /&gt;&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="合作项目" /><summary type="html">测试报告-WEEK 8</summary></entry><entry><title type="html">软件工程week7-α迭代第二次报告</title><link href="/2021/11/08/software-engineering-project-report-2.html" rel="alternate" type="text/html" title="软件工程week7-α迭代第二次报告" /><published>2021-11-08T18:53:47+08:00</published><updated>2021-11-08T18:53:47+08:00</updated><id>/2021/11/08/software-engineering-project-report-2</id><content type="html" xml:base="/2021/11/08/software-engineering-project-report-2.html">&lt;h1 id=&quot;scrum-meeting--week-7&quot;&gt;Scrum Meeting -Week 7&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject&quot;&gt;Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)&lt;/a&gt;&lt;/p&gt;
 
