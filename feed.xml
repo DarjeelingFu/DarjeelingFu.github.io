@@ -1,4 +1,289 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-11-29T20:16:14+08:00</updated><id>/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">软件工程合作项目beta迭代第一次报告</title><link href="/2021/11/29/software-engineering-project-report-4.html" rel="alternate" type="text/html" title="软件工程合作项目beta迭代第一次报告" /><published>2021-11-29T20:14:46+08:00</published><updated>2021-11-29T20:14:46+08:00</updated><id>/2021/11/29/software-engineering-project-report-4</id><content type="html" xml:base="/2021/11/29/software-engineering-project-report-4.html">&lt;h1 id=&quot;scrum-meeting--week-10-第四组&quot;&gt;Scrum Meeting -Week 10-第四组&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-12-06T20:05:26+08:00</updated><id>/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">软件工程合作项目β迭代报告2</title><link href="/2021/12/06/software-engineering-project-report-5.html" rel="alternate" type="text/html" title="软件工程合作项目β迭代报告2" /><published>2021-12-06T20:00:33+08:00</published><updated>2021-12-06T20:00:33+08:00</updated><id>/2021/12/06/software-engineering-project-report-5</id><content type="html" xml:base="/2021/12/06/software-engineering-project-report-5.html">&lt;h1 id=&quot;scrum-meeting--week-11-第四组&quot;&gt;Scrum Meeting -Week 11-第四组&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject&quot;&gt;Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;一工作记录&quot;&gt;一、工作记录&lt;/h2&gt;
+
+&lt;h3 id=&quot;1每个人的工作及进度&quot;&gt;1.每个人的工作及进度&lt;/h3&gt;
+
+&lt;h4 id=&quot;本周进度&quot;&gt;①本周进度&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;队员&lt;/th&gt;
+      &lt;th&gt;本周完成&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;帖子发布页、将创建房间页面的主页改为富文本#31#47&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;评论的分页显示，修改个性签名，帖子页图片显示 #32#33#53&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;完善相关接口#48#49#50#51&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;我的房间页完善、加入房间申请提交#36#37&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;修改房间大小、房间搜索时的分页显示、房间筛选功能#39#40#41&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;消息页分页、我的帖子页分页、同意加入功能#42#43#44&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;实现房间列表和论坛列表的分页功能、页面跳转#45#46#52&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;日进度&quot;&gt;②日进度&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;队员&lt;/th&gt;
+      &lt;th&gt;11月29日（周一）已完成&lt;/th&gt;
+      &lt;th&gt;11月30日（周二）计划&lt;/th&gt;
+      &lt;th&gt;11月30日（周二）已完成&lt;/th&gt;
+      &lt;th&gt;12月1日（周三）计划&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;完善图片上传#47&lt;/td&gt;
+      &lt;td&gt;完善图片上传#47&lt;/td&gt;
+      &lt;td&gt;完善图片上传#47&lt;/td&gt;
+      &lt;td&gt;完善图片上传#47&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;个性签名设计#32&lt;/td&gt;
+      &lt;td&gt;实现个性签名修改#32&lt;/td&gt;
+      &lt;td&gt;个性签名从后端加载#32&lt;/td&gt;
+      &lt;td&gt;增加评论分页#33&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;帖子图像上传接口#48&lt;/td&gt;
+      &lt;td&gt;帖子图像上传接口#48&lt;/td&gt;
+      &lt;td&gt;帖子图像上传接口#48&lt;/td&gt;
+      &lt;td&gt;房间筛选功能接口#49&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;我的房间页面完善#36&lt;/td&gt;
+      &lt;td&gt;我的房间区分创建的房间和加入的房间#36&lt;/td&gt;
+      &lt;td&gt;我的房间区分创建的房间和加入的房间#36&lt;/td&gt;
+      &lt;td&gt;前端界面分开显示创建的房间和加入的房间#36&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;增加修改房间大小的ui#39&lt;/td&gt;
+      &lt;td&gt;调用后端接口完成房间大小修改#39&lt;/td&gt;
+      &lt;td&gt;调用后端接口完成房间大小修改#39&lt;/td&gt;
+      &lt;td&gt;完成房间搜索页的筛选功能#40&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;增加前端界面显示#42#44&lt;/td&gt;
+      &lt;td&gt;增加前端界面显示#42#44&lt;/td&gt;
+      &lt;td&gt;增加前端界面显示#42#44&lt;/td&gt;
+      &lt;td&gt;写分页调用函数#42#44&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;增加论坛页分页功能#46&lt;/td&gt;
+      &lt;td&gt;增加论坛页分页功能#46&lt;/td&gt;
+      &lt;td&gt;增加论坛页分页功能#46&lt;/td&gt;
+      &lt;td&gt;增加组队页分页功能#45&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;队员&lt;/th&gt;
+      &lt;th&gt;12月1日（周三）已完成&lt;/th&gt;
+      &lt;th&gt;12月2日（周四）计划&lt;/th&gt;
+      &lt;th&gt;12月2日（周四）已完成&lt;/th&gt;
+      &lt;th&gt;12月3日（周五）计划&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;完成图片上传#47&lt;/td&gt;
+      &lt;td&gt;将创建房间页面的主页改为富文本#31&lt;/td&gt;
+      &lt;td&gt;将创建房间页面的主页改为富文本#31&lt;/td&gt;
+      &lt;td&gt;将创建房间页面的主页改为富文本#31&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;增加评论分页#33&lt;/td&gt;
+      &lt;td&gt;调试评论分页#33&lt;/td&gt;
+      &lt;td&gt;调试评论分页#33&lt;/td&gt;
+      &lt;td&gt;尝试获取帖子图片#53&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;房间筛选功能接口#49&lt;/td&gt;
+      &lt;td&gt;部分分页获取接口#50&lt;/td&gt;
+      &lt;td&gt;部分分页获取接口#50&lt;/td&gt;
+      &lt;td&gt;申请功能接口#51&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;前端界面分开显示创建的房间和加入的房间#36&lt;/td&gt;
+      &lt;td&gt;加入房间申请ui#37&lt;/td&gt;
+      &lt;td&gt;加入房间申请ui#37&lt;/td&gt;
+      &lt;td&gt;加入房间申请提交#37&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;完成房间搜索页的筛选功能#40&lt;/td&gt;
+      &lt;td&gt;完成搜索页面的分页显示逻辑#41&lt;/td&gt;
+      &lt;td&gt;完成搜索页面的分页显示逻辑#41&lt;/td&gt;
+      &lt;td&gt;调用后端接口完成分页显示#41&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;写分页调用函数#42#44&lt;/td&gt;
+      &lt;td&gt;调试分页#42#44&lt;/td&gt;
+      &lt;td&gt;调试分页#42#44&lt;/td&gt;
+      &lt;td&gt;写同意加入房间功能#43&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;增加组队页分页功能#45&lt;/td&gt;
+      &lt;td&gt;总体调试分页效果#45#46&lt;/td&gt;
+      &lt;td&gt;总体调试分页效果#45#46&lt;/td&gt;
+      &lt;td&gt;增加到搜索页的跳转#52&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;队员&lt;/th&gt;
+      &lt;th&gt;12月3日（周五）已完成&lt;/th&gt;
+      &lt;th&gt;12月6日（周一）计划&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;将创建房间页面的主页改为富文本#31&lt;/td&gt;
+      &lt;td&gt;软件测试&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;尝试获取帖子图片#53&lt;/td&gt;
+      &lt;td&gt;软件测试&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;申请功能接口#51&lt;/td&gt;
+      &lt;td&gt;其他后端接口、代码合并、软件测试&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;加入房间申请提交#37&lt;/td&gt;
+      &lt;td&gt;软件测试&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;调用后端接口完成分页显示#41&lt;/td&gt;
+      &lt;td&gt;房间主页修改功能、软件测试&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;写同意加入房间功能#43&lt;/td&gt;
+      &lt;td&gt;完善同意、拒绝房间加入申请功能、软件测试&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;增加到搜索页的跳转#52&lt;/td&gt;
+      &lt;td&gt;软件测试&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;issues链接： &lt;a href=&quot;https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject/issues&quot;&gt;缺陷 - Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2工作中遇到的困难&quot;&gt;2.工作中遇到的困难&lt;/h3&gt;
+
+&lt;p&gt;我们组负责前端的有些同学学习能力较强，对于分配的任务已能够全部完成；同意加入房间申请的功能、修改房间主页功能、提交富文本功能还未完成。后端同学任务比较繁重，目前服务器管理页显示还有问题。具体信息如下：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;队员&lt;/th&gt;
+      &lt;th&gt;遇到的困难&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;提交富文本功能&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;无&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;服务器管理页显示错误&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;无&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;修改房间主页功能&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;同意申请加入功能&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;无&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;3关于高兴的地方&quot;&gt;3.关于高兴的地方&lt;/h3&gt;
+
+&lt;p&gt;本周基本上把整个小程序需要做的功能完善得差不多了，大家都按时完成了任务，有不会的地方也认真请教他人得以解决。本周后端任务及其繁重，但负责后端的同学还是保质保量地完成了任务，及时给前端同学提供了新功能的接口，保证了功能的正常使用。本周大家配合得很好，非常值得高兴，希望γ阶段大家一鼓作气完成这个小程序！&lt;/p&gt;
+
+&lt;h2 id=&quot;二燃尽图&quot;&gt;二、燃尽图&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2021/12/06/aSp4jBwxyNOFevo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;三例会照片&quot;&gt;三、例会照片&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2021/12/06/9BOoK4zJqkdiS3u.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;拍摄者：石佳鹭&lt;/p&gt;
+
+&lt;h2 id=&quot;四代码签入记录&quot;&gt;四、代码签入记录&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2021/12/06/KIoAfxY9UtaBVvi.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="合作项目" /><summary type="html">Scrum Meeting -Week 11-第四组</summary></entry><entry><title type="html">软件工程合作项目beta迭代第一次报告</title><link href="/2021/11/29/software-engineering-project-report-4.html" rel="alternate" type="text/html" title="软件工程合作项目beta迭代第一次报告" /><published>2021-11-29T20:14:46+08:00</published><updated>2021-11-29T20:14:46+08:00</updated><id>/2021/11/29/software-engineering-project-report-4</id><content type="html" xml:base="/2021/11/29/software-engineering-project-report-4.html">&lt;h1 id=&quot;scrum-meeting--week-10-第四组&quot;&gt;Scrum Meeting -Week 10-第四组&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject&quot;&gt;Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)&lt;/a&gt;&lt;/p&gt;
 
@@ -1351,10 +1636,4 @@
 &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;实际递归过程中多个相同的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;solve(n)&lt;/code&gt;被运算了，降低了算法效率，优化方法很多，暂略。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="算法" /><summary type="html">我对递归的理解</summary></entry><entry><title type="html">试试图床好用不，试试布局合理不</title><link href="/2020/10/21/cover-test.html" rel="alternate" type="text/html" title="试试图床好用不，试试布局合理不" /><published>2020-10-21T19:57:40+08:00</published><updated>2020-10-21T19:57:40+08:00</updated><id>/2020/10/21/cover-test</id><content type="html" xml:base="/2020/10/21/cover-test.html"></content><author><name>饱食终日的我</name></author><category term="测试" /><summary type="html"></summary></entry><entry><title type="html">第一篇博客</title><link href="/2020/10/18/test-first-blog.html" rel="alternate" type="text/html" title="第一篇博客" /><published>2020-10-18T22:57:00+08:00</published><updated>2020-10-18T22:57:00+08:00</updated><id>/2020/10/18/test-first-blog</id><content type="html" xml:base="/2020/10/18/test-first-blog.html">&lt;h2 id=&quot;我的第一篇博客&quot;&gt;我的第一篇博客&lt;/h2&gt;
-
-&lt;p&gt;经过许多学习与尝试，总算是写了点能看的博客。&lt;/p&gt;
-
-&lt;p&gt;最初的宏图大志 was proved to be achieved by small steps, 而不是一时兴起的东拼西凑。&lt;/p&gt;
-
-&lt;p&gt;希望可以继续坚持下去。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="日常" /><summary type="html">我的第一篇博客 经过许多学习与尝试，总算是写了点能看的博客。 最初的宏图大志 was proved to be achieved by small steps, 而不是一时兴起的东拼西凑。 希望可以继续坚持下去。</summary></entry></feed>
+&lt;p&gt;实际递归过程中多个相同的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;solve(n)&lt;/code&gt;被运算了，降低了算法效率，优化方法很多，暂略。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="算法" /><summary type="html">我对递归的理解</summary></entry><entry><title type="html">试试图床好用不，试试布局合理不</title><link href="/2020/10/21/cover-test.html" rel="alternate" type="text/html" title="试试图床好用不，试试布局合理不" /><published>2020-10-21T19:57:40+08:00</published><updated>2020-10-21T19:57:40+08:00</updated><id>/2020/10/21/cover-test</id><content type="html" xml:base="/2020/10/21/cover-test.html"></content><author><name>饱食终日的我</name></author><category term="测试" /><summary type="html"></summary></entry></feed>
