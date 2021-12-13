@@ -97,9 +97,9 @@
 		</div>
 	</div>
 	<div id="passageInfo">
-		<div id="title">软件工程合作项目β阶段测试报告</div>
+		<div id="title">软件工程项目β迭代阶段总结报告</div>
 		<div id="subInfo">
-			<span id="datetime">2021-12-13 20:38</span>
+			<span id="datetime">2021-12-13 21:06</span>
 			<ul id="tags">
 				
 				<li>合作项目</li>
@@ -108,355 +108,59 @@
 		</div>
 	</div>
 	<div id="postText">
-		<h1 id="第4组测试报告-week-12">第4组测试报告-WEEK 12</h1>
+		<h1 id="第四小组beta冲刺阶段博客目录">第四小组Beta冲刺阶段博客目录</h1>
 
-<p>我们的β迭代成果： <a href="https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject">Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)</a></p>
+<h2 id="一scrum-meeting">一、Scrum Meeting</h2>
 
-<h2 id="1version-21-bug-list">1.version 2.1 bug list</h2>
+<ol>
+  <li>第九周会议记录   https://darjeelingfu.github.io/2021/11/29/software-engineering-project-report-4.html</li>
+  <li>第十周会议记录   https://darjeelingfu.github.io/2021/12/06/software-engineering-project-report-5.html</li>
+</ol>
 
-<h3 id="本次测试出现的主要bug">本次测试出现的主要bug</h3>
+<h2 id="二测试报告">二、测试报告</h2>
 
-<ul>
-  <li>页面切换问题：由于app.json中未添加房间搜索页路径，导致此页面进不去。</li>
-  <li>页面刷新问题：创建新房间或修改房间之后，组队页没有刷新。</li>
-  <li>功能性问题：
-    <ul>
-      <li>房间创建页、房间管理页的富文本的提交、显示和修改不能正确进行。</li>
-      <li>个人页：个性签名修改后未保存。</li>
-      <li>我的帖子页：帖子显示的不是本人的帖子。</li>
-      <li>房间管理页：房间成员信息加载失败。</li>
-    </ul>
-  </li>
-</ul>
+<p>https://darjeelingfu.github.io/2021/12/13/software-engineering-project-report-beta.html</p>
 
-<h3 id="有待改进的地方">有待改进的地方</h3>
-
-<ul>
-  <li>增加论坛页、组队页的刷新机制。</li>
-  <li>房间创建页的字数限制可以放宽松一点。</li>
-  <li>组队页的按钮放到下面或者增加前往顶部的按钮。</li>
-  <li>前端修改，如页面导航栏的标题、组队页的人数显示、我的帖子页每个帖子的高度、房间详情页标题和人数重叠的问题等。</li>
-  <li>帖子评论点赞功能优化。</li>
-  <li>房间管理页限制组队人数上限。</li>
-</ul>
-
-<h2 id="2场景测试">2.场景测试</h2>
-
-<h3 id="场景一">场景一</h3>
-
-<ul>
-  <li>典型用户：房主</li>
-  <li>需求：想要寻找SRDP项目成员。</li>
-  <li>场景描述：
-    <ul>
-      <li>扫码打开小程序。</li>
-      <li>进入首页，点击创建房间的按钮，填写相关的信息，包括选择房间的类型（如项目合作）、填写创建房间的目的、以富文本形式介绍房间等等。</li>
-      <li>创建房间后，等待其他人加入房间。一段时间后，进入消息页面的申请信息模块检查是否有成员申请加入。若有新成员申请加入，房主有两种选择：
-        <ul>
-          <li>同意加入</li>
-          <li>拒绝加入</li>
-        </ul>
-      </li>
-      <li>进入我的房间页，点击相应房间进入房间详情页面，在成员一栏点击相应成员的头像，查看详细的个人信息。</li>
-      <li>进入房间管理页面，修改房间信息，包括房间标题、类型、介绍、房间主页，也可删除成员。</li>
-      <li>组队结束之后，房主在合适时间进入房间管理页面删除整个房间。</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="场景二">场景二</h3>
-
-<ul>
-  <li>典型用户：成员</li>
-  <li>需求：想要寻找SRDP队伍。</li>
-  <li>场景描述：
-    <ul>
-      <li>扫码打开小程序。</li>
-      <li>进入首页，他有两种选择：
-        <ul>
-          <li>浏览位于首页的房间列表，选择合适SRDP队伍的房间。</li>
-          <li>点击右上角“放大镜”按钮，进入房间搜索页面，选择条件搜索，选择类型：项目合作，输入相应关键词搜索房间，在搜索结果中选择合适的SRDP队伍的房间。</li>
-        </ul>
-      </li>
-      <li>点击房间进入详情页，查看房间的详细信息和当前的房间成员。</li>
-      <li>认为该小组合适，点击申请加入，试图加入该房间。</li>
-      <li>一段时间后，打开消息页面的，查看房主是否已同意自己加入该房间。</li>
-      <li>若发现自己不适合此项目组，可进入个人页，点击“我的房间”进入我的房间页，查找想要退出的小组，进入该小组详情页，选择退出房间。</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="场景三">场景三</h3>
-
-<ul>
-  <li>典型用户：想要分享竞赛经验的同学A</li>
-  <li>需求：同学A在某比赛中拿了奖，想要把一些竞赛心得分享给大家。</li>
-  <li>场景描述：
-    <ul>
-      <li>扫码打开小程序</li>
-      <li>进入论坛页，点击“➕”按钮进入帖子创建页面，将自己的经验以文字形式分享给大家，同时可上传自己在准备比赛时的图片或获奖图片，点击“发布”按钮发布帖子。</li>
-      <li>过一段时间，进入个人页，点击“我的帖子”进入我的帖子页，查看自己发布帖子的动态情况。</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="场景四">场景四</h3>
-
-<ul>
-  <li>典型用户：想要获取竞赛经验的同学B</li>
-  <li>需求：同学B最近想参加某比赛，但是不知道该如何准备，想从小程序的帖子里汲取一些经验。</li>
-  <li>场景描述：
-    <ul>
-      <li>扫码打开小程序</li>
-      <li>进入论坛页，浏览帖子列表，发现合适的经验帖。</li>
-      <li>进入合适经验帖的帖子详情页，浏览帖子内容学习经验。</li>
-      <li>同学B有一些不明白的地方想问一下楼主，遂在帖子下面评论自己的问题。</li>
-      <li>同学B觉得很受益，点赞帖子。</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="3测试矩阵">3.测试矩阵</h2>
+<h2 id="三习得的软工原理--方法--技能">三、习得的软工原理 / 方法 / 技能</h2>
 
 <table>
   <thead>
     <tr>
-      <th> </th>
-      <th>功能</th>
-      <th> </th>
-      <th>房间创建页</th>
-      <th>房间详情页</th>
-      <th> </th>
-      <th>个人页</th>
-      <th>房间管理页</th>
-      <th>房间搜索页</th>
-      <th> </th>
-      <th> </th>
-      <th>消息页</th>
-      <th> </th>
-      <th> </th>
-      <th>论坛页</th>
-      <th>帖子发布页</th>
-      <th>帖子详情页</th>
-      <th> </th>
-      <th> </th>
-      <th>我的组队页</th>
-      <th>我的帖子页</th>
-      <th>前端</th>
-      <th> </th>
-      <th> </th>
-      <th> </th>
+      <th>成员</th>
+      <th style="text-align: center">收获</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td> </td>
-      <td>测试机型</td>
-      <td>测试环境（系统版本）</td>
-      <td>创建房间</td>
-      <td>加入房间</td>
-      <td>退出房间</td>
-      <td>修改个性签名</td>
-      <td>房间信息修改</td>
-      <td>房间人数的修改</td>
-      <td>按ID搜索</td>
-      <td>按条件搜索</td>
-      <td>接收房间动态</td>
-      <td>拒绝进入房间</td>
-      <td>同意进入房间</td>
-      <td>显示帖子</td>
-      <td>发布帖子</td>
-      <td>展示帖子信息</td>
-      <td>点赞</td>
-      <td>评论</td>
-      <td>正确显示组队信息</td>
-      <td>正确显示帖子信息</td>
-      <td>页面排版</td>
-      <td>图片显示</td>
-      <td>页面切换</td>
-      <td>图标正确</td>
+      <td>贲龙</td>
+      <td style="text-align: center">在beta阶段，我学到了更多的js知识，自己实现了一些如下拉框这种原生没有的组件，对客户端与服务器之间的接口理解更深，同时学到了一些网络中使用的编码，团队合作能力也得到了提高。</td>
     </tr>
     <tr>
-      <td>1</td>
-      <td>iphone11</td>
-      <td>IOS 15.1</td>
-      <td>房间主页富文本提交失败</td>
-      <td>√</td>
-      <td>√</td>
-      <td>个性签名退出后丢失</td>
-      <td>房间主页富文本提交失败（图片无法提交）</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>帖子与用户不匹配</td>
-      <td> </td>
-      <td> </td>
-      <td>切换至搜索页失败</td>
-      <td>√</td>
+      <td>崔丽媛</td>
+      <td style="text-align: center">这段时间我学会了js文件的详细操作，通过接口获取后端数据并与前端ui及时适配，同时通过前端函数和后端借口的共同协调实现不同功能，也需要与相关页面的同学进行统一与对应相对接的函数，提高了我的团队协作能力。</td>
     </tr>
     <tr>
-      <td>2</td>
-      <td>iPhone 11 pm</td>
-      <td>IOS 15.0.1</td>
-      <td>房间主页富文本提交失败</td>
-      <td>√</td>
-      <td>√</td>
-      <td>个性签名退出后丢失</td>
-      <td>房间主页富文本提交失败（图片无法提交）</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>接收不到请求</td>
-      <td>接收不到请求</td>
-      <td>没有刷新</td>
-      <td>√</td>
-      <td>√</td>
-      <td>在论坛页点赞完之后进入详情页可重复点赞</td>
-      <td>√</td>
-      <td>√</td>
-      <td>帖子与用户不匹配</td>
-      <td>√</td>
-      <td>√</td>
-      <td>切换至搜索页失败</td>
-      <td>√</td>
+      <td>付翔宇</td>
+      <td style="text-align: center">对软件需求分析和软件整体设计的有了更深刻的理解，提高了对任务划分和组内合作能力，学会了在后端对富文本进行操作，掌握了后端文件上传和下载的方法，加深了对django框架原理的理解。</td>
     </tr>
     <tr>
-      <td>3</td>
-      <td>Honor30</td>
-      <td>HarmonyOS2.0.0</td>
-      <td>房间主页富文本提交失败</td>
-      <td>后台收不到加入房间的请求</td>
-      <td>√</td>
-      <td>个性签名退出后丢失</td>
-      <td>房间主页富文本提交失败（图片无法提交）</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>接收不到请求</td>
-      <td>接收不到请求</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>帖子与用户不匹配</td>
-      <td>√</td>
-      <td>√</td>
-      <td>切换至搜索页失败</td>
-      <td>√</td>
+      <td>焦扬</td>
+      <td style="text-align: center">相较于之前，在beta迭代阶段，对问题考虑的方面更为全面，在开发流程和团队协作等方面的能力有所提升，同时学习了更多的JavaScript知识，运用也更为娴熟，对软件工程开发有了更深的理解。</td>
     </tr>
     <tr>
-      <td>4</td>
-      <td>redmi k40</td>
-      <td>miui12.5.18</td>
-      <td>房间主页富文本提交失败</td>
-      <td>√</td>
-      <td>√</td>
-      <td>个性签名退出后丢失、个性签名显示不明显</td>
-      <td>房间主页富文本提交失败（图片无法提交）</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>帖子与用户不匹配</td>
-      <td>√</td>
-      <td>√</td>
-      <td>切换至搜索页失败</td>
-      <td>√</td>
+      <td>刘晓琳</td>
+      <td style="text-align: center">在这一阶段我进一步提高了对前端知识的掌握，特别是数据的双向绑定、分页技术的实现，也尝试使用了一些新的组件；更加熟练地掌握了项目管理及相关工具；提高了对于团队协作能力与统筹规划能力。</td>
     </tr>
     <tr>
-      <td>5</td>
-      <td>RedmeNote8pro</td>
-      <td>MIUI</td>
-      <td>房间主页富文本提交失败</td>
-      <td>√</td>
-      <td>√</td>
-      <td>个性签名退出后丢失、个性签名显示不明显</td>
-      <td>房间主页富文本提交失败（图片无法提交）</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>帖子与用户不匹配</td>
-      <td>√</td>
-      <td>√</td>
-      <td>切换至搜索页失败</td>
-      <td>√</td>
+      <td>石佳鹭</td>
+      <td style="text-align: center">对前端的一些控制组件应用的更加娴熟，熟练地查微信开发文档解决问题；学习到对涉及到js的数据绑定、函数调用等操作；提高了团队协作的能力</td>
     </tr>
     <tr>
-      <td>6</td>
-      <td>Huawei mate30</td>
-      <td>Android</td>
-      <td>房间主页富文本提交失败</td>
-      <td>√</td>
-      <td>√</td>
-      <td>个性签名退出后丢失</td>
-      <td>房间主页富文本提交失败（图片无法提交）</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>√</td>
-      <td>帖子与用户不匹配</td>
-      <td>√</td>
-      <td>√</td>
-      <td>切换至搜索页失败</td>
-      <td>√</td>
+      <td>王灿</td>
+      <td style="text-align: center">对前后端分离的分工编程模式有了更多的实践，了解了更多JavaScript的知识，对微信小程序的编写更加熟练。</td>
     </tr>
   </tbody>
 </table>
-
-<h2 id="4β版本的出口条件">4.β版本的出口条件</h2>
-
-<p>最初出口条件为：功能齐全，界面美观，能够进行实时通信。
-但由于时间紧迫，有些功能实现难度较大，因此，我们的出口条件变为：功能较为齐全，界面较为美观，没有严重bug。</p>
-
-<h2 id="5测试实录">5.测试实录</h2>
-
-<p><code class="language-plaintext highlighter-rouge">SM.MS图床卡顿，烦请稍等加载</code></p>
-
-<p><img src="https://s2.loli.net/2021/12/13/bY81RcFdEiJIr2H.jpg" alt="" /></p>
-
-<p><img src="https://s2.loli.net/2021/12/13/rPbInlW4yYvU1RT.jpg" alt="" /></p>
-
-<p><img src="https://s2.loli.net/2021/12/13/Wh7JpRq5i4MkdlF.jpg" alt="" /></p>
-
-<p><img src="https://s2.loli.net/2021/12/13/XWdTMjhgazKSAFl.jpg" alt="" /></p>
 
 
 	</div>
@@ -464,7 +168,7 @@
 <div id="postBottom" class="commonBlockPanel">
 	<div id="bottomJump">
 		
-		<a id="pre" href="/2021/12/06/software-engineering-project-report-5.html">Pre</a>
+		<a id="pre" href="/2021/12/13/software-engineering-project-report-6.html">Pre</a>
 		
 		
 		<span>咕咕咕</span>
@@ -500,7 +204,7 @@
 										<p class="centerLocatedText siteInfoHead">POST</p>
 										
 										
-										<p class="centerLocatedText siteInfoBody">13</p>
+										<p class="centerLocatedText siteInfoBody">14</p>
 									</span>
 									<span>
 										<p class="centerLocatedText siteInfoHead">TAG</p>
