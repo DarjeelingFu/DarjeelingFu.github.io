@@ -1,4 +1,352 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-12-06T20:05:26+08:00</updated><id>/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">软件工程合作项目β迭代报告2</title><link href="/2021/12/06/software-engineering-project-report-5.html" rel="alternate" type="text/html" title="软件工程合作项目β迭代报告2" /><published>2021-12-06T20:00:33+08:00</published><updated>2021-12-06T20:00:33+08:00</updated><id>/2021/12/06/software-engineering-project-report-5</id><content type="html" xml:base="/2021/12/06/software-engineering-project-report-5.html">&lt;h1 id=&quot;scrum-meeting--week-11-第四组&quot;&gt;Scrum Meeting -Week 11-第四组&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-12-13T20:57:43+08:00</updated><id>/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">软件工程合作项目β阶段测试报告</title><link href="/2021/12/13/software-engineering-project-report-beta.html" rel="alternate" type="text/html" title="软件工程合作项目β阶段测试报告" /><published>2021-12-13T20:38:32+08:00</published><updated>2021-12-13T20:38:32+08:00</updated><id>/2021/12/13/software-engineering-project-report-beta</id><content type="html" xml:base="/2021/12/13/software-engineering-project-report-beta.html">&lt;h1 id=&quot;第4组测试报告-week-12&quot;&gt;第4组测试报告-WEEK 12&lt;/h1&gt;
+
+&lt;p&gt;我们的β迭代成果： &lt;a href=&quot;https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject&quot;&gt;Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;1version-21-bug-list&quot;&gt;1.version 2.1 bug list&lt;/h2&gt;
+
+&lt;h3 id=&quot;本次测试出现的主要bug&quot;&gt;本次测试出现的主要bug&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;页面切换问题：由于app.json中未添加房间搜索页路径，导致此页面进不去。&lt;/li&gt;
+  &lt;li&gt;页面刷新问题：创建新房间或修改房间之后，组队页没有刷新。&lt;/li&gt;
+  &lt;li&gt;功能性问题：
+    &lt;ul&gt;
+      &lt;li&gt;房间创建页、房间管理页的富文本的提交、显示和修改不能正确进行。&lt;/li&gt;
+      &lt;li&gt;个人页：个性签名修改后未保存。&lt;/li&gt;
+      &lt;li&gt;我的帖子页：帖子显示的不是本人的帖子。&lt;/li&gt;
+      &lt;li&gt;房间管理页：房间成员信息加载失败。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;有待改进的地方&quot;&gt;有待改进的地方&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;增加论坛页、组队页的刷新机制。&lt;/li&gt;
+  &lt;li&gt;房间创建页的字数限制可以放宽松一点。&lt;/li&gt;
+  &lt;li&gt;组队页的按钮放到下面或者增加前往顶部的按钮。&lt;/li&gt;
+  &lt;li&gt;前端修改，如页面导航栏的标题、组队页的人数显示、我的帖子页每个帖子的高度、房间详情页标题和人数重叠的问题等。&lt;/li&gt;
+  &lt;li&gt;帖子评论点赞功能优化。&lt;/li&gt;
+  &lt;li&gt;房间管理页限制组队人数上限。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;2场景测试&quot;&gt;2.场景测试&lt;/h2&gt;
+
+&lt;h3 id=&quot;场景一&quot;&gt;场景一&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;典型用户：房主&lt;/li&gt;
+  &lt;li&gt;需求：想要寻找SRDP项目成员。&lt;/li&gt;
+  &lt;li&gt;场景描述：
+    &lt;ul&gt;
+      &lt;li&gt;扫码打开小程序。&lt;/li&gt;
+      &lt;li&gt;进入首页，点击创建房间的按钮，填写相关的信息，包括选择房间的类型（如项目合作）、填写创建房间的目的、以富文本形式介绍房间等等。&lt;/li&gt;
+      &lt;li&gt;创建房间后，等待其他人加入房间。一段时间后，进入消息页面的申请信息模块检查是否有成员申请加入。若有新成员申请加入，房主有两种选择：
+        &lt;ul&gt;
+          &lt;li&gt;同意加入&lt;/li&gt;
+          &lt;li&gt;拒绝加入&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;进入我的房间页，点击相应房间进入房间详情页面，在成员一栏点击相应成员的头像，查看详细的个人信息。&lt;/li&gt;
+      &lt;li&gt;进入房间管理页面，修改房间信息，包括房间标题、类型、介绍、房间主页，也可删除成员。&lt;/li&gt;
+      &lt;li&gt;组队结束之后，房主在合适时间进入房间管理页面删除整个房间。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;场景二&quot;&gt;场景二&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;典型用户：成员&lt;/li&gt;
+  &lt;li&gt;需求：想要寻找SRDP队伍。&lt;/li&gt;
+  &lt;li&gt;场景描述：
+    &lt;ul&gt;
+      &lt;li&gt;扫码打开小程序。&lt;/li&gt;
+      &lt;li&gt;进入首页，他有两种选择：
+        &lt;ul&gt;
+          &lt;li&gt;浏览位于首页的房间列表，选择合适SRDP队伍的房间。&lt;/li&gt;
+          &lt;li&gt;点击右上角“放大镜”按钮，进入房间搜索页面，选择条件搜索，选择类型：项目合作，输入相应关键词搜索房间，在搜索结果中选择合适的SRDP队伍的房间。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;点击房间进入详情页，查看房间的详细信息和当前的房间成员。&lt;/li&gt;
+      &lt;li&gt;认为该小组合适，点击申请加入，试图加入该房间。&lt;/li&gt;
+      &lt;li&gt;一段时间后，打开消息页面的，查看房主是否已同意自己加入该房间。&lt;/li&gt;
+      &lt;li&gt;若发现自己不适合此项目组，可进入个人页，点击“我的房间”进入我的房间页，查找想要退出的小组，进入该小组详情页，选择退出房间。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;场景三&quot;&gt;场景三&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;典型用户：想要分享竞赛经验的同学A&lt;/li&gt;
+  &lt;li&gt;需求：同学A在某比赛中拿了奖，想要把一些竞赛心得分享给大家。&lt;/li&gt;
+  &lt;li&gt;场景描述：
+    &lt;ul&gt;
+      &lt;li&gt;扫码打开小程序&lt;/li&gt;
+      &lt;li&gt;进入论坛页，点击“➕”按钮进入帖子创建页面，将自己的经验以文字形式分享给大家，同时可上传自己在准备比赛时的图片或获奖图片，点击“发布”按钮发布帖子。&lt;/li&gt;
+      &lt;li&gt;过一段时间，进入个人页，点击“我的帖子”进入我的帖子页，查看自己发布帖子的动态情况。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;场景四&quot;&gt;场景四&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;典型用户：想要获取竞赛经验的同学B&lt;/li&gt;
+  &lt;li&gt;需求：同学B最近想参加某比赛，但是不知道该如何准备，想从小程序的帖子里汲取一些经验。&lt;/li&gt;
+  &lt;li&gt;场景描述：
+    &lt;ul&gt;
+      &lt;li&gt;扫码打开小程序&lt;/li&gt;
+      &lt;li&gt;进入论坛页，浏览帖子列表，发现合适的经验帖。&lt;/li&gt;
+      &lt;li&gt;进入合适经验帖的帖子详情页，浏览帖子内容学习经验。&lt;/li&gt;
+      &lt;li&gt;同学B有一些不明白的地方想问一下楼主，遂在帖子下面评论自己的问题。&lt;/li&gt;
+      &lt;li&gt;同学B觉得很受益，点赞帖子。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3测试矩阵&quot;&gt;3.测试矩阵&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;功能&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;房间创建页&lt;/th&gt;
+      &lt;th&gt;房间详情页&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;个人页&lt;/th&gt;
+      &lt;th&gt;房间管理页&lt;/th&gt;
+      &lt;th&gt;房间搜索页&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;消息页&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;论坛页&lt;/th&gt;
+      &lt;th&gt;帖子发布页&lt;/th&gt;
+      &lt;th&gt;帖子详情页&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;我的组队页&lt;/th&gt;
+      &lt;th&gt;我的帖子页&lt;/th&gt;
+      &lt;th&gt;前端&lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;测试机型&lt;/td&gt;
+      &lt;td&gt;测试环境（系统版本）&lt;/td&gt;
+      &lt;td&gt;创建房间&lt;/td&gt;
+      &lt;td&gt;加入房间&lt;/td&gt;
+      &lt;td&gt;退出房间&lt;/td&gt;
+      &lt;td&gt;修改个性签名&lt;/td&gt;
+      &lt;td&gt;房间信息修改&lt;/td&gt;
+      &lt;td&gt;房间人数的修改&lt;/td&gt;
+      &lt;td&gt;按ID搜索&lt;/td&gt;
+      &lt;td&gt;按条件搜索&lt;/td&gt;
+      &lt;td&gt;接收房间动态&lt;/td&gt;
+      &lt;td&gt;拒绝进入房间&lt;/td&gt;
+      &lt;td&gt;同意进入房间&lt;/td&gt;
+      &lt;td&gt;显示帖子&lt;/td&gt;
+      &lt;td&gt;发布帖子&lt;/td&gt;
+      &lt;td&gt;展示帖子信息&lt;/td&gt;
+      &lt;td&gt;点赞&lt;/td&gt;
+      &lt;td&gt;评论&lt;/td&gt;
+      &lt;td&gt;正确显示组队信息&lt;/td&gt;
+      &lt;td&gt;正确显示帖子信息&lt;/td&gt;
+      &lt;td&gt;页面排版&lt;/td&gt;
+      &lt;td&gt;图片显示&lt;/td&gt;
+      &lt;td&gt;页面切换&lt;/td&gt;
+      &lt;td&gt;图标正确&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;iphone11&lt;/td&gt;
+      &lt;td&gt;IOS 15.1&lt;/td&gt;
+      &lt;td&gt;房间主页富文本提交失败&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;个性签名退出后丢失&lt;/td&gt;
+      &lt;td&gt;房间主页富文本提交失败（图片无法提交）&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;帖子与用户不匹配&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;切换至搜索页失败&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;iPhone 11 pm&lt;/td&gt;
+      &lt;td&gt;IOS 15.0.1&lt;/td&gt;
+      &lt;td&gt;房间主页富文本提交失败&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;个性签名退出后丢失&lt;/td&gt;
+      &lt;td&gt;房间主页富文本提交失败（图片无法提交）&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;接收不到请求&lt;/td&gt;
+      &lt;td&gt;接收不到请求&lt;/td&gt;
+      &lt;td&gt;没有刷新&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;在论坛页点赞完之后进入详情页可重复点赞&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;帖子与用户不匹配&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;切换至搜索页失败&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Honor30&lt;/td&gt;
+      &lt;td&gt;HarmonyOS2.0.0&lt;/td&gt;
+      &lt;td&gt;房间主页富文本提交失败&lt;/td&gt;
+      &lt;td&gt;后台收不到加入房间的请求&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;个性签名退出后丢失&lt;/td&gt;
+      &lt;td&gt;房间主页富文本提交失败（图片无法提交）&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;接收不到请求&lt;/td&gt;
+      &lt;td&gt;接收不到请求&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;帖子与用户不匹配&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;切换至搜索页失败&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;redmi k40&lt;/td&gt;
+      &lt;td&gt;miui12.5.18&lt;/td&gt;
+      &lt;td&gt;房间主页富文本提交失败&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;个性签名退出后丢失、个性签名显示不明显&lt;/td&gt;
+      &lt;td&gt;房间主页富文本提交失败（图片无法提交）&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;帖子与用户不匹配&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;切换至搜索页失败&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;RedmeNote8pro&lt;/td&gt;
+      &lt;td&gt;MIUI&lt;/td&gt;
+      &lt;td&gt;房间主页富文本提交失败&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;个性签名退出后丢失、个性签名显示不明显&lt;/td&gt;
+      &lt;td&gt;房间主页富文本提交失败（图片无法提交）&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;帖子与用户不匹配&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;切换至搜索页失败&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;Huawei mate30&lt;/td&gt;
+      &lt;td&gt;Android&lt;/td&gt;
+      &lt;td&gt;房间主页富文本提交失败&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;个性签名退出后丢失&lt;/td&gt;
+      &lt;td&gt;房间主页富文本提交失败（图片无法提交）&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;帖子与用户不匹配&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+      &lt;td&gt;切换至搜索页失败&lt;/td&gt;
+      &lt;td&gt;√&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;4β版本的出口条件&quot;&gt;4.β版本的出口条件&lt;/h2&gt;
+
+&lt;p&gt;最初出口条件为：功能齐全，界面美观，能够进行实时通信。
+但由于时间紧迫，有些功能实现难度较大，因此，我们的出口条件变为：功能较为齐全，界面较为美观，没有严重bug。&lt;/p&gt;
+
+&lt;h2 id=&quot;5测试实录&quot;&gt;5.测试实录&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SM.MS图床卡顿，烦请稍等加载&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2021/12/13/bY81RcFdEiJIr2H.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2021/12/13/rPbInlW4yYvU1RT.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2021/12/13/Wh7JpRq5i4MkdlF.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2021/12/13/XWdTMjhgazKSAFl.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="合作项目" /><summary type="html">第4组测试报告-WEEK 12</summary></entry><entry><title type="html">软件工程合作项目β迭代报告2</title><link href="/2021/12/06/software-engineering-project-report-5.html" rel="alternate" type="text/html" title="软件工程合作项目β迭代报告2" /><published>2021-12-06T20:00:33+08:00</published><updated>2021-12-06T20:00:33+08:00</updated><id>/2021/12/06/software-engineering-project-report-5</id><content type="html" xml:base="/2021/12/06/software-engineering-project-report-5.html">&lt;h1 id=&quot;scrum-meeting--week-11-第四组&quot;&gt;Scrum Meeting -Week 11-第四组&lt;/h1&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject&quot;&gt;Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)&lt;/a&gt;&lt;/p&gt;
 
@@ -1636,4 +1984,4 @@
 &lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;实际递归过程中多个相同的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;solve(n)&lt;/code&gt;被运算了，降低了算法效率，优化方法很多，暂略。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="算法" /><summary type="html">我对递归的理解</summary></entry><entry><title type="html">试试图床好用不，试试布局合理不</title><link href="/2020/10/21/cover-test.html" rel="alternate" type="text/html" title="试试图床好用不，试试布局合理不" /><published>2020-10-21T19:57:40+08:00</published><updated>2020-10-21T19:57:40+08:00</updated><id>/2020/10/21/cover-test</id><content type="html" xml:base="/2020/10/21/cover-test.html"></content><author><name>饱食终日的我</name></author><category term="测试" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;实际递归过程中多个相同的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;solve(n)&lt;/code&gt;被运算了，降低了算法效率，优化方法很多，暂略。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="算法" /><summary type="html">我对递归的理解</summary></entry></feed>

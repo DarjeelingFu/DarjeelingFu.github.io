@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>秦莱山记志</title>
+	<script src="/static/js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/static/js/anime.min.js"></script>
+	<script src="/static/js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="/static/js/highlight.pack.js"></script>
+	<script type="text/javascript" src="/static/js/highlightjs-line-numbers.js"></script>
+	<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+	<script type="text/javascript">hljs.initLineNumbersOnLoad();</script>
+	<script type="text/javascript" src="/static/js/image_cut.js"></script>
+	<script type="text/javascript" src="/static/js/scroll-event.js"></script>	
+
+	<!-- 	
+	<link rel="shortcut icon" type="image/x-icon" media="screen" href="/favicon.ico" />
+    <link rel="canonical" href="/2021/12/13/software-engineering-project-report-beta.html" />
+    <link rel="alternate" type="application/rss+xml" title="FuXiangyu's blog (initial version)" href="/feed.xml"  />
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/octicons/3.5.0/octicons.min.css" >
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+	-->
+
+	<link rel="stylesheet" href="/static/css/common.css" />
+	<link rel="stylesheet" href="/static/css/header.css" />
+	<link rel="stylesheet" href="/static/css/container.css" />
+	<link rel="stylesheet" href="/static/css/side.css" />
+	<link rel="stylesheet" href="/static/css/floatwindows.css" />
+	<link rel="stylesheet" href="/static/css/post.css" />
+	<link rel="stylesheet" href="/static/css/md.css" />
+	<link rel="stylesheet" href="/static/styles/darcula.css" />	
+
+</head>
+	
+	<body>
+		<div id="main">
+			<div id="root">
+				
+				<!-- header开始 -->
+				<div id="header" onmouseenter="bannerShow()" onmouseleave="bannerHide()">
+	<div id="headerContent">
+		<div id="headerContentLeft" class="headerContentBox">
+			<ul class="towardsRight bueatifiedList">
+				<li><a href="/" id="mainPage">首页</a></li>
+			</ul>
+		</div>
+		<div id="headerContentRight" class="headerContentBox">
+			<ul class="towardsLeft bueatifiedList">
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+	// header出现
+	function bannerShow(){
+		new anime({
+			targets: '#header',
+			opacity: 1,
+			easing: 'linear',
+			duration: 200
+		})
+	}
+	
+	// header消失
+	function bannerHide(){
+		new anime({
+			targets: '#header',
+			opacity: 0,
+			easing: 'linear',
+			duration: 300
+		})
+	}
+</script>
+				<!-- header结束 -->
+				
+				<!-- container开始 -->
+				<div id="container">
+					<div id="coverViewPort">
+						<div id="coverImg">
+							<p class="topTitle">my hollow wrath, my houkai</p>
+							<p class="topTitle">dissovling in the realm of shell</p>
+						</div>
+					</div>
+					<div id="content">
+						<div id="contentList">
+							
+							<!-- 内容 -->
+							<div id="postContent" class="commonBlockPanel">
+	<div id="postCoverViewPort">
+		<div id="postCoverImg" class="coverImg">
+			<img src="" id="img" />
+		</div>
+	</div>
+	<div id="passageInfo">
+		<div id="title">软件工程合作项目β阶段测试报告</div>
+		<div id="subInfo">
+			<span id="datetime">2021-12-13 20:38</span>
+			<ul id="tags">
+				
+				<li>合作项目</li>
+				
+			</ul>
+		</div>
+	</div>
+	<div id="postText">
+		<h1 id="第4组测试报告-week-12">第4组测试报告-WEEK 12</h1>
+
+<p>我们的β迭代成果： <a href="https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject">Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)</a></p>
+
+<h2 id="1version-21-bug-list">1.version 2.1 bug list</h2>
+
+<h3 id="本次测试出现的主要bug">本次测试出现的主要bug</h3>
+
+<ul>
+  <li>页面切换问题：由于app.json中未添加房间搜索页路径，导致此页面进不去。</li>
+  <li>页面刷新问题：创建新房间或修改房间之后，组队页没有刷新。</li>
+  <li>功能性问题：
+    <ul>
+      <li>房间创建页、房间管理页的富文本的提交、显示和修改不能正确进行。</li>
+      <li>个人页：个性签名修改后未保存。</li>
+      <li>我的帖子页：帖子显示的不是本人的帖子。</li>
+      <li>房间管理页：房间成员信息加载失败。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="有待改进的地方">有待改进的地方</h3>
+
+<ul>
+  <li>增加论坛页、组队页的刷新机制。</li>
+  <li>房间创建页的字数限制可以放宽松一点。</li>
+  <li>组队页的按钮放到下面或者增加前往顶部的按钮。</li>
+  <li>前端修改，如页面导航栏的标题、组队页的人数显示、我的帖子页每个帖子的高度、房间详情页标题和人数重叠的问题等。</li>
+  <li>帖子评论点赞功能优化。</li>
+  <li>房间管理页限制组队人数上限。</li>
+</ul>
+
+<h2 id="2场景测试">2.场景测试</h2>
+
+<h3 id="场景一">场景一</h3>
+
+<ul>
+  <li>典型用户：房主</li>
+  <li>需求：想要寻找SRDP项目成员。</li>
+  <li>场景描述：
+    <ul>
+      <li>扫码打开小程序。</li>
+      <li>进入首页，点击创建房间的按钮，填写相关的信息，包括选择房间的类型（如项目合作）、填写创建房间的目的、以富文本形式介绍房间等等。</li>
+      <li>创建房间后，等待其他人加入房间。一段时间后，进入消息页面的申请信息模块检查是否有成员申请加入。若有新成员申请加入，房主有两种选择：
+        <ul>
+          <li>同意加入</li>
+          <li>拒绝加入</li>
+        </ul>
+      </li>
+      <li>进入我的房间页，点击相应房间进入房间详情页面，在成员一栏点击相应成员的头像，查看详细的个人信息。</li>
+      <li>进入房间管理页面，修改房间信息，包括房间标题、类型、介绍、房间主页，也可删除成员。</li>
+      <li>组队结束之后，房主在合适时间进入房间管理页面删除整个房间。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="场景二">场景二</h3>
+
+<ul>
+  <li>典型用户：成员</li>
+  <li>需求：想要寻找SRDP队伍。</li>
+  <li>场景描述：
+    <ul>
+      <li>扫码打开小程序。</li>
+      <li>进入首页，他有两种选择：
+        <ul>
+          <li>浏览位于首页的房间列表，选择合适SRDP队伍的房间。</li>
+          <li>点击右上角“放大镜”按钮，进入房间搜索页面，选择条件搜索，选择类型：项目合作，输入相应关键词搜索房间，在搜索结果中选择合适的SRDP队伍的房间。</li>
+        </ul>
+      </li>
+      <li>点击房间进入详情页，查看房间的详细信息和当前的房间成员。</li>
+      <li>认为该小组合适，点击申请加入，试图加入该房间。</li>
+      <li>一段时间后，打开消息页面的，查看房主是否已同意自己加入该房间。</li>
+      <li>若发现自己不适合此项目组，可进入个人页，点击“我的房间”进入我的房间页，查找想要退出的小组，进入该小组详情页，选择退出房间。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="场景三">场景三</h3>
+
+<ul>
+  <li>典型用户：想要分享竞赛经验的同学A</li>
+  <li>需求：同学A在某比赛中拿了奖，想要把一些竞赛心得分享给大家。</li>
+  <li>场景描述：
+    <ul>
+      <li>扫码打开小程序</li>
+      <li>进入论坛页，点击“➕”按钮进入帖子创建页面，将自己的经验以文字形式分享给大家，同时可上传自己在准备比赛时的图片或获奖图片，点击“发布”按钮发布帖子。</li>
+      <li>过一段时间，进入个人页，点击“我的帖子”进入我的帖子页，查看自己发布帖子的动态情况。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="场景四">场景四</h3>
+
+<ul>
+  <li>典型用户：想要获取竞赛经验的同学B</li>
+  <li>需求：同学B最近想参加某比赛，但是不知道该如何准备，想从小程序的帖子里汲取一些经验。</li>
+  <li>场景描述：
+    <ul>
+      <li>扫码打开小程序</li>
+      <li>进入论坛页，浏览帖子列表，发现合适的经验帖。</li>
+      <li>进入合适经验帖的帖子详情页，浏览帖子内容学习经验。</li>
+      <li>同学B有一些不明白的地方想问一下楼主，遂在帖子下面评论自己的问题。</li>
+      <li>同学B觉得很受益，点赞帖子。</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="3测试矩阵">3.测试矩阵</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>功能</th>
+      <th> </th>
+      <th>房间创建页</th>
+      <th>房间详情页</th>
+      <th> </th>
+      <th>个人页</th>
+      <th>房间管理页</th>
+      <th>房间搜索页</th>
+      <th> </th>
+      <th> </th>
+      <th>消息页</th>
+      <th> </th>
+      <th> </th>
+      <th>论坛页</th>
+      <th>帖子发布页</th>
+      <th>帖子详情页</th>
+      <th> </th>
+      <th> </th>
+      <th>我的组队页</th>
+      <th>我的帖子页</th>
+      <th>前端</th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>测试机型</td>
+      <td>测试环境（系统版本）</td>
+      <td>创建房间</td>
+      <td>加入房间</td>
+      <td>退出房间</td>
+      <td>修改个性签名</td>
+      <td>房间信息修改</td>
+      <td>房间人数的修改</td>
+      <td>按ID搜索</td>
+      <td>按条件搜索</td>
+      <td>接收房间动态</td>
+      <td>拒绝进入房间</td>
+      <td>同意进入房间</td>
+      <td>显示帖子</td>
+      <td>发布帖子</td>
+      <td>展示帖子信息</td>
+      <td>点赞</td>
+      <td>评论</td>
+      <td>正确显示组队信息</td>
+      <td>正确显示帖子信息</td>
+      <td>页面排版</td>
+      <td>图片显示</td>
+      <td>页面切换</td>
+      <td>图标正确</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>iphone11</td>
+      <td>IOS 15.1</td>
+      <td>房间主页富文本提交失败</td>
+      <td>√</td>
+      <td>√</td>
+      <td>个性签名退出后丢失</td>
+      <td>房间主页富文本提交失败（图片无法提交）</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>帖子与用户不匹配</td>
+      <td> </td>
+      <td> </td>
+      <td>切换至搜索页失败</td>
+      <td>√</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>iPhone 11 pm</td>
+      <td>IOS 15.0.1</td>
+      <td>房间主页富文本提交失败</td>
+      <td>√</td>
+      <td>√</td>
+      <td>个性签名退出后丢失</td>
+      <td>房间主页富文本提交失败（图片无法提交）</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>接收不到请求</td>
+      <td>接收不到请求</td>
+      <td>没有刷新</td>
+      <td>√</td>
+      <td>√</td>
+      <td>在论坛页点赞完之后进入详情页可重复点赞</td>
+      <td>√</td>
+      <td>√</td>
+      <td>帖子与用户不匹配</td>
+      <td>√</td>
+      <td>√</td>
+      <td>切换至搜索页失败</td>
+      <td>√</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Honor30</td>
+      <td>HarmonyOS2.0.0</td>
+      <td>房间主页富文本提交失败</td>
+      <td>后台收不到加入房间的请求</td>
+      <td>√</td>
+      <td>个性签名退出后丢失</td>
+      <td>房间主页富文本提交失败（图片无法提交）</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>接收不到请求</td>
+      <td>接收不到请求</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>帖子与用户不匹配</td>
+      <td>√</td>
+      <td>√</td>
+      <td>切换至搜索页失败</td>
+      <td>√</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>redmi k40</td>
+      <td>miui12.5.18</td>
+      <td>房间主页富文本提交失败</td>
+      <td>√</td>
+      <td>√</td>
+      <td>个性签名退出后丢失、个性签名显示不明显</td>
+      <td>房间主页富文本提交失败（图片无法提交）</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>帖子与用户不匹配</td>
+      <td>√</td>
+      <td>√</td>
+      <td>切换至搜索页失败</td>
+      <td>√</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RedmeNote8pro</td>
+      <td>MIUI</td>
+      <td>房间主页富文本提交失败</td>
+      <td>√</td>
+      <td>√</td>
+      <td>个性签名退出后丢失、个性签名显示不明显</td>
+      <td>房间主页富文本提交失败（图片无法提交）</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>帖子与用户不匹配</td>
+      <td>√</td>
+      <td>√</td>
+      <td>切换至搜索页失败</td>
+      <td>√</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Huawei mate30</td>
+      <td>Android</td>
+      <td>房间主页富文本提交失败</td>
+      <td>√</td>
+      <td>√</td>
+      <td>个性签名退出后丢失</td>
+      <td>房间主页富文本提交失败（图片无法提交）</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>√</td>
+      <td>帖子与用户不匹配</td>
+      <td>√</td>
+      <td>√</td>
+      <td>切换至搜索页失败</td>
+      <td>√</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="4β版本的出口条件">4.β版本的出口条件</h2>
+
+<p>最初出口条件为：功能齐全，界面美观，能够进行实时通信。
+但由于时间紧迫，有些功能实现难度较大，因此，我们的出口条件变为：功能较为齐全，界面较为美观，没有严重bug。</p>
+
+<h2 id="5测试实录">5.测试实录</h2>
+
+<p><code class="language-plaintext highlighter-rouge">SM.MS图床卡顿，烦请稍等加载</code></p>
+
+<p><img src="https://s2.loli.net/2021/12/13/bY81RcFdEiJIr2H.jpg" alt="" /></p>
+
+<p><img src="https://s2.loli.net/2021/12/13/rPbInlW4yYvU1RT.jpg" alt="" /></p>
+
+<p><img src="https://s2.loli.net/2021/12/13/Wh7JpRq5i4MkdlF.jpg" alt="" /></p>
+
+<p><img src="https://s2.loli.net/2021/12/13/XWdTMjhgazKSAFl.jpg" alt="" /></p>
+
+
+	</div>
+</div>
+<div id="postBottom" class="commonBlockPanel">
+	<div id="bottomJump">
+		
+		<a id="pre" href="/2021/12/06/software-engineering-project-report-5.html">Pre</a>
+		
+		
+		<span>咕咕咕</span>
+		
+	</div>
+</div>
+							<!-- 内容结束 -->
+							
+						</div>
+						<div id="extraInfoList">
+							<div id="blogerInfo" class="commonBlockPanel scrollFixed">
+								<div id="blogerCoverViewPort">
+									<div id="blogerCoverImg" class="coverImg" onmouseenter="avatorShine()" 
+									onclick="showFloatingWinodwWithInfo('brFloatingWindow', 'brFloatingWindowContent', '在萌图上拷到的头像图片')">
+										<div id="shiningBar"></div>
+									</div>
+								</div>
+								<p id="blogerName" class="centerLocatedText">饱食终日的我</p>
+								<p id="blogerDescription" class="centerLocatedText"></p>
+								<div id="relatedLinksBox">
+									<ul id="relatedLinks" class="bueatifiedList">
+										
+										<li><a href="https://github.com/DarjeelingFu">github</a></li>
+										
+										<li><a href="https://www.kaggle.com/michaelfu2012">Kaggle</a></li>
+										
+									</ul>
+								</div>
+							</div>
+							<div id="siteInfoBox" class="commonBlockPanel scrollFixed">
+								<div id="siteInfo">
+									<span>
+										<p class="centerLocatedText siteInfoHead">POST</p>
+										
+										
+										<p class="centerLocatedText siteInfoBody">13</p>
+									</span>
+									<span>
+										<p class="centerLocatedText siteInfoHead">TAG</p>
+										
+										
+										<p class="centerLocatedText siteInfoBody">5</p>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- container结束 -->
+				
+				<!-- 浮窗开始 -->
+				<div id="brFloatingWindow" class="commonGlobalFloatingWindow commonBlockPanel" onclick="closeBrFloatingWindow()" >
+					<!-- <div id="brFlaotingWindowHeader"></div> -->
+					<p id="brFloatingWindowContent"></p>
+				</div>
+				<!-- 浮窗结束 -->
+				
+			</div>
+		</div>
+		<script src="/static/js/animations.js"></script>
+		<script>
+			
+			function log(a){
+				console.log(a)
+			}
+			
+			var imgCoverWidth = $('.articleCoverViewPort').css('width')
+			var imgCoverHeight = $('.articleCoverViewPort').css('height')
+			if(imgCoverHeight && imgCoverHeight){
+				var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
+				var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
+				cutImage('.articleCover', width, height)
+			}
+			
+			var imgCoverWidth = $('#postCoverViewPort').css('width')
+			var imgCoverHeight = $('#postCoverViewPort').css('height')
+			if(imgCoverWidth && imgCoverHeight){
+				var width = parseFloat(imgCoverWidth.substr(0, imgCoverWidth.length - 2))
+				var height = parseFloat(imgCoverHeight.substr(0, imgCoverHeight.length - 2))
+				cutImage('#img', width, height)
+			}
+			
+		</script>
+	</body>
+</html>
