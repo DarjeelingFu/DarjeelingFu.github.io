@@ -1,4 +1,188 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-12-13T21:07:44+08:00</updated><id>/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">软件工程项目β迭代阶段总结报告</title><link href="/2021/12/13/software-engineering-project-report-beta.html" rel="alternate" type="text/html" title="软件工程项目β迭代阶段总结报告" /><published>2021-12-13T21:06:18+08:00</published><updated>2021-12-13T21:06:18+08:00</updated><id>/2021/12/13/software-engineering-project-report-beta</id><content type="html" xml:base="/2021/12/13/software-engineering-project-report-beta.html">&lt;h1 id=&quot;第四小组beta冲刺阶段博客目录&quot;&gt;第四小组Beta冲刺阶段博客目录&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-12-20T09:05:10+08:00</updated><id>/feed.xml</id><title type="html">FuXiangyu’s blog (initial version)</title><subtitle>经过多次的大型的refresh，发现还是要从头开始，从基础开始，了解怎样搭建静态博客...</subtitle><author><name>饱食终日的我</name></author><entry><title type="html">Scrum Meeting Week 13</title><link href="/2021/12/20/software-engineering-project-report-7.html" rel="alternate" type="text/html" title="Scrum Meeting Week 13" /><published>2021-12-20T09:04:05+08:00</published><updated>2021-12-20T09:04:05+08:00</updated><id>/2021/12/20/software-engineering-project-report-7</id><content type="html" xml:base="/2021/12/20/software-engineering-project-report-7.html">&lt;h1 id=&quot;scrum-meeting--week-13-第四组&quot;&gt;Scrum Meeting -Week 13-第四组&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject&quot;&gt;Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;一工作记录&quot;&gt;一、工作记录&lt;/h2&gt;
+
+&lt;h3 id=&quot;1每个人的工作及进度&quot;&gt;1.每个人的工作及进度&lt;/h3&gt;
+
+&lt;h4 id=&quot;本周进度&quot;&gt;①本周进度&lt;/h4&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;成员&lt;/th&gt;
+      &lt;th&gt;本周完成&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;修复了上传图片的错误、统一了标题的字数和人数限制#57 #58&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;修复个性签名，评论区显示#62 #69&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;阅读实时通信源码 #74&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;修复了房间详情页的bug，以及完善了我的房间页 #59 #60 #61 #75&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;修复了房间管理页的bug #57 #58 #63 #64 #65&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;修复了我的帖子页、消息页bug #66 #67 #71 #72 #73&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;新增下拉刷新功能以及返回顶部功能#54 #55 #56 #68&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;日进度&quot;&gt;②日进度&lt;/h4&gt;
+
+&lt;p&gt;issues链接： &lt;a href=&quot;https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject/issues&quot;&gt;缺陷 - Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)&lt;/a&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;成员&lt;/th&gt;
+      &lt;th&gt;12月13日&lt;/th&gt;
+      &lt;th&gt;12月14日待完成&lt;/th&gt;
+      &lt;th&gt;12月14日完成&lt;/th&gt;
+      &lt;th&gt;12月15日待完成&lt;/th&gt;
+      &lt;th&gt;12月15日完成&lt;/th&gt;
+      &lt;th&gt;12月16日待完成&lt;/th&gt;
+      &lt;th&gt;12月16日完成&lt;/th&gt;
+      &lt;th&gt;12月17日待完成&lt;/th&gt;
+      &lt;th&gt;12月17日完成&lt;/th&gt;
+      &lt;th&gt;12月20日待完成&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;贲龙&lt;/td&gt;
+      &lt;td&gt;修复了上传图片的错误#57&lt;/td&gt;
+      &lt;td&gt;修复了上传图片的错误#57&lt;/td&gt;
+      &lt;td&gt;修复了上传图片的错误#57&lt;/td&gt;
+      &lt;td&gt;修复了上传图片的错误#57&lt;/td&gt;
+      &lt;td&gt;修复了上传图片的错误#57&lt;/td&gt;
+      &lt;td&gt;修复了上传图片的错误#57&lt;/td&gt;
+      &lt;td&gt;修复了上传图片的错误#57&lt;/td&gt;
+      &lt;td&gt;更改了输入长度限制#58&lt;/td&gt;
+      &lt;td&gt;更改了输入长度限制#58&lt;/td&gt;
+      &lt;td&gt;剩余bug&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;崔丽媛&lt;/td&gt;
+      &lt;td&gt;将个性签名传入后端#62&lt;/td&gt;
+      &lt;td&gt;将个性签名传入后端#62&lt;/td&gt;
+      &lt;td&gt;将个性签名传入后端#62&lt;/td&gt;
+      &lt;td&gt;可以成功获取显示个性签名#62&lt;/td&gt;
+      &lt;td&gt;可以成功获取个性签名#62&lt;/td&gt;
+      &lt;td&gt;将个人详情页留言改为个性签名#62&lt;/td&gt;
+      &lt;td&gt;将个人详情页改为个性签名#62&lt;/td&gt;
+      &lt;td&gt;清空评论区#69&lt;/td&gt;
+      &lt;td&gt;清空评论区#69&lt;/td&gt;
+      &lt;td&gt;重复点赞问题，增加评论提示#68 #70&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;付翔宇&lt;/td&gt;
+      &lt;td&gt;阅读实时通信源码#74&lt;/td&gt;
+      &lt;td&gt;阅读实时通信源码#74&lt;/td&gt;
+      &lt;td&gt;阅读实时通信源码#74&lt;/td&gt;
+      &lt;td&gt;阅读实时通信源码#74&lt;/td&gt;
+      &lt;td&gt;阅读实时通信源码#74&lt;/td&gt;
+      &lt;td&gt;阅读实时通信源码#74&lt;/td&gt;
+      &lt;td&gt;阅读实时通信源码#74&lt;/td&gt;
+      &lt;td&gt;阅读实时通信源码#74&lt;/td&gt;
+      &lt;td&gt;阅读实时通信源码#74&lt;/td&gt;
+      &lt;td&gt;阅读实时通信源码#74&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;焦扬&lt;/td&gt;
+      &lt;td&gt;限制房间名字显示字数长度#60&lt;/td&gt;
+      &lt;td&gt;显示房间id#61&lt;/td&gt;
+      &lt;td&gt;显示房间id#61&lt;/td&gt;
+      &lt;td&gt;加入房间申请bug修改#59&lt;/td&gt;
+      &lt;td&gt;加入房间申请bug修改#59&lt;/td&gt;
+      &lt;td&gt;房间详情页排版修改#60&lt;/td&gt;
+      &lt;td&gt;房间详情页排版修改#60&lt;/td&gt;
+      &lt;td&gt;我的房间页房间名字和简介过长不会换行问题修改#75&lt;/td&gt;
+      &lt;td&gt;我的房间页名字和简介过长的显示问题#75&lt;/td&gt;
+      &lt;td&gt;剩余bug&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;刘晓琳&lt;/td&gt;
+      &lt;td&gt;增加显示房间id#64&lt;/td&gt;
+      &lt;td&gt;跟房间创建页统一标题字数和人数限制#58&lt;/td&gt;
+      &lt;td&gt;跟房间创建页统一标题字数和人数限制#58&lt;/td&gt;
+      &lt;td&gt;房间人数输入字符问题#63&lt;/td&gt;
+      &lt;td&gt;房间人数输入字符问题#63&lt;/td&gt;
+      &lt;td&gt;信息加载问题#65&lt;/td&gt;
+      &lt;td&gt;信息加载问题#65&lt;/td&gt;
+      &lt;td&gt;解决富文本提交问题#57&lt;/td&gt;
+      &lt;td&gt;解决富文本提交问题#57&lt;/td&gt;
+      &lt;td&gt;尝试合并代码&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;石佳鹭&lt;/td&gt;
+      &lt;td&gt;我的帖子页导航栏显示#73&lt;/td&gt;
+      &lt;td&gt;消息页接受相应request#66&lt;/td&gt;
+      &lt;td&gt;消息页接受相应request#66&lt;/td&gt;
+      &lt;td&gt;链接跳转实现#72&lt;/td&gt;
+      &lt;td&gt;链接跳转实现#72&lt;/td&gt;
+      &lt;td&gt;页面布局#67&lt;/td&gt;
+      &lt;td&gt;页面布局#67&lt;/td&gt;
+      &lt;td&gt;显示错误解决#71&lt;/td&gt;
+      &lt;td&gt;显示错误解决#71&lt;/td&gt;
+      &lt;td&gt;剩余bug&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;王灿&lt;/td&gt;
+      &lt;td&gt;信息更新#54&lt;/td&gt;
+      &lt;td&gt;新增forum页下拉刷新功能#55&lt;/td&gt;
+      &lt;td&gt;新增forum页下拉刷新功能#55&lt;/td&gt;
+      &lt;td&gt;新增返回顶部按钮#55&lt;/td&gt;
+      &lt;td&gt;返回顶部的实现#55&lt;/td&gt;
+      &lt;td&gt;组队页房间人数显示#56&lt;/td&gt;
+      &lt;td&gt;组队页房间人数显示#56&lt;/td&gt;
+      &lt;td&gt;重复点赞问题修复#68&lt;/td&gt;
+      &lt;td&gt;重复点赞问题修复#68&lt;/td&gt;
+      &lt;td&gt;剩余bug&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;2工作中遇到的困难&quot;&gt;2.工作中遇到的困难&lt;/h3&gt;
+
+&lt;p&gt;通过前面两次迭代的经验积累，本周我们组成员在前端方面已能完成所有任务，没什么困难了。小程序大致功能已基本完成，目前的困难就是实时通信的组件还不知道该怎样嵌入我们的小程序，下周将重点解决这个问题。&lt;/p&gt;
+
+&lt;h3 id=&quot;3关于高兴的地方&quot;&gt;3.关于高兴的地方&lt;/h3&gt;
+
+&lt;p&gt;我们组项目目前已进入收尾阶段，已完成小程序大致的功能，还剩实时通信功能未完成。大家可以更熟练地使用微信开发者工具拉去并推送代码，使用微信代码管理平台的”缺陷“查看自己被分配的任务，效率也越来越高了。大家有问题会在群里求助或求助比较擅长的同学，有些页面需要互相沟通商定方案也很快沟通好了，全员都保质保量地完成了自己的任务。希望我们组接下来能一鼓作气拿下这个小程序！&lt;/p&gt;
+
+&lt;h2 id=&quot;二燃尽图&quot;&gt;二、燃尽图&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2021/12/20/6Q7KkC985sjxRnP.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;三例会照片&quot;&gt;三、例会照片&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2021/12/20/biNfYMwvsXEzOW4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;拍摄者：贲龙&lt;/p&gt;
+
+&lt;h2 id=&quot;四代码签入记录&quot;&gt;四、代码签入记录&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2021/12/20/G8IUAYtFv3iNmXk.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>饱食终日的我</name></author><summary type="html">Scrum Meeting -Week 13-第四组</summary></entry><entry><title type="html">软件工程项目β迭代阶段总结报告</title><link href="/2021/12/13/software-engineering-project-report-beta.html" rel="alternate" type="text/html" title="软件工程项目β迭代阶段总结报告" /><published>2021-12-13T21:06:18+08:00</published><updated>2021-12-13T21:06:18+08:00</updated><id>/2021/12/13/software-engineering-project-report-beta</id><content type="html" xml:base="/2021/12/13/software-engineering-project-report-beta.html">&lt;h1 id=&quot;第四小组beta冲刺阶段博客目录&quot;&gt;第四小组Beta冲刺阶段博客目录&lt;/h1&gt;
 
 &lt;h2 id=&quot;一scrum-meeting&quot;&gt;一、Scrum Meeting&lt;/h2&gt;
 
@@ -1903,69 +2087,4 @@
 
 &lt;p&gt;但是，该模型的训练结果比不被我们所重视，而我们真正需要的其实是模型内部的参数。one-hot编码具有自己的独特性，独特在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;是唯一的，也即，在训练过程中，当一个one-hot编码被传入时，从输入到隐含层的各个权重中，仅有与&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;相连的权重被激活了，只要one-hot编码不同，那么激活的权重就不同，而前面已经说明，词语与其one-hot编码一一对应，这样一来，经过该模型的训练，所有的词语就会被一一对应于相等数量的权重，而且不难直到，如果隐含层的单元个数为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v&lt;/code&gt;，那么每个词对应的权重数也为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v&lt;/code&gt;，将这&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v&lt;/code&gt;个数据放到一个向量中，该向量即为词语的wrod2vec词向量。&lt;/p&gt;
 
-&lt;p&gt;由于引入了上下文环境，word2vec词向量具有了表达含义的能力，有训练结果显示，词语king，queen，man，woman的word2vec词向量体现出了&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;king = queen - woman + man&lt;/code&gt;的奇妙运算关系。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="机器学习" /><summary type="html">自然语言处理 Natural Language Processing</summary></entry><entry><title type="html">leetcode日记</title><link href="/2020/10/25/leetcode-videoclips.html" rel="alternate" type="text/html" title="leetcode日记" /><published>2020-10-25T12:37:27+08:00</published><updated>2020-10-25T12:37:27+08:00</updated><id>/2020/10/25/leetcode-videoclips</id><content type="html" xml:base="/2020/10/25/leetcode-videoclips.html">&lt;blockquote&gt;
-  &lt;p&gt;你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。&lt;/p&gt;
-
-  &lt;p&gt;视频片段 clips[i] 都用区间进行表示：开始于 clips[i] [0] 并于 clips[i] [1] 结束。我们甚至可以对这些片段自由地再剪辑，例如片段 [0, 7] 可以剪切成 [0, 1] + [1, 3] + [3, 7] 三部分。&lt;/p&gt;
-
-  &lt;p&gt;我们需要将这些片段进行再剪辑，并将剪辑后的内容拼接成覆盖整个运动过程的片段（[0, T]）。返回所需片段的最小数目，如果无法完成该任务，则返回 -1 。&lt;/p&gt;
-
-  &lt;p&gt;了解到该问题实质上是找到尽可能少的片段去覆盖最大的范围时，很难让人不想到贪心算法。但是我对贪心算法掌握并不熟练，故虽能在代码中体现该思想，但想法仍旧十分浅层和初阶，最终通过后排名也不尽人意，有待后期继续完善。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;主要思路：首先将clips按长度降序排序，在保证包含0（起点）和T（终点，大于等于即可）的前提下遍历找出最少的需要的clip；其次，将这些clips按起点（clip[i] [0]）升序排序，这样他们的起点在数轴上能够依次排开，之后遍历这些clip，每次都判断是否要将需要的总片段数自增（分析可知，对于遍历中的每一个clip，只有其起点和终点满足一定要求时才会使总片段数自增，粗略的讲，clip的始末点都要在一个有效的区间里）。&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Solution&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;videoStitching&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clips&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
-        :type clips: List[List[int]]
-        :type T: int
-        :rtype: int
-        &quot;&quot;&quot;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;sortedByLen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clips&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;# print(sortedByLen)
-&lt;/span&gt;        &lt;span class=&quot;n&quot;&gt;isContained&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;finallySelected&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;isContained&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;isContained&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;finallySelected&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isContained&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isContained&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-        
-        &lt;span class=&quot;c1&quot;&gt;# print(finallySelected)
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isContained&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isContained&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;finallySelected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getStartPos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;currentStart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-        
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-            
-            &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentStart&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-                                
-                &lt;span class=&quot;n&quot;&gt;currentStart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt;
-                
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sortedByStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;currentStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentEnd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'|'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt;
-            
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getStartPos&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;排名极差······有待提升&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="算法" /><summary type="html">你将会获得一系列视频片段，这些片段来自于一项持续时长为 T 秒的体育赛事。这些片段可能有所重叠，也可能长度不一。 视频片段 clips[i] 都用区间进行表示：开始于 clips[i] [0] 并于 clips[i] [1] 结束。我们甚至可以对这些片段自由地再剪辑，例如片段 [0, 7] 可以剪切成 [0, 1] + [1, 3] + [3, 7] 三部分。 我们需要将这些片段进行再剪辑，并将剪辑后的内容拼接成覆盖整个运动过程的片段（[0, T]）。返回所需片段的最小数目，如果无法完成该任务，则返回 -1 。 了解到该问题实质上是找到尽可能少的片段去覆盖最大的范围时，很难让人不想到贪心算法。但是我对贪心算法掌握并不熟练，故虽能在代码中体现该思想，但想法仍旧十分浅层和初阶，最终通过后排名也不尽人意，有待后期继续完善。</summary></entry></feed>
+&lt;p&gt;由于引入了上下文环境，word2vec词向量具有了表达含义的能力，有训练结果显示，词语king，queen，man，woman的word2vec词向量体现出了&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;king = queen - woman + man&lt;/code&gt;的奇妙运算关系。&lt;/p&gt;</content><author><name>饱食终日的我</name></author><category term="机器学习" /><summary type="html">自然语言处理 Natural Language Processing</summary></entry></feed>
