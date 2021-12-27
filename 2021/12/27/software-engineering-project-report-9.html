@@ -17,7 +17,7 @@
 
 	<!-- 	
 	<link rel="shortcut icon" type="image/x-icon" media="screen" href="/favicon.ico" />
-    <link rel="canonical" href="/2021/11/15/software-engineering-project-report-alpha.html" />
+    <link rel="canonical" href="/2021/12/27/software-engineering-project-report-9.html" />
     <link rel="alternate" type="application/rss+xml" title="FuXiangyu's blog (initial version)" href="/feed.xml"  />
 
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
@@ -97,70 +97,135 @@
 		</div>
 	</div>
 	<div id="passageInfo">
-		<div id="title">软件工程项目α迭代阶段总结报告</div>
+		<div id="title">软件工程合作项目γ阶段测试报告</div>
 		<div id="subInfo">
-			<span id="datetime">2021-11-15 21:52</span>
+			<span id="datetime">2021-12-27 21:01</span>
 			<ul id="tags">
-				
-				<li>合作项目</li>
 				
 			</ul>
 		</div>
 	</div>
 	<div id="postText">
-		<h1 id="第四小组alpha冲刺阶段博客目录">第四小组Alpha冲刺阶段博客目录</h1>
+		<h1 id="第4组测试报告-week-14">第4组测试报告-WEEK 14</h1>
 
-<h2 id="一scrum-meeting">一、Scrum Meeting</h2>
+<p>我们的γ迭代成果： <a href="https://git.weixin.qq.com/Uuchan/SoftwareEngineeringProject">Uuchan/SoftwareEngineeringProject - 微信开发者代码管理 (qq.com)</a></p>
 
-<ol>
-  <li>第六周会议记录  https://darjeelingfu.github.io/2021/11/01/software-engineering-project-report-1.html</li>
-  <li>第七周会议记录  https://darjeelingfu.github.io/2021/11/08/software-engineering-project-report-2.html</li>
-</ol>
+<h2 id="1version-30-bug-list">1.version 3.0 bug list</h2>
 
-<h2 id="二测试报告">二、测试报告</h2>
+<h3 id="有待改进的地方">有待改进的地方</h3>
 
-<p>https://darjeelingfu.github.io/2021/11/15/software-engineering-project-report-3.html</p>
+<ul>
+  <li>实时通信的消息接收窗口可以更好</li>
+  <li>帖子点赞评论信息的接收</li>
+</ul>
 
-<h2 id="三习得的软工原理--方法--技能">三、习得的软工原理 / 方法 / 技能</h2>
+<h2 id="2场景测试">2.场景测试</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>成员</th>
-      <th style="text-align: center">收获</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>贲龙</td>
-      <td style="text-align: center">在过去的两周里，我学习了微信小程序的前端写法，掌握了git的使用与团队开发</td>
-    </tr>
-    <tr>
-      <td>崔丽媛</td>
-      <td style="text-align: center">掌握类似javascript的一些基础语法，学习了一些软件工程的需求分析方法和模型建立方法，同时也学会了一些git的使用方法，更便于代码的书写和管理</td>
-    </tr>
-    <tr>
-      <td>付翔宇</td>
-      <td style="text-align: center">掌握了软件需求分析和软件整体设计的基本方法，提高了对整体任务进行模块划分和队伍内分工的效率，熟悉了git提供的各种功能，加深了对django框架原理的理解</td>
-    </tr>
-    <tr>
-      <td>焦扬</td>
-      <td style="text-align: center">在Alpha阶段，我学习到了小程序前端的基本语法，了解了软件需求分析对于产品设计和团队协作的重要性，同时熟悉了git团队间的合作使用</td>
-    </tr>
-    <tr>
-      <td>刘晓琳</td>
-      <td style="text-align: center">在α阶段，我了解了软件工程的具体流程和基本方法，学会了微信小程序页面的布局，用js实现页面的逻辑以及调用后端数据等，也学会了如何用git进行团队合作</td>
-    </tr>
-    <tr>
-      <td>石佳鹭</td>
-      <td style="text-align: center">在这几周里，我对js的认知从无到有，学习了一些基础语法和简单的应用，习惯用文档查找函数，学习了页面的静态布局，和数据绑定，函数调用等内容</td>
-    </tr>
-    <tr>
-      <td>王灿</td>
-      <td style="text-align: center">在第一阶段中学习了一些JavaScript的基础语法，对需求分析等开发开发方法进行了实践，也学会了利用Git进行合作开发，规范文档的使用等等</td>
-    </tr>
-  </tbody>
-</table>
+<h3 id="场景一"><strong>场景一</strong></h3>
+
+<ul>
+  <li>典型用户：房主</li>
+  <li>需求：想要寻找SRDP项目成员。</li>
+  <li>场景描述：
+    <ul>
+      <li>扫码打开小程序。</li>
+      <li>进入首页，点击创建房间的按钮，填写相关的信息，包括选择房间的类型（如项目合作）、填写创建房间的目的、人数、以富文本形式介绍房间等等。</li>
+      <li>创建房间后，等待其他人加入房间，可间歇性查看是否有私信。一段时间后，进入消息页面的申请信息模块检查是否有成员申请加入。若有新成员申请加入，房主有两种选择：
+        <ul>
+          <li>同意加入</li>
+          <li>拒绝加入</li>
+        </ul>
+      </li>
+      <li>进入我的房间页，点击相应房间进入房间详情页面，在成员一栏点击相应成员的头像，查看详细的个人信息。</li>
+      <li>进入房间管理页面，修改房间信息，包括房间标题、类型、最大人数、介绍、房间主页，也可删除成员。</li>
+      <li>组队结束之后，房主在合适时间进入房间管理页面删除整个房间。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="场景二">场景二</h3>
+
+<ul>
+  <li>典型用户：成员</li>
+  <li>需求：想要寻找SRDP队伍。</li>
+  <li>场景描述：
+    <ul>
+      <li>扫码打开小程序。</li>
+      <li>进入首页，他有两种选择：
+        <ul>
+          <li>浏览位于首页的房间列表，选择合适SRDP队伍的房间。</li>
+          <li>点击右上角“放大镜”按钮，进入房间搜索页面，选择条件搜索，选择类型：项目合作，输入相应关键词搜索房间，在搜索结果中选择合适的SRDP队伍的房间。</li>
+        </ul>
+      </li>
+      <li>点击房间进入详情页，查看房间的详细信息和当前的房间成员。</li>
+      <li>若对该队伍感兴趣，可点击房主头像私聊房主。</li>
+      <li>若了解之后觉得该小组合适，可点击申请加入，试图加入该房间。</li>
+      <li>一段时间后，打开消息页面的，查看房主是否已同意自己加入该房间。</li>
+      <li>若发现自己不适合此项目组，可进入个人页，点击“我的房间”进入我的房间页，查找想要退出的小组，进入该小组详情页，选择退出房间。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="场景三">场景三</h3>
+
+<ul>
+  <li>典型用户：想要分享竞赛经验的同学A</li>
+  <li>需求：同学A在某比赛中拿了奖，想要把一些竞赛心得分享给大家。</li>
+  <li>场景描述：
+    <ul>
+      <li>扫码打开小程序</li>
+      <li>进入论坛页，点击“➕”按钮进入帖子创建页面，将自己的经验以文字形式分享给大家，同时可上传自己在准备比赛时的图片或获奖图片，点击“发布”按钮发布帖子。</li>
+      <li>过一段时间，进入个人页，点击“我的帖子”进入我的帖子页，查看自己发布帖子的动态情况。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="场景四">场景四</h3>
+
+<ul>
+  <li>典型用户：有疑惑想求助大家的同学B</li>
+  <li>需求：同学B要参加某考试，但是不知道该如何准备，想求助大家汲取一些经验。</li>
+  <li>场景描述：
+    <ul>
+      <li>扫码打开小程序</li>
+      <li>进入论坛页，点击“➕”按钮进入帖子创建页面，提出自己的疑惑，点击“发布”按钮发布帖子。</li>
+      <li>等待他人评论。</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="场景五">场景五</h3>
+
+<ul>
+  <li>典型用户：闲来无事看帖的同学C</li>
+  <li>需求：同学C闲来无事看帖消遣。</li>
+  <li>场景描述：
+    <ul>
+      <li>扫码打开小程序</li>
+      <li>进入论坛页，浏览帖子列表。</li>
+      <li>发现有同学有疑惑，自己恰好有经验，可点开帖子详情，评论该帖子分享自己的经验。</li>
+      <li>看到一篇经验帖，同学B觉得很受益，点赞帖子。</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="3测试矩阵">3.测试矩阵</h2>
+
+<p><img src="https://s2.loli.net/2021/12/27/N9v5F4cCSOgqR1p.png" alt="" /></p>
+
+<h2 id="4γ版本的出口条件">4.γ版本的出口条件</h2>
+
+<p>最初出口条件为：功能较为齐全，界面美观，能够进行实时通信。</p>
+
+<h2 id="5测试实录">5.测试实录</h2>
+
+<p><img src="https://s2.loli.net/2021/12/27/Gp1tjSrYfbXoLDM.png" alt="" /></p>
+
+<p><img src="https://s2.loli.net/2021/12/27/kF1ZeWGvIaNrd9c.png" alt="" /></p>
+
+<p><img src="https://s2.loli.net/2021/12/27/xezTdbUmuOiAs1n.png" alt="" /></p>
+
+<p><img src="https://s2.loli.net/2021/12/27/wzxRtaFLgsoKfvW.png" alt="" /></p>
 
 
 	</div>
@@ -168,10 +233,10 @@
 <div id="postBottom" class="commonBlockPanel">
 	<div id="bottomJump">
 		
-		<a id="pre" href="/2021/11/15/software-engineering-project-report-3.html">Pre</a>
+		<a id="pre" href="/2021/12/27/software-engineering-project-report-8.html">Pre</a>
 		
 		
-		<a id="next" href="/2021/11/29/software-engineering-project-report-4.html">Next</a>
+		<a id="next" href="/2021/12/27/software-engineering-project-report-gama.html">Next</a>
 		
 	</div>
 </div>
